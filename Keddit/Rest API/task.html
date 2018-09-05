@@ -1,0 +1,23 @@
+<html>
+<p><b>Rest API</b></p>
+<p>Now we are going to move Retrofit initialization into a new class called “RestAPI.kt”.</p>
+<p>In Kotlin classes you are able to initialize your class in a body block with the init keyword. Here we are going to use it to initialize our RedditApi:</p>
+<pre><code>private val redditApi: RedditApi
+
+init {
+    val retrofit = Retrofit.Builder()
+            .baseUrl("https://www.reddit.com")
+            .addConverterFactory(MoshiConverterFactory.create())
+            .build()
+
+    redditApi = retrofit.create(RedditApi::class.java)
+}</code></pre>
+<ol><li>init block: Kotlin class initializer block.</li>
+<li>“.addConverterFactory(MoshiConverterFactory.create())”: Setting the Moshi converter.</li>
+    <li>“RedditApi::class.java”: This syntax allows you to get the Java Class instance corresponding to the given KClass instance. A KClass is an interface that represents a class and provides introspection capabilities.</li></ol>
+<p><b>getNews:</b></p>
+<p>And also we provide a function to consume the API and request the news:</p>
+<pre><code>fun getNews(after: String, limit: String): Call&lt;RedditNewsResponse>{
+    return redditApi.getTop(after, limit)
+}</code></pre>
+</html>

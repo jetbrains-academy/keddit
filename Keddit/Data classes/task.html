@@ -1,0 +1,38 @@
+<html>
+<p><b>News Item with Data Classes</b></p>
+<p>Before creating our News delegate adapter and configure the NewsAdapter to receive a list of news, we need our UI object to represent each news. In Java we would normally create a class like this:</p>
+<pre><code>public class RedditNewsItem {
+
+    private String author;
+    private String title;
+
+    public MyNews(String author, String title) {
+        this.author = author;
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+}</code></pre>
+<p>Again, Kotlin has come to help us with a new class type called “data class” which brings you a lot of benefits and for the same example it looks like this:</p>
+<pre><code>data class RedditNewsItem(var author: String, var title: String)</code></pre>
+<p>With this simple line you are doing the same as the previous Java code, it means that author and title has their own getters and setters and it requires a constructor with this two elements. This is just AMAZING! but wait! you still receive more benefits if you take this data class, you receive for free for this class:</p>
+<ul><li>equals/hashCode pair.
+</li>
+<li>toString() with all the properties included.</li>
+<li>copy() method to make easily a copy of your object.</li>
+    <li>and other useful methods that we are not going to see here but you can see more in the <a href="https://kotlinlang.org/docs/reference/data-classes.html">official page.</a></li></ul>
+</html>

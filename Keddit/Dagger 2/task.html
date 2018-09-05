@@ -1,0 +1,12 @@
+<html>
+<p><b>Dagger 2</b></p>
+<blockquote>Dagger is a fully static, compile-time dependency injection framework for both Java and Android. It is an adaptation of an earlier version created by Square and now maintained by Google.</blockquote>
+<p>There are excellent tutorials about dagger. I really like this video from <a href="https://youtu.be/plK0zyRLIP8">Jake Wharton.</a></p>
+<p><b>Dependency</b></p>
+<p>So let’s add Dagger 2 as dependency to our Keddit App in the build.gradle file:</p>
+<pre><code>compile 'com.google.dagger:dagger:2.4'
+kapt 'com.google.dagger:dagger-compiler:2.4'
+provided 'org.glassfish:javax.annotation:10.0-b28'</code></pre>
+<blockquote>Please don’t forget to enable ‘generateStubs’ from this file as we saw before.</blockquote>
+
+</html>

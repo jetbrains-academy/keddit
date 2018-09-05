@@ -1,0 +1,15 @@
+<html>
+<p><b>ObserveOn</b></p>
+<p>ObserveOn is another method from the Observable class and it allows you to define where do you want to execute the functions that you provided in the “subscribe(…)” method. In other words, in which thread is going to be executed the functions that we provided in the subscribe method with the onNext and onError code. As we need to execute this code in the Main UI Thread it could be a good idea to make our Observable to observeOn the Main UI Thread.</p>
+<p>Here is where we need to add RxAndroid dependency to have a new Scheduler called:</p>
+<blockquote>AndroidSchedulers.mainThread()</blockquote>
+<p>And we need to update our code to set the observeOn Scheduler:</p>
+<pre><code>val subscription = newsManager.getNews()
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe ( ...
+)</code></pre>
+<p>And with this last change we are creating our mock data in another thread and showing our news in the screen.</p>
+<p>But we have to realize that our app can be closed at any time or perform an orientation change operation in the middle of a subscription. This could lead us to a problem if we don’t manage our subscriptions properly, so let’s do something with it.</p>
+
+</html>

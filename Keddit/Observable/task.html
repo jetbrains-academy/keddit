@@ -1,0 +1,20 @@
+<html>
+<p><b>Observable</b></p>
+<p>The NewsManager class will provide a method that will return an Observable object which will allows you to run a piece of code (like an API call) in another context (in this case in a new thread).</p>
+<pre><code>fun getNews(): Observable&lt;List&lt;RedditNewsItem&gt;&gt; {
+    ...
+}
+</code></pre>
+<p>This Observable object will be created by us from the NewsManager. We will provide the implementation of this object:</p>
+<pre><code>fun getNews(): Observable&lt;List&lt;RedditNewsItem>> {
+    return Observable.create {
+        subscriber ->
+
+        val news = mutableListOf<RedditNewsItem>()
+        // api call...
+        subscriber.onNext(news)
+        subscriber.onCompleted()
+    }
+}</code></pre>
+
+</html>

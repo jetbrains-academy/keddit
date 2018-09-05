@@ -1,0 +1,51 @@
+buildscript {
+  ext.kotlin_version = '1.2.30'
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.1.3'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    jcenter()
+  }
+  afterEvaluate {
+    if (extensions.findByName("android") != null) {
+      android {
+        testOptions {
+          unitTests {
+            includeAndroidResources = true
+            all {
+              afterTest { TestDescriptor test, TestResult result ->
+                if (result.resultType == TestResult.ResultType.FAILURE) {
+                  def message = result.exception?.message ?: "Wrong answer"
+                  def lines = message.readLines()
+                  println "#educational_plugin FAILED + " + lines[0]
+                  lines[1..-1].forEach { line ->
+                    println "#educational_plugin" + line
+                  }
+                  // we need this to separate output of different tests
+                  println
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.5'
+}

@@ -1,0 +1,14 @@
+<html>
+<p><b>Reddit API</b></p>
+<p>Let’s review a little bit the API that we are going to consume from Reddit. The idea is to request the Reddit’s TOP news to be shown in the App.</p>
+<p><b>Request URL</b></p>
+<p>The URL that we are going to consume is the following:</p>
+<pre><code>www.reddit.com/top.json?limit=10</code></pre>
+<p><b>JSON Response</b></p>
+<p>As you can see the returned response is in JSON format. A better way to analyse the content is using a Json parser like Json Editor Online (http://www.jsoneditoronline.org/) which is an excellent online tool.</p>
+<p>Here there are 3 things that we will care about it:</p>
+<ul><li>children: Is the news’ list paginated by 10 items (as we requested in the query string) and each children has details about the news (name, image, author, etc).</li>
+<li>after: It allows you to perform pagination with this Reddit API. “after” will bring you the next 10 items by calling: “/top.json?after=t3_4cdt7v”.</li>
+<li>before: The same as “after” but to navigate back.</li></ul>
+
+</html>

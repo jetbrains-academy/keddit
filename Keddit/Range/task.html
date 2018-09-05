@@ -1,0 +1,13 @@
+<html>
+<p><b>Update NewsAdapter to receive News</b></p>
+<p>Let’s modify our NewsAdapter to receive a list of mocked news to be shown with our news and loading delegated adapters:</p>
+<p><b>Range</b></p>
+<p>Kotlin allows you to create in an easy way a range of numbers (Int, Long and Char types) by using an expression like this: “1..10”, this will return an IntRange (as we are using Ints in this example), IntRange extends from IntProgression and this implements Iterable. Thanks to this is that we can iterate over the range that we have, in this case from 1 to 10 to create our mock data:</p>
+<pre><code>for (i in 1..10) {
+    ...
+}</code></pre>
+<p>You can control the steps in the range and make it decremental like “10 downTo 1”. More about this you can <a href ="https://kotlinlang.org/docs/reference/ranges.html">find it here.</a></p>
+<p><b>mutableListOf</b></p>
+<p>This is a Kotlin function which returns a MutableList, a list that can be modified and in this case is to store locally the mocked news for the adapter:</p>
+<pre><code>val news = mutableListOf&lt;RedditNewsItem&gt;()</code></pre>
+</html>

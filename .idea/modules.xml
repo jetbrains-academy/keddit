@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Creating_Android_Application_with_Kotlin.iml" filepath="$PROJECT_DIR$/Creating_Android_Application_with_Kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/API Interface/Keddit-API_Interface.iml" filepath="$PROJECT_DIR$/Keddit/API Interface/Keddit-API_Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/API Model/Keddit-API_Model.iml" filepath="$PROJECT_DIR$/Keddit/API Model/Keddit-API_Model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Android Extensions/Keddit-Android_Extensions.iml" filepath="$PROJECT_DIR$/Keddit/Android Extensions/Keddit-Android_Extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Annotation processing/Keddit-Annotation_processing.iml" filepath="$PROJECT_DIR$/Keddit/Annotation processing/Keddit-Annotation_processing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Bonus Parcelabel/Keddit-Bonus_Parcelabel.iml" filepath="$PROJECT_DIR$/Keddit/Bonus Parcelabel/Keddit-Bonus_Parcelabel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Call the API/Keddit-Call_the_API.iml" filepath="$PROJECT_DIR$/Keddit/Call the API/Keddit-Call_the_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Configuration basics/Keddit-Configuration_basics.iml" filepath="$PROJECT_DIR$/Keddit/Configuration basics/Keddit-Configuration_basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Dagger 2/Keddit-Dagger_2.iml" filepath="$PROJECT_DIR$/Keddit/Dagger 2/Keddit-Dagger_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Dagger API/Keddit-Dagger_API.iml" filepath="$PROJECT_DIR$/Keddit/Dagger API/Keddit-Dagger_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Data classes/Keddit-Data_classes.iml" filepath="$PROJECT_DIR$/Keddit/Data classes/Keddit-Data_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Default Values in Parameters/Keddit-Default_Values_in_Parameters.iml" filepath="$PROJECT_DIR$/Keddit/Default Values in Parameters/Keddit-Default_Values_in_Parameters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Delegated Properties/Keddit-Delegated_Properties.iml" filepath="$PROJECT_DIR$/Keddit/Delegated Properties/Keddit-Delegated_Properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Elvis operator/Keddit-Elvis_operator.iml" filepath="$PROJECT_DIR$/Keddit/Elvis operator/Keddit-Elvis_operator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Extension Functions/Keddit-Extension_Functions.iml" filepath="$PROJECT_DIR$/Keddit/Extension Functions/Keddit-Extension_Functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Filter/Keddit-Filter.iml" filepath="$PROJECT_DIR$/Keddit/Filter/Keddit-Filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Functions/Keddit-Functions.iml" filepath="$PROJECT_DIR$/Keddit/Functions/Keddit-Functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Gradle introduction/Keddit-Gradle_introduction.iml" filepath="$PROJECT_DIR$/Keddit/Gradle introduction/Keddit-Gradle_introduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Higher-Order functions/Keddit-Higher-Order_functions.iml" filepath="$PROJECT_DIR$/Keddit/Higher-Order functions/Keddit-Higher-Order_functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Infinite Scroll/Keddit-Infinite_Scroll.iml" filepath="$PROJECT_DIR$/Keddit/Infinite Scroll/Keddit-Infinite_Scroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Java Interoperability/Keddit-Java_Interoperability.iml" filepath="$PROJECT_DIR$/Keddit/Java Interoperability/Keddit-Java_Interoperability.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Kotlin plugin/Keddit-Kotlin_plugin.iml" filepath="$PROJECT_DIR$/Keddit/Kotlin plugin/Keddit-Kotlin_plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Lambda expressions/Keddit-Lambda_expressions.iml" filepath="$PROJECT_DIR$/Keddit/Lambda expressions/Keddit-Lambda_expressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Map/Keddit-Map.iml" filepath="$PROJECT_DIR$/Keddit/Map/Keddit-Map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Mockito/Keddit-Mockito.iml" filepath="$PROJECT_DIR$/Keddit/Mockito/Keddit-Mockito.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Object expressions/Keddit-Object_expressions.iml" filepath="$PROJECT_DIR$/Keddit/Object expressions/Keddit-Object_expressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Observable/Keddit-Observable.iml" filepath="$PROJECT_DIR$/Keddit/Observable/Keddit-Observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Observer/Keddit-Observer.iml" filepath="$PROJECT_DIR$/Keddit/Observer/Keddit-Observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Parcelable/Keddit-Parcelable.iml" filepath="$PROJECT_DIR$/Keddit/Parcelable/Keddit-Parcelable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Properties and Fields/Keddit-Properties_and_Fields.iml" filepath="$PROJECT_DIR$/Keddit/Properties and Fields/Keddit-Properties_and_Fields.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/RXAndroid/Keddit-RXAndroid.iml" filepath="$PROJECT_DIR$/Keddit/RXAndroid/Keddit-RXAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/RXJava/Keddit-RXJava.iml" filepath="$PROJECT_DIR$/Keddit/RXJava/Keddit-RXJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Range/Keddit-Range.iml" filepath="$PROJECT_DIR$/Keddit/Range/Keddit-Range.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/RedditApi/Keddit-RedditApi.iml" filepath="$PROJECT_DIR$/Keddit/RedditApi/Keddit-RedditApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Rest API/Keddit-Rest_API.iml" filepath="$PROJECT_DIR$/Keddit/Rest API/Keddit-Rest_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Retrofit/Keddit-Retrofit.iml" filepath="$PROJECT_DIR$/Keddit/Retrofit/Keddit-Retrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Safe/Keddit-Safe.iml" filepath="$PROJECT_DIR$/Keddit/Safe/Keddit-Safe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Saving News/Keddit-Saving_News.iml" filepath="$PROJECT_DIR$/Keddit/Saving News/Keddit-Saving_News.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Statically Typed/Keddit-Statically_Typed.iml" filepath="$PROJECT_DIR$/Keddit/Statically Typed/Keddit-Statically_Typed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Subscriptions/Keddit-Subscriptions.iml" filepath="$PROJECT_DIR$/Keddit/Subscriptions/Keddit-Subscriptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/TestSubscriber/Keddit-TestSubscriber.iml" filepath="$PROJECT_DIR$/Keddit/TestSubscriber/Keddit-TestSubscriber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit/Values and Variables/Keddit-Values_and_Variables.iml" filepath="$PROJECT_DIR$/Keddit/Values and Variables/Keddit-Values_and_Variables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Keddit_mock/task_mock/Keddit_mock-task_mock.iml" filepath="$PROJECT_DIR$/Keddit_mock/task_mock/Keddit_mock-task_mock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/framework lesson2/task1/framework_lesson2-task1.iml" filepath="$PROJECT_DIR$/framework lesson2/task1/framework_lesson2-task1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
+    </modules>
+  </component>
+</project>

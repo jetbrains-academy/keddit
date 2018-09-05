@@ -1,0 +1,15 @@
+<html>
+<p><b>API Interface</b></p>
+<p>I created a Kotlin file called RedditApi and it looks like this:</p>
+<pre><code>import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Query
+interface  RedditApi {
+    @GET("/top.json")
+    fun getTop(@Query("after") after: String,
+               @Query("limit") limit: String)
+    : Call&lt;RedditNewsResponse>;
+}</code></pre>
+<p>We defined here a synchronous API that will receive the “after” and “limit” query string. The return type is “Call<RedditNewsResponse>”, this Call class will allow us to execute the request and know if the request was successful or not, also to extract the response data with the given generic type, in this case, the new defined Kotlin class RedditNewsResponse.</p>
+
+</html>

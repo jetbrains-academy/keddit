@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Keddit/API Interface" />
+            <option value="$PROJECT_DIR$/Keddit/API Model" />
+            <option value="$PROJECT_DIR$/Keddit/Android Extensions" />
+            <option value="$PROJECT_DIR$/Keddit/Annotation processing" />
+            <option value="$PROJECT_DIR$/Keddit/Bonus Parcelabel" />
+            <option value="$PROJECT_DIR$/Keddit/Call the API" />
+            <option value="$PROJECT_DIR$/Keddit/Configuration basics" />
+            <option value="$PROJECT_DIR$/Keddit/Dagger 2" />
+            <option value="$PROJECT_DIR$/Keddit/Dagger API" />
+            <option value="$PROJECT_DIR$/Keddit/Data classes" />
+            <option value="$PROJECT_DIR$/Keddit/Default Values in Parameters" />
+            <option value="$PROJECT_DIR$/Keddit/Delegated Properties" />
+            <option value="$PROJECT_DIR$/Keddit/Elvis operator" />
+            <option value="$PROJECT_DIR$/Keddit/Extension Functions" />
+            <option value="$PROJECT_DIR$/Keddit/Filter" />
+            <option value="$PROJECT_DIR$/Keddit/Functions" />
+            <option value="$PROJECT_DIR$/Keddit/Gradle introduction" />
+            <option value="$PROJECT_DIR$/Keddit/Higher-Order functions" />
+            <option value="$PROJECT_DIR$/Keddit/Infinite Scroll" />
+            <option value="$PROJECT_DIR$/Keddit/Java Interoperability" />
+            <option value="$PROJECT_DIR$/Keddit/Kotlin plugin" />
+            <option value="$PROJECT_DIR$/Keddit/Lambda expressions" />
+            <option value="$PROJECT_DIR$/Keddit/Map" />
+            <option value="$PROJECT_DIR$/Keddit/Mockito" />
+            <option value="$PROJECT_DIR$/Keddit/Object expressions" />
+            <option value="$PROJECT_DIR$/Keddit/Observable" />
+            <option value="$PROJECT_DIR$/Keddit/Observer" />
+            <option value="$PROJECT_DIR$/Keddit/Parcelable" />
+            <option value="$PROJECT_DIR$/Keddit/Properties and Fields" />
+            <option value="$PROJECT_DIR$/Keddit/RXAndroid" />
+            <option value="$PROJECT_DIR$/Keddit/RXJava" />
+            <option value="$PROJECT_DIR$/Keddit/Range" />
+            <option value="$PROJECT_DIR$/Keddit/RedditApi" />
+            <option value="$PROJECT_DIR$/Keddit/Rest API" />
+            <option value="$PROJECT_DIR$/Keddit/Retrofit" />
+            <option value="$PROJECT_DIR$/Keddit/Safe" />
+            <option value="$PROJECT_DIR$/Keddit/Saving News" />
+            <option value="$PROJECT_DIR$/Keddit/Statically Typed" />
+            <option value="$PROJECT_DIR$/Keddit/Subscriptions" />
+            <option value="$PROJECT_DIR$/Keddit/TestSubscriber" />
+            <option value="$PROJECT_DIR$/Keddit/Values and Variables" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

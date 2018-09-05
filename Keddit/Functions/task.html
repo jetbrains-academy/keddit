@@ -1,0 +1,54 @@
+<html>
+<p><b>Kotlin Syntax</b></p>
+<p>Now our MainActivity is a Kotlin file and we are ready to start learning the syntax. The first time that you see the code it may cause you a little bit of fear but believe me that you are going to love it! ;)
+</p><p>Kotlin is defined in many ways and this is one of them (which I really like) that tries to include the most important characteristics in one sentence:</p>
+<blockquote>Kotlin is a Concise, Safe and Statically typed programming language focused on Interoperability with Java.</blockquote><br>
+<p>Let’s use this definition to start reviewing our generated code. I give you here both MainActivity files: Java and Kotlin files.</p>
+<pre><code>public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+    }
+}</code></pre>
+Main.Activity.class
+<pre><code>class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        val fab = findViewById(R.id.fab) as FloatingActionButton
+        fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
+    }
+}</code></pre>
+MainActivity.kt
+<p><b>Concise</b></p>
+Did you notice that the Java file has 19 lines of code and the Kotlin file has only 12?
+
+<p>This is because most of the verbosity of Java was eliminated. Concise code takes less time to write and to read so this will improve your productivity.<p>
+<p><b>Extend and Implement:</b></p><p>The words “extends” and “implement” were replaced by a colon “:” indifferently. In this case we are extending from AppCompatActivity (which is a Java class!)</p>
+<p><code>class MainActivity : AppCompatActivity()</code></p>
+<p><b>Fun-ctions</b></p>
+<p>We don’t have our classic “public void methodName()” structure. Now we define functions inside our class with the “fun” keyword and the return type is added to the end. But where is the type returned from our “onCreate” method?</p>
+<p><code>override fun onCreate(savedInstanceState: Bundle?) {</code></p>
+<p>In the case that we don’t want to return any value in Java we would use “void”, here the alternative is “Unit” which works in the same way. The compiler will know that we are not returning anything so we can omit it. In the case that we want to add it just do it in this way:</p>
+<p><code>override fun onCreate(savedInstanceState: Bundle?) : Unit {</code></p>
+<p>Also the parameters are in a different order. First you define the name of the variable and then the type.</p>
+<p><b>Bye, Semicolon;</b></p>
+<p>In Kotlin you don’t have to put the semicolon at the end of a sentences but still you can do it if you want (don’t do it).</p>
+</html>

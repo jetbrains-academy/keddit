@@ -1,0 +1,68 @@
+<html>
+<p><b>Parcelable</b></p>
+<p>If you were working with Android for sure you already know about Parcelable. A Parcelable is an interface for classes whose instances can be written to and restored from a Parcel. This is a fast mechanism that Android provides as a IPC (Inter Process Communication) transport and the Parcel is the message container to transfer.</p>
+<p>Also, Android provides some lifecycle methods that will allow us to persist temporarily the information required for our classes in a Parcel class while having a runtime change (rotating the device or if the activity is killed by the OS). In our case, we want to save our news from this situations so we will be implementing the Parcelable interface.</p>
+<p><b>Data Classes with Parcelable</b></p>
+<p>Let’s review one of the classes:</p>
+<pre><code>data class RedditNews(val after: String,
+                      val before: String,
+                      val news: List&lt;RedditNewsItem>) : Parcelable {
+
+    // 1
+    companion object {
+        // 2
+        @JvmField @Suppress("unused")
+        val CREATOR = createParcel { RedditNews(it) } // 3
+    }
+
+    // 4
+    protected constructor(parcelIn: Parcel) : this(
+            parcelIn.readString(),
+            parcelIn.readString(),
+            mutableListOf&lt;RedditNewsItem>().apply {
+                parcelIn.readTypedList(this, RedditNewsItem.CREATOR)
+            }
+    )
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        dest.writeString(after)
+        dest.writeString(before)
+        dest.writeTypedList(news)
+    }
+
+    override fun describeContents() = 0
+}</code></pre>
+<p><b>1. Companion object</b></p>
+<p>As you may notice, in Kotlin there is no static keyword to create a static member for a class but exists something called companion objects which allows you to provide the same behavior. When using this keyword we are declaring an object (an instance) directly in the code and all the properties and method inside companion object can be called directly by using the class name:</p>
+<pre><code>data class RedditNews(...)
+    companion object {
+        val ENDPOINT = "http://kotlinlang.org"
+    }
+}</code></pre>
+<p>Use it:</p>
+<pre><code>RedditNews.ENDPOINT</code></pre>
+<p>We are going to use it to expose the CREATOR function.</p>
+<p><b>2. @JvmField Annotation</b></p>
+<p>Classes implementing the Parcelable interface must also have a non-null static field called CREATOR of a type that implements the Parcelable.Creator interface. In order to make our CREATOR implementation visible as a field in Java we need this special annotation called “@JvmField”, otherwise it will not be found and in the middle of the process it will throw an exception.</p>
+<p><b>3. Extension Function for the Creator</b></p>
+<p>I have this useful extension function that creates the CREATOR passing as parameter a function:</p>
+<pre><code>val CREATOR = createParcel { RedditNews(it) }</code></pre>
+<p>The definition of this extension function is like this:</p>
+<pre><code>inline fun &lt;reified T : Parcelable> createParcel(
+        crossinline createFromParcel: (Parcel) -> T?): Parcelable.Creator&lt;T> =
+        object : Parcelable.Creator&lt;T> {
+            override fun createFromParcel(source: Parcel): T? = createFromParcel(source)
+            override fun newArray(size: Int): Array&lt;out T?> = arrayOfNulls(size)
+        }</code></pre>
+<p><b>3.1) Inline Functions</b></p>
+<p>The inline modifier means that the function itself and the function passed to it, will be inlined into the call site, it means like you were implementing manually this function at every place that you were using it. Behind the scenes, the compiler will be generating specific bytecode at every place that you use it (it’s like “copy & pasting” this function in all the place that you were using it) giving you better performance and avoiding to create new classes for you like a normal extension function could do.</p>
+<p><b>3.2) reified T</b></p>
+<p>If you need to access to a type passed as a parameter, well, reified keyword is here to save you! with the reified modifier now it’s accessible inside the function, almost as if it were a normal class and no reflection is needed!</p>
+<p>3.3) crossinline</p>
+<p>If you need to execute the function passed as parameter in another context then crossinline allows you to use it in this way and maybe run it also in another thread. In this case, inside the Creator object.</p>
+<p><b>4. Secondary Constructors</b></p>
+<p>We were really accustomed to create classes with primary constructors like this:</p>
+<pre><code>data class News(val title: String)</code></pre>
+<p>But maybe the primary constructor is not enough specially for scenarios where you need to provide alternatives way to create this class, like in this example that requires a Parcel parameter.</p>
+<pre><code>protected constructor(parcelIn: Parcel) : this(...)</code></pre>
+</html>

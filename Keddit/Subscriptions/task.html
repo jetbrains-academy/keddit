@@ -1,0 +1,26 @@
+<html>
+<p><b>Subscriptions</b></p>
+<p>In order to avoid leaving our subscriptions in the middle of a process while we are leaving from a fragment or closing our App, we must manage it carefully and a good practice is to unsubscribe all the subscriptions that we create.</p>
+<p>A good technique to do so is to add all the subscription that you create in a CompositeSubscription object, this class is provided by RxJava and allows you to unsubscribe all the subscription that it has with just one method call. We are going to initialize a CompositeSubscription object inside the onResume method and unsubscribe when the onPause method is invoked. The code will be something like this:</p>
+<pre><code>var subscriptions = CompositeSubscription()
+
+override fun onResume() {
+    super.onResume()
+    subscriptions = CompositeSubscription()
+}
+
+override fun onPause() {
+    super.onPause()
+    subscriptions.clear()
+}</code></pre>
+<p>The only thing that we have to do now is to add our subscription to this new CompositeSubscription object and we are safe to leave our App (or fragment in this case) at any moment:</p>
+<pre><code>private fun requestNews() {
+    val subscription = newsManager.getNews()
+            .subscribeOn(Schedulers.io())
+            .subscribe (...)
+    subscriptions.add(subscription) // add the subscription
+}</code></pre>
+<p>And just to make it more readable I move all this logic to a new base fragment called “RxBaseFragment” which gives me all this logic by default. Checkout the code to see with more details.</p>
+<p>As you can see Kotlin & RxJava works perfect together and in this tutorial we are just seeing a small part of all the things that you can do with RxJava and thanks to Kotlin the code is totally readable and easy to understand.</p>
+
+</html>

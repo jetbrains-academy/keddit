@@ -1,0 +1,10 @@
+<html>
+<p><b>Properties and Fields</b></p>
+<p>In Kotlin you access properties like accessing a field in Java. Instead of calling the getResources() method from an Activity you directly do:</p>
+<pre><code>resources.getString(R.string.id)
+// vs
+getResources().getString(R.string.id) // still allowed</code></pre>
+<p>You can still call the getResource() method but Android Studio will suggest you to change it.<p>
+<p>It doesn’t mean that you are accessing the field directly, it’s calling the “getResource()” method but in a more convenient way.</p>
+<br>
+</html>

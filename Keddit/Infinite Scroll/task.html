@@ -1,0 +1,17 @@
+<html>
+<p><b>Infinite Scroll</b></p>
+<p>Ok lets see how we can take advantages of this new concept and create our infinite scroll behaviour.</p>
+<p>The RecyclerView allows you to set a Scroll Listener so I created this InfiniteScrollListener and I defined the signature of this class in this way:</p>
+<pre><code>class InfiniteScrollListener(
+        val func: () -> Unit,
+        val layoutManager: LinearLayoutManager)
+                 : RecyclerView.OnScrollListener() {...}</code></pre>
+<p>What we are doing here is to receive a function parameter that will be invoked every time we get to the end of the RecyclerView (see line 36 for more details). In fact, it will be called before to reach the end of the list, you can set a threshold that will make our function to be invoked a few items before and in this way you provide a better experience and not making the user to see all the time the loader that more news were requested.</p>
+<p>The function that we are going to pass as parameter is a function that request more news and update the NewsAdapter with the new received news:</p>
+<pre><code>news_list.addOnScrollListener(
+    InfiniteScrollListener({ requestNews() }, linearLayout)
+    )</code></pre>
+<p>requestNews() is a function that we already have in our code, I update it to use pagination and request the next available news from Reddit.</p>
+<p>As you may notice, I’m not passing requestNews() but inside a lambda expression. This is because the compiler will not take it as a function parameter but as a function that needs to be executed and use the return type of this function as the value that we are passing to the InfiniteScrollListener. As the return type of requestNews is “Unit”, it doesn’t match the InfiniteScrollListener parameter expected which is “()->Unit”, so this code will not compile except if you put this into the lambda expression that match perfectly the required parameter.</p>
+
+</html>

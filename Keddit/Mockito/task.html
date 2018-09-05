@@ -1,0 +1,13 @@
+<html>
+<p><b>Mockito</b></p>
+<p>Let’s talk about Unit Test in Keddit App. I’m not going to mention the reasons why we need to create unit tests, we all already know that it’s a critical part of any app development to have a set of unit tests. So today we are going to add some unit tests to this App, those will be focused on the NewsManager class, the one responsible to request, map the Reddit news and key place to be the principal cause of all the mayors problems regarding internet connectivity.</p>
+<p><b>NewsAPI Interface</b></p>
+<p>Just to make unit test easier, I created a new interface for the News API so now I just can pass a mock of this interface. There is nothing crazy with this new interface so let’s jump to the next part.</p>
+<p><b>NewsManager Unit Tests</b></p>
+<p>We need to configure the project and create our unit tests for the NewsManager.</p>
+<p><b>Mockito Dependency</b></p>
+<p><a href = "http://mockito.org/">Mockito</a> is an incredible lib to make unit tests really awesome and you can use it in Kotlin!</p>
+<pre><code>testCompile “org.mockito:mockito-core:1.+”</code></pre>
+<p>If you try to mock a class that needs a generics definition, like trying to mock the Call&lt;T> class from Retrofit, it will not work. But you can still make it work with a useful Extension Function:</p>
+<pre><code>inline fun &lt;reified T : Any> mock(): T = Mockito.mock(T::class.java)</code></pre>
+<p>And we are ready to go!</p>
