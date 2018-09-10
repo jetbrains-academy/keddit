@@ -1,11 +1,11 @@
 <html>
 <p><b>Default Values in Parameters</b></p>
-<p>In Kotlin you are able to define default values in the parameters of a function (also in a class constructor but we are not going to see this now). So we are going to add a default value for the attachToRoot parameter:</p>
-<pre><code>fun ViewGroup.inflate(layoutId: Int, attachToRoot: Boolean = false): View {
-    return LayoutInflater.from(context).inflate(layoutId, this, attachToRoot)
-}</code></pre>
+<p>In Kotlin you are able to define default values in the parameters of a function (also in a class constructor). So you are going to add a default value for the attachToRoot parameter.</p>
+
 <p>In case you don’t specify the attachToRoot parameter it will take the default value, so you can call it in different ways:</p>
 <pre><code>container?.inflate(R.layout.news_fragment) // default: false
 container?.inflate(R.layout.news_fragment, true)</code></pre>
 
+<p><b>Task:</b></p>
+<p>Add the default value for the attachToRoot parameter in Extensions.kt</p>
 </html>
