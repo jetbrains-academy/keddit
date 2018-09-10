@@ -1,9 +1,7 @@
 <html>
 <p><b>Create our NewsFragment.kt</b></p>
-<p>Let’s create our NewsFragment.kt file, it will be responsible to show the latests news from the Reddit API and we are going to use a RecyclerView to show the news.</p>
-<p>
-    In Java we would normally create a private field to store the RecyclerView locally and assign it when we are inflating the view. Trying to do the same in Kotlin, it’ll be like this:
-
+<p>It is time to create NewsFragment.kt file, it will be responsible to show the latests news from the Reddit API and a RecyclerView to show the news.</p>
+<p>In Java you would normally create a private field to store the RecyclerView locally and assign it when inflating the view. Trying to do the same in Kotlin leads to this:
 </p>
 <pre><code>private var newsList: RecyclerView? = null
 
@@ -15,31 +13,28 @@ override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saved
 
     return view
 }</code></pre>
-<p>This is a valid code and works but! it’s not a “Kotlin-ized” code so we are going to make it better. With this small piece of code we are going to incorporate some new concepts about the language:</p>
+<p>This is a valid code and works but! it’s not a “Kotlin-ized” code so you are going to make it better. With this small piece of code you are going to incorporate some new concepts about the language:</p>
 <p><b>Extension Functions (Utility class?)</b></p>
-<p>Extension functions allow us to extend the functionality of a class by adding new functions. The class doesn’t have to belongs to us (could it be a third party library) and also without requiring us to inherit the class.</p>
-<p>This is really a super powerful feature! As we will be able to add new functions to existing classes and that’s what we are going to see right now with the ViewGroup class, a great trick that I found in this link by Antonio Leiva which I really encourage you to follow him on Twitter. Also we are going to understand how it works and how to consume it from Java.</p>
-<p>As you know ViewGroup is a class from the Android SDK and in order to inflate it we have to do this:</p>
+<p>Extension functions allow you to extend the functionality of a class by adding new functions. The class doesn’t have to belongs to you (could it be a third party library) and also without requiring you to inherit the class.</p>
+<p>As you will be able to add new functions to existing classes, e.g. the ViewGroup class. Also you are going to understand how it works and how to consume it from Java.</p>
+<p>ViewGroup is a class from the Android SDK and in order to inflate it you have to do this:</p>
 <pre><code>
 inflater.inflate(R.layout.news_fragment, container, false)
 </code></pre>
 <p>But this is not really an intuitive way to do this. This should be something that the ViewGroup should be able to do like this:</p>
 <pre><code>val view = container?.inflate(R.layout.news_fragment)</code></pre>
-<p>It’s like the ViewGroup is able to inflate by itself! Awesome trick! But how to do that? Let’s create our first Extention Function:</p>
-<p>I created a file called “Extensions.kt” in the package “commons”. Checkout the code to see it. And the code is like this:</p>
-<pre><code>fun ViewGroup.inflate(layoutId: Int): View {
-    return LayoutInflater.from(context).inflate(layoutId, this, false)
-}</code></pre>
-<p>What we are doing here is to add a new method to ViewGroup (see how we add the ViewGroup with a dot before the “inflate” method name) but we are not modifying the ViewGroup class but adding a new function. This function will be internally a static method but you will be calling it from an instance of a class with the dot-notation, in this case: container.inflate(…) and not ViewGroup.inflate(). This is because the compiler will be creating a Util class for us. If you want to use this Extension Function from Java you will be using it in this way:</p>
+<p>It’s like the ViewGroup is able to inflate by itself! But how to do that? Let’s create your first Extention Function:</p>
+<p>A file called “Extensions.kt” in the package “commons” was created. Checkout the code to see it.</p>
+<p>Here you are going to add a new method to ViewGroup (check out the ViewGroup with a dot before the “inflate” method name) but you are not modifying the ViewGroup class but adding a new function. This function will be internally a static method but you will be calling it from an instance of a class with the dot-notation, in this case: <code>container.inflate(…)</code> and not <code>ViewGroup.inflate()</code>. This is because the compiler will be creating a Util class for you. If you want to use this Extension Function from Java you will be using it in this way:</p>
 <pre><code>// Java
 ExtensionsKt.inflate(container, R.layout.news_fragment);
 // Kotlin
 container?.inflate(R.layout.news_fragment)</code></pre>
-<p>In the Kotlin world it’s in a more convenient way. Remember that we are adding the “?” mark just because in our example container could be a null object and this prevent us to get a NullPointerException.</p>
+<p>In the Kotlin world it’s in a more convenient way. Remember adding the “?” mark just because in this example container could be a null object and this prevents getting a NullPointerException.</p>
 <p>The name of the Utility class will be the same as the file’s name plus “Kt” suffix or you can override it with an specific annotation:</p>
 <pre><code>@file:JvmName("ExtensionsUtils")
 
-package com.droidcba.kedditbysteps.commons
+package com.edu.Keddit.commons
 
 import ...
 
@@ -49,14 +44,16 @@ fun ViewGroup.inflate(layoutId: Int): View {
 // Use it in this way in Java:
 ExtensionsUtils.inflate(container, R.layout.news_fragment);</code></pre>
 <p>More details about interoperability can be <a href="https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html">found here</a></p>
-<p>Coming back to our function</p>
+<p>Coming back to your function</p>
 <pre><code>fun ViewGroup.inflate(layoutId: Int): View {
     return LayoutInflater.from(context).inflate(layoutId, this, false)
 }</code></pre>
 <p>Inside the code block it’s like you are writing code as it is a real new method of the class (like a regular method) that’s why you can access to the instance of the class with the “this” keyword and access to the local variable “context”.</p>
-<p>Great! This is our first Extension Function and we know a lot more about this concept. Our code was updated in this way:</p>
+<p>Great! This is your first Extension Function and you know a lot more about this concept. Code in the MainActivity was updated in this way:</p>
 <pre><code>// old code:
 val view = inflater.inflate(R.layout.news_fragment, container, false)
 // replaced with:
 val view = container?.inflate(R.layout.news_fragment)</code></pre>
+<p><b>Task:</b></p>
+Modify the return statement of inflate extension function in Extensions.kt.
 </html>
