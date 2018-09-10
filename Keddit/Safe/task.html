@@ -2,16 +2,16 @@
 <p><b>Safe ?: Safe!</b></p>
 <p>This is one of the great things about Kotlin, everything in Kotlin is not nullable unless you specifically declare it in this way. The way to do this is with the “?” question mark which also suggest you that the value could be there or not.</p>
 <p>With that being said, let’s see some examples:</p>
-<pre><code>val a : String = null  // don't compile!
+<pre><code>val a : String = null  // doesn't compile!
 var b : Int          // neither as must be initialized or abstract.
 val ok : String? = null // OK :)</code></pre>
-<p>The compiler will be checking the presence of a possible null object, this will prevent us to make the common mistake of getting a “NullPointerException” or well known as the “Billion-dollar mistake” by Tony Hoare.</p>
+<p>The compiler will be checking the presence of a possible null object, this will prevent you from making the common mistake of getting a “NullPointerException” or well known as the “Billion-dollar mistake” by Tony Hoare.</p>
 <p><b>Safe call</b></p>
 <p>To interact with a nullable object is really easy, the “?” question mark will allow you to get the value just in case it exists, otherwise it will ignore it and you are safe to continue running the program:</p>
 <pre><code>val context : Context? = null
-val res = context?.getResources() // not crash, res will be null</code></pre>
+val res = context?.getResources() // does not crash, res will be null</code></pre>
 <p><b>Smart cast</b></p>
-<p>If you continue playing with nullable objects maybe you end up doing this:</p>
+<p>If you continue playing with nullable objects you may end up doing this:</p>
 <pre><code>val context : Context? = null
 val res = context?.getResources()
 val appName = res?.getString(R.string.app_name)
@@ -29,4 +29,5 @@ context?.let {
     val appName = res.getString(R.string.app_name)
     val shortName = appName.substring(0, 2)
 }</code></pre>
+<p>You can move on to the next task.</p>
 </html>
