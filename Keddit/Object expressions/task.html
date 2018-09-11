@@ -1,16 +1,17 @@
 <html>
 <p><b>Object Expressions</b></p>
-<p>In Kotlin you have something called “Object expressions”, which works in a similar way as anonymous inner classes in Java, and allows you to create an object without explicitly declaring a new subclass for it. In this case we are using it to define our loadingItem without creating a new class. The syntax is really intuitive and as you can see we are extending from ViewType and implementing the required interface.</p>
+<p>In Kotlin you have a concept called “Object expressions”, which works in a similar way as anonymous inner classes in Java, and allows you to create an object without explicitly declaring a new subclass for it. In this case we are using it to define our <code>loadingItem</code> without creating a new class. The syntax is really intuitive and as you can see we are extending from ViewType and implementing the required interface.</p>
 <p><b>Single Expressions</b></p>
-<p>The getViewType() method has only a single expression function inside the body. In Kotlin we can take advantage of this and convert this method:</p>
+<p>The getViewType() method has only a single expression function inside the body. In Kotlin you can take advantage of this and convert this method:</p>
 <pre><code>override fun getViewType() : Int {
     return AdapterConstants.LOADING
 }</code></pre>
 <p>To this:</p>
 <pre><code>override fun getViewType() = AdapterConstants.LOADING</code></pre>
-<p>It’s like we are assigning the value AdapterConstants.LOADING to a function. This is a short way to do the same and it’s really more concise. Also you don’t have to specify the return value type as it can be inferred by the context. So this is how it looks now:</p>
+<p>It’s like assigning the value AdapterConstants.LOADING to a function. This is a short way to do the same and it’s really more concise. Also you don’t have to specify the return value type as it can be inferred by the context. So this is how it looks now:</p>
 <pre><code>private val loadingItem = object : ViewType {
     override fun getViewType() = AdapterConstants.LOADING
 }</code></pre>
-
+<p><b>Task:</b></p>
+<p>Complete the <code>getViewType()</code> function override for it to return NEWS adapter constant in Models.kt in extensions package. </p>
 </html>
