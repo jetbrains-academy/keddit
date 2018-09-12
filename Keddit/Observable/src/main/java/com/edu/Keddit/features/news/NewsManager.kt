@@ -13,7 +13,6 @@ class NewsManager() {
     fun getNews(): Observable<List<RedditNewsItem>> {
         return Observable.create {
             subscriber ->
-
             val news = mutableListOf<RedditNewsItem>()
             for (i in 1..10) {
                 news.add(RedditNewsItem(
