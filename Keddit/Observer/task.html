@@ -1,45 +1,46 @@
 <html>
 <p><b>Subscribe > Subscription > Observer</b></p>
-<p>In order to request the mocked Reddit news from the NewsManager, we will turn our NewsFragment into an Observer of the Observable that we receive from the NewsManager.getNews(). We are going to do this by calling the getNews() method and invoke the method “subscribe(…)” from the received Observable:</p>
-<pre><code>val subscription = newsManager.getNews().subscribe (
+<p>In order to request the mocked Reddit news from the <code>NewsManager</code>, time to turn your <code>NewsFragment</code> into an <code>Observer</code> of the <code>Observable</code> that you receive from the <code>NewsManager.getNews()</code>. It will be done by calling the <code>getNews()</code> method and invoke the method “<code>subscribe(…)</code>” from the received <code>Observable</code>:</p>
+<pre><code>subscribe (
         { retrievedNews ->
             ...
         },
         { e ->
             ...
         }</code></pre>
-<p>The method subscribe has several overloads and we are going to use this one:</p>
+<p>The method subscribe has several overloads and you are going to need this one:</p>
 <pre><code>public final Subscription subscribe(
        final Action1&lt;? super T> onNext,
        final Action1&lt;Throwable> onError) {
        ...
 }</code></pre>
 <p>It receives two functions:</p>
-<ul><li>onNext: A function to be invoked when the Observable calls the onNext() method that we saw previously. We will use it to set the NewsAdapter with the received news.</li>
-<li>onError: A function to be called when the onError() method from the Observable is invoked. We’ll use it to show a SnackBar with an error message.</li></ul>
-<p>And returns a Subscription object. This object will allow us to manage the subscription like checking if it still subscribed or to cancel the subscription (we are going to see more about this at the end of this tutorial).</p>
-<p>Thanks to Kotlin again, we can provide these two functions using lambda expressions. For example in the first function, the retrievedNews variable is the name that I gave to the news received from the onNext() method:</p>
+<ul><li><code>onNext</code>: A function to be invoked when the <code>Observable</code> calls the <code>onNext()</code> method that you saw previously. You will need it to set the NewsAdapter with the received news.</li>
+    <li><code>onError</code>: A function to be called when the <code>onError()</code> method from the <code>Observable</code> is invoked. You’ll need it to show a SnackBar with an error message.</li></ul>
+<p>And returns a Subscription object. This object will allow you to manage the subscription like checking if it still subscribed or to cancel the subscription (you are going to see more about this at the end of this task).</p>
+<p>Thanks to Kotlin again, these two functions could be provided using lambda expressions. For example in the first function, the <code>retrievedNews</code> variable is the name that is given to the news received from the <code>onNext()</code> method:</p>
 <pre><code>{
     retrievedNews ->
      (news_list.adapter as NewsAdapter).addNews(retrievedNews)
 }</code></pre>
-<p>Remember that the onNext returning type is a “List&lt;RedditNewsItem>”, so what I did is to pass these news directly to our NewsAdapter.</p>
-<p>And for the onError function, I’m just telling the user that there was an error with a SnackBar. I can use “e”, which is a Throwable type, to get more details about the received exception:</p>
+<p>Remember that the <code>onNext</code> returning type is a “<code>List&lt;RedditNewsItem></code>”, these news should be passed directly to your <code>NewsAdapter</code>.</p>
+<p>And for the <code>onError</code> function, let's the user that there was an error with a SnackBar. You can use “e”, which is a <code>Throwable</code> type, to get more details about the received exception:</p>
 <pre><code>{ e ->
     Snackbar.make(...).show()
 }</code></pre>
-<p><b>We are still in the Main Thread</b></p>
-<p>If we run the App it will just work because we are mocking the data provided in this Observable. But if you really do a long running operation instead of the mocked data that we generate, the App will stop working as we are still in the Main UI Thread.</p>
+<p><b>Still in the Main Thread</b></p>
+<p>If you run the App it will just work because the data provided in this <code>Observable</code> are mocked. But if you really do a long running operation instead of the mocked data that you generate, the App will stop working as you are still in the Main UI Thread.</p>
 <p>As we didn’t provide any specific details to our Observable, it will run with the default configuration which is to be executed in the same thread that it was invoked. So let’s configure our Observable to be executed in another thread but still notify any event in our current Main UI Thread.</p>
 <p><b>SubscribeOn</b></p>
 <pre><code>val subscription = newsManager.getNews()
         .subscribeOn(Schedulers.io())
         .subscribe (...)</code></pre>
-<p>The method subscribeOn(…) allows you to move the execution of the Observable code into another thread and with an specific behaviour. To do this, RxJava use Schedulers which provides the behaviour that you need for your use case. RxJava also provides a list of Schedulers for common scenarios:</p>
+<p>The method <code>subscribeOn(…)</code> allows you to move the execution of the <code>Observable</code> code into another thread and with an specific behaviour. To do this, RxJava use Schedulers which provides the behaviour that you need for your use case. RxJava also provides a list of Schedulers for common scenarios:</p>
 <ul><li>io: intended for IO-bound work.</li>
 <li>computation: intended for computational work.</li>
 <li>newThread: creates a new Thread for each unit of work.</li>
     <li>test: useful for debugging.</li></ul>
-<p>In our case, we are going to use Schedulers.io() as we are going to be executing an API request.</p>
-
+<p>In this case, <code>Schedulers.io()</code> will be used as you are going to be executing an API request.</p>
+<p><b>Task:</b></p>
+<p>Complete the <code>requestNews()</code> in the NewsFragment.kt by invoking subscribe method on <code>getNews</code> method, finishing lambdas declarations for <code>retrievedNews</code> and error, and filling up the correct argument for the <code>subscribOn</code> invocation.</p>
 </html>
