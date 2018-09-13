@@ -16,7 +16,6 @@ class NewsManager(private val api: RestAPI = RestAPI()) {
                 subscriber ->
                 val callResponse = api.getNews("", limit)
                 val response = callResponse.execute()
-
                 if (response.isSuccessful) {
                     val news = response.body().data.children.map {
                         val item = it.data
