@@ -1,17 +1,19 @@
 <html>
 <p><b>Infinite Scroll</b></p>
-<p>Ok lets see how we can take advantages of this new concept and create our infinite scroll behaviour.</p>
-<p>The RecyclerView allows you to set a Scroll Listener so I created this InfiniteScrollListener and I defined the signature of this class in this way:</p>
+<p>Let's take advantages of this new concept and create your infinite scroll behaviour.</p>
+<p>The <code>RecyclerView</code> allows you to set a Scroll Listener so this <code>InfiniteScrollListener</code> was created and the signature of this class was defined in this way:</p>
 <pre><code>class InfiniteScrollListener(
-        val func: () -> Unit,
-        val layoutManager: LinearLayoutManager)
+        val func: ...,
+        val layoutManager: ...)
                  : RecyclerView.OnScrollListener() {...}</code></pre>
-<p>What we are doing here is to receive a function parameter that will be invoked every time we get to the end of the RecyclerView (see line 36 for more details). In fact, it will be called before to reach the end of the list, you can set a threshold that will make our function to be invoked a few items before and in this way you provide a better experience and not making the user to see all the time the loader that more news were requested.</p>
-<p>The function that we are going to pass as parameter is a function that request more news and update the NewsAdapter with the new received news:</p>
+<p>It needs to receive a function parameter that will be invoked every time the user gets to the end of the <code>RecyclerView</code> (see line 36 for more details). In fact, it will be called before to reach the end of the list, you can set a threshold that will make your function to be invoked a few items before and in this way you provide a better experience and not making the user to see all the time the loader that more news were requested.</p>
+<p>The function that is going to be passed as parameter is a function that requests more news and update the <code>NewsAdapter</code> with the new received news:</p>
 <pre><code>news_list.addOnScrollListener(
     InfiniteScrollListener({ requestNews() }, linearLayout)
     )</code></pre>
-<p>requestNews() is a function that we already have in our code, I update it to use pagination and request the next available news from Reddit.</p>
-<p>As you may notice, I’m not passing requestNews() but inside a lambda expression. This is because the compiler will not take it as a function parameter but as a function that needs to be executed and use the return type of this function as the value that we are passing to the InfiniteScrollListener. As the return type of requestNews is “Unit”, it doesn’t match the InfiniteScrollListener parameter expected which is “()->Unit”, so this code will not compile except if you put this into the lambda expression that match perfectly the required parameter.</p>
-
+<p><code>requestNews()</code> is a function that you already have in your code, it was updated to use pagination and request the next available news from Reddit.</p>
+<p>As you may notice, <code>requestNews()</code> is not passed but inside a lambda expression. This is because the compiler will not take it as a function parameter but as a function that needs to be executed and use the return type of this function as the value passed to the <code>InfiniteScrollListener</code>. As the return type of <code>requestNews</code> is “<code>Unit</code>”, it doesn’t match the <code>InfiniteScrollListener</code> parameter expected which is “<code>()->Unit</code>”, so this code will not compile except if you put this into the lambda expression that match perfectly the required parameter.</p>
+<p><b>Task:</b></p>
+<p>Complete the <code>InfiniteScrollListener</code> declaration by filling up types for the <code>func</code> and <code>layoutManager</code> (you should choose the linear one). Check out the res of the code for the scroll listener.</p>
+<p>Complete the <code>OnActivityCreated</code> method by adding the <code>InfiniteScrollListener</code> to the news_list with the <code>requestNews</code> and <code>linearLayout</code> as the parameters.</p>
 </html>
