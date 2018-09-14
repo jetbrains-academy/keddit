@@ -2,31 +2,33 @@
 <p><b>Delegated Properties</b></p>
 <p>Delegated Properties are an excellent way to reuse common behavior that you may recurrently need for a property. In Kotlin you already have some common delegated properties defined in the language (also you can create your own). Here we are going to use this existing delegated property:</p>
 <blockquote><b>Lazy properties:</b> The value gets computed only upon first access.</blockquote>
-<p>This topic is really a world so here we are going to see just the lazy property and in other parts we are going to continue introducing another concepts about Delegated Properties.</p>
+<p>Here we are going to see just the lazy property and in other parts another concepts about Delegated Properties will be introduced.</p>
 <p><b>Lazy</b></p>
-<p>This is a great delegated property that we are going to use to avoid initializing our newsList as a nullable object. With Lazy we are going to create it as a non-nullable property and will be executed just when you use it and just the first time.</p>
-<p>Lazy will be initializing newsList with the value that you execute in the code block:</p>
+<p>This is a great delegated property that you are going to use to avoid initializing <code>newsList</code> as a nullable object. With Lazy you can create it as a non-nullable property, executed just when you use it and just the first time.</p>
+<p>Lazy will be initializing <code>newsList</code> with the value that you execute in the code block:</p>
 <pre><code>private val newsList: RecyclerView by lazy {
     view?.findViewById(R.id.news_list) as RecyclerView
     }</code></pre>
-<p>Here we can use the news_list synthetic property to avoid using findViewById and as the type can be inferred by the context we can also remove the property type:</p>
-<pre><code>private val newsList by lazy {
+<p>You can use the news_list synthetic property to avoid using findViewById and as the type can be inferred by the context we can also remove the property type:</p>
+<pre><code>by lazy {
     news_list
 }</code></pre>
-<p>The lazy block will be executed when we use it, in this case in the onActivityCreated() method:</p>
+<p>The lazy block will be executed when the application uses it, in this case in the <code>onActivityCreated()</code> method:</p>
 <pre><code>override fun onActivityCreated(savedInstanceState: Bundle?) {
     super.onActivityCreated(savedInstanceState)
 
     newsList.setHasFixedSize(true) // <-- Lazy executed!
     newsList.layoutManager = LinearLayoutManager(context)
 }</code></pre>
-<p>Also we could move this initialization code inside the onActivityCreated into the lazy block in this way:</p>
+<p>This initialization code could be moved inside the <code>onActivityCreated</code> into the lazy block in this way:</p>
 <pre><code>private val newsList by lazy {
     news_list.setHasFixedSize(true)
     news_list.layoutManager = LinearLayoutManager(context)
     news_list // this will work as the return type
 }</code></pre>
-<p>But as we are not calling the newsList in any place, the RecyclerView will raise an Exception as it doesn’t have a layout manager set. So we are going to leave it as we have it previously but we are going to change it in this way later.</p>
+<p><b>Task:</b></p>
+<p>Initialize newList (using new_list resource) in NewsFragment.kt using lazy delegated property.</p>
+<p>For now you are not calling the <code>newsList</code> in any place, so the <code>RecyclerView</code> will raise an Exception as it doesn’t have a layout manager set. Leave it as it is for now it is going to be changed in this way later.</p>
 
 
 </html>
