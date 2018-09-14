@@ -1,10 +1,10 @@
 <html>
 <p><b>NewsManager: Call the Api!</b></p>
-<p>We are going to use default parameters to initialize our RestApi class in this way:</p>
-<pre><code>class NewsManager(private val api: RestAPI = RestAPI()) {
+<p>You need to use default parameters to initialize your RestApi class</p>
+<pre><code>class NewsManager(private val api: RestAPI ...) {
      ...
 }</code></pre>
-<p>Also updating the Observable definition to call this Api and perform the request:</p>
+<p>Also take a look at the <code>Observable</code> definition update to call this Api and perform the request:</p>
 <pre><code>subscriber ->
 val callResponse = api.getNews("", limit)
 val response = callResponse.execute()
@@ -20,9 +20,11 @@ if (response.isSuccessful) {
 } else {
     subscriber.onError(Throwable(response.message()))
 }</code></pre>
-<ol><li>callResponse.execute(): This will execute the request synchronously.</li>
-    <li>response.body().data.children.map {…}: Here we use the List function “map” to transform every children into a RedditNewsItem.</li>
-    <li>it.data: “it” is a short way to access a single parameter from the lambda expression. This is only valid when you receive just one parameter, otherwise for more parameters you have to specify it, for example with two parameters it looks like this “x, y -> …”.</li>
-    <li>subscriber.onError(): We are creating a new Throwable object with the response.message() that we receive from the service.</li></ol>
-<p>With this last changes we are now showing the first 10 news from Reddit in our app </p>
+<ol><li><code>callResponse.execute()</code>: This will execute the request synchronously.</li>
+    <li><code>response.body().data.children.map {…}</code>: Here you use the List function “map” to transform every children into a RedditNewsItem.</li>
+    <li><code>it.data</code>: “it” is a short way to access a single parameter from the lambda expression. This is only valid when you receive just one parameter, otherwise for more parameters you have to specify it, for example with two parameters it looks like this “x, y -> …”.</li>
+    <li><code>subscriber.onError()</code>: a new <code>Throwable</code> object is created with the <code>response.message()</code> that we receive from the service.</li></ol>
+<p><b>Task:</b></p>
+<p>Complete <code>NewsManager</code> declaration by passing the <code>RestApi()</code> constructor as the default value for the api parameter</p>
+<p>With this last changes you are now showing the first 10 news from Reddit in your app </p>
 </html>
