@@ -18,7 +18,6 @@ class AppModule(val app: KedditApp) {
     fun provideContext(): Context {
         return app;
     }
-
     @Provides
     @Singleton
     fun provideApplication(): KedditApp {
