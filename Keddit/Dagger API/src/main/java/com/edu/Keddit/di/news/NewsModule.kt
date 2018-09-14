@@ -21,7 +21,6 @@ class NewsModule {
     fun provideNewsAPI(redditApi: RedditApi): NewsAPI {
         return NewsRestAPI(redditApi)
     }
-
     @Provides
     @Singleton
     fun provideRedditApi(retrofit: Retrofit): RedditApi {

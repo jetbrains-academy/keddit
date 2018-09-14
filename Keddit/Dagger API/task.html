@@ -1,34 +1,34 @@
 <html>
 <p><b>Dagger API</b></p>
-<p>As you know, Dagger has 4 main annotations to provide dependency injection (there are others but are not covered here as we are not going to use it)</p>
+<p>As you may know, Dagger has 4 main annotations to provide dependency injection (there are others but they are not covered here)</p>
 <ul>
-    <li>@Modules + @Provides: provides dependencies.</li>
-    <li>@Injects: request dependencies.</li>
-    <li>@Component: bridge between modules and injections.</li>
+    <li><code>@Modules</code> + <code>@Provides</code>: provides dependencies.</li>
+    <li><code>@Injects</code>: request dependencies.</li>
+    <li><code>@Component</code>: bridge between modules and injections.</li>
 </ul>
-<p>Thanks to default constructors in Kotlin, we were already providing some dependencies from the constructor, so we don’t have to change so much our code in the Keddit App in order to provide these dependencies.</p>
+<p>Thanks to default constructors in Kotlin, some dependencies from the constructor were already provided, so you don’t have to change so much your code in the Keddit App in order to provide these dependencies.</p>
 <p><b>@Modules</b></p>
-<p>I created 3 modules:</p>
+<p>3 modules were created:</p>
 <ul>
-    <li>AppModule: provide the Context and the instance to KedditApp application.</li>
-    <li>NetworkModule: provides an instance of Retrofit.</li>
-    <li>NewsModule: provides the NewsAPI and RedditApi instances.</li>
+    <li><code>AppModule</code>: provides the <code>Context</code> and the instance to Keddit application.</li>
+    <li><code>NetworkModule</code>: provides an instance of Retrofit.</li>
+    <li><code>NewsModule</code>: provides the <code>NewsAPI</code> and <code>RedditApi</code> instances.</li>
 </ul>
-<p>Also we need to provide the “NewsManager” but it is not listed in any Module class, this is because you can annotate a constructor of a class that you created with the “@Inject” annotation and Dagger by default will create a Factory and make this class available to be provided like any other “@Provide” in the module classes. Kotlin also allows you to add annotations inlined with the constructor in this way:</p>
+<p>Also you need to provide is the “<code>NewsManager</code>” but it is not listed in any Module class, this is because you can annotate a constructor of a class that you created with the “<code>@Inject</code>” annotation and Dagger by default will create a <code>Factory</code> and make this class available to be provided like any other “<code>@Provide</code>” in the module classes. Kotlin also allows you to add annotations inlined with the constructor in this way:</p>
 <pre><code>@Singleton
 class NewsManager @Inject constructor(private val api: NewsAPI) {
     ...
 }</code></pre>
 <p><b>@Injects</b></p>
-<p>I’m requesting dependencies in 2 places:</p>
+<p>Dependencies are requested in 2 places:</p>
 <ul>
-    <li>NewsManager: as we saw previously in the constructor.</li>
-    <li>NewsFragment: we need here the NewsManager:</li>
+    <li><code>NewsManager</code>: as you saw previously in the constructor.</li>
+    <li><code>NewsFragment</code>: you need here the <code>NewsManager</code>:</li>
 </ul>
 <pre><code>@Inject lateinit var newsManager: NewsManager</code></pre>
-<blockquote>Remember that ‘lateinit’ allows you to define a non-nullable property and set the value later.</blockquote>
+<blockquote>Remember that ‘<code>lateinit</code>’ allows you to define a non-nullable property and set the value later.</blockquote>
 <p><b>@Component</b></p>
-<p>I created one component called “NewsComponent” which will be the bridge between the modules and injections:</p>
+<p>A component called “<code>NewsComponent</code>” was created which will be the bridge between the modules and injections:</p>
 <pre><code>@Singleton
 @Component(modules = arrayOf(
         AppModule::class,
@@ -38,9 +38,9 @@ class NewsManager @Inject constructor(private val api: NewsAPI) {
 interface NewsComponent {
     fun inject(newsFragment: NewsFragment)
 }</code></pre>
-<p>At least for now we don’t need to expose any other thing than a method to inject dependencies for the NewsFragment. Dagger will implement this method, search for injectable annotations and provides them.</p>
+<p>At least for now you don’t need to expose any other thing than a method to inject dependencies for the <code>NewsFragment</code>. Dagger will implement this method, search for injectable annotations and provides them.</p>
 <p><b>Binding Altogether</b></p>
-<p>As we know, Dagger will create a new class called DaggerNewsComponent which will have a builder to create an implementation of our NewsComponent interface. We are going to create a instance of this and make it available from the KedditApp class in a static way:</p>
+<p>As you know, Dagger will create a new class called <code>DaggerNewsComponent</code> which will have a builder to create an implementation of our <code>NewsComponent</code> interface. You are going to create an instance of this and make it available from the <code>KedditApp</code> class in a static way:</p>
 <pre><code>companion object {
     lateinit var newsComponent: NewsComponent
 }
@@ -48,10 +48,12 @@ newsComponent = DaggerNewsComponent.builder()
         .appModule(AppModule(this))
         //.newsModule(NewsModule()) NOT REQUIRED
         .build()</code></pre>
-<blockquote>Modules with empty constructor are implicitly created by Dagger, so in this case we don’t need to do “.newsModule(…)”, the NewsModule will be created inside the builder for us.</blockquote>
-<p>We can use this newsComponent in this way from our NewsFragment:</p>
+<blockquote>Modules with empty constructor are implicitly created by Dagger, so in this case you don’t need to do “<code>.newsModule(…)</code>”, the <code>NewsModule</code> will be created inside the builder for you.</blockquote>
+<p>You can use this <code>newsComponent</code> in this way from your <code>NewsFragment</code>:</p>
 <pre><code>override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     KedditApp.newsComponent.inject(this)
 }</code></pre>
+<p><b>Task:</b></p>
+<p>Provide the necessary annotations int the di package (all of the files), <code>NewsFragment.kt</code> and <code>NewsManager.kt</code></p>
 </html>
