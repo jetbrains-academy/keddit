@@ -1,20 +1,27 @@
 <html>
+<p><b>News Manager</b></p>
+<p>The <code>NewsManager</code> class will be in charge of providing news from Reddit API. It will be responsible for performing the server request and give you a list of news with our already created News UI Model.</p>
+<p>The main idea behind this is to make your API call to be executed outside of your Main UI Thread, in another thread.</p>
+
 <p><b>Observable</b></p>
 <p>The NewsManager class will provide a method that will return an Observable object which will allows you to run a piece of code (like an API call) in another context (in this case in a new thread).</p>
 <pre><code>fun getNews(): Observable&lt;List&lt;RedditNewsItem&gt;&gt; {
     ...
 }
 </code></pre>
-<p>This Observable object will be created by us from the NewsManager. We will provide the implementation of this object:</p>
+<p>This Observable object will be created from the <code>NewsManager</code>. We will provide the implementation of this object:</p>
 <pre><code>fun getNews(): Observable&lt;List&lt;RedditNewsItem>> {
     return Observable.create {
         subscriber ->
 
-        val news = mutableListOf<RedditNewsItem>()
-        // api call...
-        subscriber.onNext(news)
+        //code to tun in another context
+        ...
+
+        //actions on subscriber
+
         subscriber.onCompleted()
     }
 }</code></pre>
-
+<p><b>Task:</b></p>
+Complete the <code>getNews()</code> functions in NewsManager.kt to create and return Observable, that will generate news for subscriber (will be added in the next task).
 </html>
