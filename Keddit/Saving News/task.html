@@ -1,15 +1,12 @@
 <html>
 <p><b>Saving News</b></p>
-<p>Now we need to use the famous onSaveInstanceState to save our news. </p>
+<p>Now you need to use the famous <code>onSaveInstanceState</code> to save our news. </p>
 <p>The most interest code is this:</p>
 <pre><code>news_list.apply {
-    setHasFixedSize(true)
-    val linearLayout = LinearLayoutManager(context)
-    layoutManager = linearLayout
-    clearOnScrollListeners()
+    ...
     ...
     ...
 }</code></pre>
-<p>Apply is an Extension Function that allows you to execute a code block as you were inside the instance of the object that you are executing the apply function. It’s really useful for cases like this that you don’t want to put all the time “news_list.” every time you need to set a value or call a method from this object.</p>
-
+<p><code>apply</code> is an Extension Function that allows you to execute a code block as you were inside the instance of the object that you are executing the apply function. It’s really useful for cases like this that you don’t want to put all the time “<code>news_list</code>.” every time you need to set a value or call a method from this object.</p>
+<p><b>Complete the <code>apply</code> invocation in <code>OnActivityCreated</code> method in <code>NewsFragment.kt</code></b></p>
 </html>
