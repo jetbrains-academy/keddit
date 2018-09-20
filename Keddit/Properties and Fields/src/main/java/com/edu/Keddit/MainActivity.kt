@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v7.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
+  var globalManager: FragmentManager? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -22,16 +23,17 @@ class MainActivity : AppCompatActivity() {
     }
     ft.setCustomAnimations(
             R.anim.abc_fade_in, R.anim.abc_fade_out, R.anim.abc_popup_enter, R.anim.abc_popup_exit);
-    ft.replace(R.id.activity_base_content, f);
+    ft.replace(R.id.activity_base_content,f);
     ft.addToBackStack(null);
     ft.commit();
   }
 
   fun clearBackStack() {
-    val manager = supportFragmentManager;
+    val manager = supportFragmentManager
+    globalManager = manager
     if (manager.backStackEntryCount > 0) {
-      val first = manager.getBackStackEntryAt(0);
-      manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+      val first = manager.getBackStackEntryAt(0)
+      manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
   }
 
