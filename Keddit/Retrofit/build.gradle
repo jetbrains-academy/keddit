@@ -48,14 +48,13 @@ dependencies {
   testImplementation 'org.robolectric:robolectric:3.8'
   implementation 'org.mockito:mockito-core:2.7.22'
   implementation 'junit:junit:4.12'
-  implementation 'org.jetbrains.spek:spek-api:1.1.0'
+
   testImplementation 'junit:junit:4.12'
-  testImplementation 'org.jetbrains.spek:spek-api:1.1.5'
+
   testImplementation 'org.junit.platform:junit-platform-runner:1.0.0'
   testImplementation 'org.junit.platform:junit-platform-launcher:1.0.0'
   testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.0.0'
   testImplementation 'org.jetbrains.kotlin:kotlin-test:1.1.0'
-  testImplementation 'org.jetbrains.spek:spek-junit-platform-engine:1.1.5'
 }
 repositories {
   mavenCentral()
