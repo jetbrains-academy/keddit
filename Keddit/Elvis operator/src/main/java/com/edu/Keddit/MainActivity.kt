@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
   }
 
-  fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
+  fun changeFragment(f: Fragment, cleanStack: Boolean?) {
     val ft = supportFragmentManager.beginTransaction()
-    if (cleanStack) {
+    if (cleanStack ?: false) {
       clearBackStack()
     }
     ft.setCustomAnimations(
@@ -32,19 +32,6 @@ class MainActivity : AppCompatActivity() {
     if (manager.backStackEntryCount > 0) {
       val first = manager.getBackStackEntryAt(0)
       manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-    }
-  }
-
-
-  /**
-   * Finish activity when reaching the last fragment.
-   */
-  override fun onBackPressed() {
-    val fragmentManager = supportFragmentManager
-    if (fragmentManager.backStackEntryCount > 1) {
-      fragmentManager.popBackStack()
-    } else {
-      finish()
     }
   }
 }
