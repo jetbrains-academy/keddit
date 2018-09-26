@@ -1,23 +1,18 @@
 <html>
 <p><b>API Model: Kotlin Classes</b></p>
-<p>We need to create some classes in order to convert our Json response into Kotlin classes. If we do this in Java we will end up creating big Java files with getters and setters to do this but as we are using Kotlin we can take advantage of this and represent all these classes really easily. It’s so clean and concise that I can paste here all the code to represent these classes :)</p>
+<p>You need to create some classes in order to convert your Json response into Kotlin classes. If you do this in Java you will end up creating big Java files with getters and setters to do this but as you are using Kotlin you can take advantage of this and represent all these classes really easily. </p>
 <pre><code>class RedditNewsResponse(val data: RedditDataResponse)
 
 class RedditDataResponse(
-        val children: List&lt;RedditChildrenResponse>,
-        val after: String?,
-        val before: String?
+        // Should contain values "children "(List of RedditChildrenResponse), "after" (nullable String) and "before" (also a nullable String).
 )
 
 class RedditChildrenResponse(val data: RedditNewsDataResponse)
 
 class RedditNewsDataResponse(
-        val author: String,
-        val title: String,
-        val num_comments: Int,
-        val created: Long,
-        val thumbnail: String,
-        val url: String
+        // Should include values "author" (String), "title" (String), "num_comments" (Int), "created" (Long), "thumbnail" (String), and "url" (also a String).
 )</code></pre>
-<p>Here we are mapping the previous model that we reviewed with Kotlin classes and with this 4 classes we are ready!</p>
+<p><b>Task:</b></p>
+<p>Complete the model in <code>ApiModels.kt</code> in api package according to the comments in the code examples above.</p>
+<p>Here is mapping for the previous model reviewed with Kotlin classes and with this 4 classes the model is ready!</p>
 </html>

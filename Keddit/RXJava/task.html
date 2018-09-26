@@ -1,11 +1,8 @@
 <html>
 <p><b>Kotlin, RxJava & RxAndroid</b></p>
-<p>Finally we are here to talk about RxJava in Kotlin. This is an incredible combo and we are going to take advantages of both by providing a new layer to our App and decoupling our Main UI thread with our background tasks, in this case to request Reddit news from the server. We are going to leave everything prepare to connect with a real server (next Part) but for now the mock data will be OK to emulate a server request.</p>
-<p>If this is the first time that you hear about RxJava, I encourage you <a href="https://github.com/ReactiveX/RxJava/wiki">to read about this incredible peace of software</a> that will blow your mind.</p>
+<p>Time to talk about RxJava in Kotlin. You are going to take advantages of both by providing a new layer to your App and decoupling your Main UI thread with your background tasks, in this case to request Reddit news from the server. For now the mock data will be OK to emulate a server request.</p>
+<p>If this is the first time that you hear about RxJava, you should <a href="https://github.com/ReactiveX/RxJava/wiki">read about this software</a>.</p>
 <blockquote>RxJava is the implementation of Reactive Extensions, a library for composing asynchronous and event-based programs by using observable sequences.</blockquote>
-<p>And we are going to use the Observable class to avoid making server requests (or any long process execution) from our famous Main UI Thread.</p>
-<p><b>News Manager</b></p>
-<p>The NewsManager class will be in charge of providing news from Reddit API. It will be responsible for performing the server request and give us a list of news with our already created News UI Model.</p>
-<p>The main idea behind of this is to make our API call to be executed outside of our Main UI Thread, in another thread. A big picture would be something like this:</p>
-
+<p>You should use the <code>Observable</code> class to avoid making server requests (or any long process execution) from your famous Main UI Thread.</p>
+<p>You can move on to the nest task.</p>
 </html>

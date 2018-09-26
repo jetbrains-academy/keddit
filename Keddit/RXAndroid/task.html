@@ -1,15 +1,17 @@
 <html>
 <p><b>ObserveOn</b></p>
-<p>ObserveOn is another method from the Observable class and it allows you to define where do you want to execute the functions that you provided in the “subscribe(…)” method. In other words, in which thread is going to be executed the functions that we provided in the subscribe method with the onNext and onError code. As we need to execute this code in the Main UI Thread it could be a good idea to make our Observable to observeOn the Main UI Thread.</p>
-<p>Here is where we need to add RxAndroid dependency to have a new Scheduler called:</p>
+<p><code>ObserveOn</code> is another method from the <code>Observable</code> class and it allows you to define where do you want to execute the functions that you provided in the “<code>subscribe(…)</code>” method. In other words, in which thread the functions that you provided in the <code>subscribe</code> method are going to be executed with the <code>onNext</code> and <code>onError</code> code. As you need to execute this code in the Main UI Thread it could be a good idea to make your <code>Observable</code> to <code>observeOn</code> the Main UI Thread.</p>
+<p>Here is where the RxAndroid dependency is need to be added to have a new <code>Scheduler</code> called:</p>
 <blockquote>AndroidSchedulers.mainThread()</blockquote>
-<p>And we need to update our code to set the observeOn Scheduler:</p>
+<p>And we need to update our code to set the <code>observeOn</code> Scheduler:</p>
 <pre><code>val subscription = newsManager.getNews()
         .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
+        .observeOn(...) //observe your scheduler
         .subscribe ( ...
 )</code></pre>
-<p>And with this last change we are creating our mock data in another thread and showing our news in the screen.</p>
-<p>But we have to realize that our app can be closed at any time or perform an orientation change operation in the middle of a subscription. This could lead us to a problem if we don’t manage our subscriptions properly, so let’s do something with it.</p>
+<p><b>Task:</b></p>
+<p>Complete the <code>onObserve()</code> invocation to observe on <code>AndroidSchedulers.mainThread()</code></p>
+<p>And with this last change your mock data is creating in another thread and your news are shown on the screen.</p>
+<p>But you have to realize that your app can be closed at any time or perform an orientation change operation in the middle of a subscription. This could leads you to a problem if you don’t manage your subscriptions properly, it will be described in the next task</p>
 
 </html>

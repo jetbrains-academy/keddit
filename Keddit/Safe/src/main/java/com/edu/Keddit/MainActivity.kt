@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
   }
 
   fun clearBackStack() {
-    val manager = supportFragmentManager;
+    val manager = supportFragmentManager
     if (manager.backStackEntryCount > 0) {
-      val first = manager.getBackStackEntryAt(0);
-      manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+      val first = manager.getBackStackEntryAt(0)
+      manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
   }
 }

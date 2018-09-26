@@ -9,12 +9,12 @@
     Log.d("tag", "after executing func")
 }</code></pre>
 <p><b>func: ()-> Unit</b></p>
-<p>As you already know, “func” is the name of the parameter and “() -> Unit” is the “type” of the parameter, in this case, we are saying that func will be a function that doesn’t receive any parameter and doesn’t return any value (remember that Unit works like void in Java).</p>
+<p>As you already know, “func” is the name of the parameter and “() -> Unit” is the “type” of the parameter, in this case, func will be a function that doesn’t receive any parameter and doesn’t return any value (remember that Unit works like void in Java).</p>
 <p>You can call this function by passing a lambda expression that must not receive or return any value, like in this way:</p>
 <pre><code>logExecution( { Log.d("tag", "I'm a function") } )</code></pre>
 <p>but also Kotlin allows you to remove the parenthesis if there is only one function parameter or if the last parameter is a function:</p>
 <pre><code>logExecution { Log.d("tag", "I'm a function") }</code></pre>
-<p>If we change the logExecution signature to receive another parameter and we put the function parameter at the end, we can do this:</p>
+<p>If you change the logExecution signature to receive another parameter and put the function parameter at the end, you can do this:</p>
 <pre><code>// added tag parameter:
 fun logExecution(tag: String, func: () -> Unit) { ... }
 // call in this way:
@@ -29,11 +29,11 @@ logExecution("tag") { Log.d("tag", "I'm a function") }</code></pre>
 }</code></pre>
 <p>As you can see Kotlin gives you a lot of power with Higher-Order functions. Also this allows you to remove a lot of Android ceremonies that requires you to initialize things before to execute something or never forget to close a cursor, and much more.</p>
 <p><b>Async function example</b></p>
-<p>Lets see a practical example. We are going to create a new function that receives a function and execute it in another thread:</p>
+<p>Let's see a practical example -  create a new function that receives a function and execute it in another thread:</p>
 <pre><code>fun runAsync(func: () -> Unit) {
     Thread(Runnable { func() }).start()
 }</code></pre>
-<p>Now we can execute a function outside of the Main UI Thread easily:</p>
+<p>Now you can execute a function outside of the Main UI Thread easily:</p>
 <pre><code>runAsync {
     // i.e.: save something in the Database
 }</code></pre>
@@ -48,4 +48,5 @@ logExecution("tag") { Log.d("tag", "I'm a function") }</code></pre>
 <pre><code>isLollipopOrAbove {
     // run lollipop specific code safely
 }</code></pre>
+<p>You can move onto the next task.</p>
 </html>

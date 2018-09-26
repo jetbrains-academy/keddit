@@ -1,13 +1,14 @@
 <html>
 <p><b>Lists Functions & Lambdas</b></p>
-<p>I created a method that I’ll be using it later to save the news when we are in the middle of an Orientation Change event but I would like to show you how easy is to work with list to filter and map (transform) every item from a list to another one.</p>
-<p>In our code we have a method called “getNews” which returns a List of RedditNewsItems. In order to filter and transform our items (a list of ViewType) we are going to do this:</p>
+<p>A method that will be used later to save the news when the app is in the middle of an Orientation Change event was created to show you how easy is to work with list to filter and map (transform) every item from a list to another one.</p>
+<p>In your code you have a method called “getNews” which returns a List of RedditNewsItems. In order to filter and transform our items (a list of ViewType) you are going to do this:</p>
 <pre><code>fun getNews(): List&lt;RedditNewsItem> {
     return items
-            .filter { it.getViewType() == AdapterConstants.NEWS }
-            .map { it as RedditNewsItem }
+            .filter { condition for list elements to include, refer to an item using keyword "it"}
+            .map { condition for list elements to map, refer to an item using keyword "it" }
 }</code></pre>
 <p><b>Filter</b></p>
 <p>Every list has some useful functions like “filter”, in this case, which allow us to iterate a list and filter (exclude) items that don’t apply certain condition. In our items list we have ViewTypes so we could have News items or Loading items, with this filter function we make sure to return only those that are News items.</p>
-
+<p><b>Task:</b></p>
+<p>Modify the getNews function in NewsAdapter.kt to filter items which getViewType() method return same value as "AdapterConstants.NEWS"</p>
 </html>

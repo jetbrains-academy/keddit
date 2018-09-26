@@ -1,13 +1,17 @@
 <html>
 <p><b>Lambda expressions</b></p>
-<p>Thanks to Kotlin, we can use lambda expressions to provide the function required by the Observable.create(…) method, in this case we are providing the implementation of the code that will be executed in the context that we provide to the Observable (we will see more about this context later in this post but in short it means in which thread to be executed).</p>
-<p>The create() method requires you to provide a function that receives a subscriber object, this subscriber object allows you to send events to the subscribers by executing 3 possible methods:</p>
-<ul><li>onNext(item: T): We are going to call this method to provide to the subscribers with the news received from the API call. In this case, T will be our “List&lt;RedditNewsItem>” that it’s already infer from the return type in the getNews() signature.</li>
-<li>onCompleted(): This method is invoked when we finished to provide all the data from this Observable, in this case, we will call it after we send the news from onNext() method and we are ready to finish this process.</li>
-<li>onError(e: Throwable): If we face any issue from the API call, we will be calling this method to tell the subscribers that there was an error. We are going to use it later to inform the user that there was a problem with the request by showing a SnackBar message.</li></ul>
-<p>So we are emulating that we are requesting news by providing mocked news and calling onNext() and onCompleted() to inform all the subscribers about this info (onCompleted method was added in another commit)</p>
-<p><b>Lazy NewsManager</b></p>
-<p>Also we added our NewsManager with our lazy property that we reviewed in the 3rd Part of this tutorial:</p>
+<p>You can use lambda expressions to provide the function required by the <code>Observable.create(…)</code> method. Time to provide the implementation of the code that will be executed in the context that you provide to the Observable (for now it means in which thread to be executed).</p>
+<p>The <code>create()</code> method requires you to provide a function that receives a subscriber object, this subscriber object allows you to send events to the subscribers by executing 3 possible methods:</p>
+<ul><li><code>onNext(item: T)</code>: This method is called to provide to the subscribers with the news received from the API call. In this case, T will be your "<code>List&lt;RedditNewsItem></code>” that it’s already infer from the return type in the <code>getNews()</code> signature.</li>
+<li><code>onCompleted()</code>: This method is invoked when providing of all the data from this Observable is finished, in this case, you will call it after you send the news from <code>onNext()</code> method and you are ready to finish this process.</li>
+<li><code>onError(e: Throwable)</code>: If you face any issue from the API call, you will be calling this method to tell the subscribers that there was an error. It will be used later to inform the user that there was a problem with the request by showing a SnackBar message.</li></ul>
+<p>So the requesting news is emulated by providing mocked news and calling <code>onNext()</code> and <code>onCompleted()</code> to inform all the subscribers about this info.</p>
+
+<p><b>Task:</b></p>
+<p>Complete the <code>getNews()</code> function to provide news to subscriber using <code>onNext</code></p>
+<p>
+    <b>Lazy NewsManager</b></p>
+<p>Also NewsManager with lazy property reviewed in the Lazy task of this course was added:</p>
 <pre><code>private val newsManager by lazy { NewsManager() }</code></pre>
-<p>This newsManager will be initialized with the NewsManager() only the first time that we use newsManagers field.</p>
+<p>This newsManager will be initialized with the NewsManager() only the first time that newsManagers field is used.</p>
 </html>
