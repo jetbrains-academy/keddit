@@ -21,11 +21,4 @@ class NewsFragment : Fragment() {
         //val view = inflater.inflate(R.layout.news_fragment, container, false)
         return container?.inflate(R.layout.news_fragment)
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        newsList.setHasFixedSize(true)
-        newsList.layoutManager = LinearLayoutManager(context)
-    }
 }
