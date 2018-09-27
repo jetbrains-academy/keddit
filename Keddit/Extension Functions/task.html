@@ -51,9 +51,7 @@ ExtensionsUtils.inflate(container, R.layout.news_fragment);</code></pre>
 <p>Inside the code block it’s like you are writing code as it is a real new method of the class (like a regular method) that’s why you can access to the instance of the class with the “this” keyword and access to the local variable “context”.</p>
 <p>Great! This is your first Extension Function and you know a lot more about this concept. Code in the MainActivity was updated in this way:</p>
 <pre><code>// old code:
-val view = inflater.inflate(R.layout.news_fragment, container, false)
-// replaced with:
-val view = container?.inflate(R.layout.news_fragment)</code></pre>
+val view = inflater.inflate(R.layout.news_fragment, container, false)</code></pre>
 <p><b>Task:</b></p>
-Modify the return statement of inflate extension function in Extensions.kt.
+Complete the return statement of <code>onCreateView()</code> method in <code>NewsFragment.kt</code> to use an inflate extension function in Extensions.kt for returning the value similar to the commented one (<code>val view</code>).
 </html>
