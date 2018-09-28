@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v7.widget.Toolbar
+import com.edu.Keddit.features.news.NewsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +14,10 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
     val toolbar = findViewById(R.id.toolbar) as Toolbar
     setSupportActionBar(toolbar)
+
+    if (savedInstanceState == null) {
+      changeFragment(NewsFragment())
+    }
   }
 
   fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
@@ -23,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     ft.setCustomAnimations(
             R.anim.abc_fade_in, R.anim.abc_fade_out, R.anim.abc_popup_enter, R.anim.abc_popup_exit);
     ft.replace(R.id.activity_base_content, f);
-    ft.addToBackStack(null);
+    ft.addToBackStack("news_fragment");
     ft.commit();
   }
 
