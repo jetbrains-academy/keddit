@@ -63,11 +63,11 @@ class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         notifyItemRangeInserted(0, items.size)
     }
 
-    fun getNews(): List<RedditNewsItem> {
+    fun getNews(): List<ViewType> {
         return items
                 .filter { it.getViewType() == AdapterConstants.NEWS }
 
-                .map { it as RedditNewsItem }
+
     }
 
     private fun getLastPosition() = if (items.lastIndex == -1) 0 else items.lastIndex

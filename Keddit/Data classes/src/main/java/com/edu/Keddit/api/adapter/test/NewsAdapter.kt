@@ -54,20 +54,5 @@ class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         notifyItemRangeChanged(initPosition, items.size + 1 /* plus loading item */)
     }
 
-    fun clearAndAddNews(news: List<RedditNewsItem>) {
-        items.clear()
-        notifyItemRangeRemoved(0, getLastPosition())
-
-        items.addAll(news)
-        items.add(loadingItem)
-        notifyItemRangeInserted(0, items.size)
-    }
-
-    fun getNews(): List<RedditNewsItem> {
-        return items
-                .filter { it.getViewType() == AdapterConstants.NEWS }
-                .map { it as RedditNewsItem }
-    }
-
     private fun getLastPosition() = if (items.lastIndex == -1) 0 else items.lastIndex
 }
