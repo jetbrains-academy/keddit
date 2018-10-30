@@ -29,9 +29,9 @@ class SolutionTest {
         Assert.assertEquals(10, actualResult)
     }
     @Test
-    fun testThereAre11AfterAddNEWS() {
+    fun testShouldThroughClassCastExceptionAfterAddNotNEWS() {
         val newsToAdd = mutableListOf<ViewType>()
-        newsToAdd.add(RedditNewsItem(
+        newsToAdd.add(NotRedditNewsItem(
                 "author",
                 "Title ",
                 0, // number of comments
@@ -41,20 +41,23 @@ class SolutionTest {
         ))
         (activity?.news_list?.adapter as NewsAdapter).addNews(newsToAdd)
         val items = ReflectionHelpers.getField<ArrayList<ViewType>>(activity?.news_list?.adapter, "items")
-        val actualResult  = (activity?.news_list?.adapter as NewsAdapter).getNews().size
-        Assert.assertEquals(items.size-1, actualResult)
-    }
-    @Test
-    fun testThereAre10AfterAddNotNEWS() {
-        val newsToAdd = mutableListOf<RedditNewsItem>()
-        val notNews = object : ViewType {
-            override fun getViewType() = AdapterConstants.LOADING
+        var actualResult: String? = "correct"
+        try {val actualResult  = (activity?.news_list?.adapter as NewsAdapter).getNews()}
+        catch (e :ClassCastException){
+            actualResult = e.message
         }
-        val items = ReflectionHelpers.getField<ArrayList<ViewType>>(activity?.news_list?.adapter, "items")
-        items.add(notNews)
-        (activity?.news_list?.adapter as NewsAdapter).addNews(newsToAdd)
-        val actualResult  = (activity?.news_list?.adapter as NewsAdapter).getNews().size
-        Assert.assertNotEquals(actualResult, items.size-1)
+        Assert.assertEquals("com.edu.Keddit.SolutionTest\$NotRedditNewsItem cannot be cast to com.edu.Keddit.commons.RedditNewsItem", actualResult)
+    }
+
+    private data class NotRedditNewsItem(
+            val author: String,
+            val title: String,
+            val numComments: Int,
+            val created: Long,
+            val thumbnail: String,
+            val url: String
+    ) : ViewType {
+        override fun getViewType() = AdapterConstants.NEWS
     }
 
 }

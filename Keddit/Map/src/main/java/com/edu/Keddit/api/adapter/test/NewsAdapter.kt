@@ -42,7 +42,7 @@ class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return this.items.get(position).getViewType()
     }
 
-    fun addNews(news: List<RedditNewsItem>) {
+    fun addNews(news: List<ViewType>) {
         // first remove loading and notify
         val initPosition = items.size - 1
         items.removeAt(initPosition)
