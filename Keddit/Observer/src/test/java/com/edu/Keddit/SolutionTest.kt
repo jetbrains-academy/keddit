@@ -31,16 +31,4 @@ class SolutionTest {
         val actualResult = activity?.news_list?.adapter?.itemCount
         Assert.assertEquals(11,actualResult)
     }
-//    @Test
-//    fun testSnackBarIsMade() {
-//        val actualResult = activity?.news_list?.layoutManager
-//        Assert.assertEquals(11,actualResult)
-//    }
-//    @Test
-//    fun testNewsManagerNotNull() {
-//        ReflectionHelpers.callInstanceMethod<Unit>(newsFragment, "requestNews")
-//        val test = ReflectionHelpers.getField<Lazy<NewsManager>>(newsFragment, "newsManager")
-//        val actualResult = test.value
-//        Assert.assertNotNull(test)
-//    }
 }
