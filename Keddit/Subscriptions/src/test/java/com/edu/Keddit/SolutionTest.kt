@@ -1,14 +1,19 @@
 package com.edu.Keddit
 
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.Keddit.commons.RxBaseFragment
 import org.junit.Assert
+import org.junit.Before
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.Robolectric
+import org.robolectric.RobolectricTestRunner
+import kotlinx.android.synthetic.main.news_fragment.*
 
-class ExampleUnitTest {
+@RunWith(RobolectricTestRunner::class)
+class SolutionTest {
     @Test
-    fun testSolution() {
-        //TODO: implement your test here
-        val m  = MainActivity()
-        Assert.assertTrue("Tests not implemented for the task", true)
+    fun testSolution(){
+        //Not implemented, instrumented tests provided
+        Assert.assertTrue(true)
     }
 }
