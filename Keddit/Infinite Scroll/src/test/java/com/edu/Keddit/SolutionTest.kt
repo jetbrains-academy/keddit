@@ -34,7 +34,7 @@ class SolutionTest {
         Assert.assertNull("Check what arguments does the constructor of InfiniteScrollListener take.",error)
     }
     @Test
-    fun testNewsNotNull() {
+    fun testListenerAttached() {
         val actualResult = activity?.news_list
         var listenerField = RecyclerView::class.java.getDeclaredField("mScrollListeners")
         listenerField.isAccessible = true
