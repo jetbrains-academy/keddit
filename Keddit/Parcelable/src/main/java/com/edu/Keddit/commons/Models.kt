@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.edu.Keddit.commons.adapter.AdapterConstants
 import com.edu.Keddit.commons.adapter.ViewType
-import com.edu.Keddit.commons.createParcel
+import com.edu.Keddit.commons.extensions.createParcel
 
 data class RedditNews(
         val after: String,
