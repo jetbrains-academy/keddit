@@ -55,6 +55,9 @@ dependencies {
   testImplementation 'org.junit.platform:junit-platform-launcher:1.0.0'
   testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.0.0'
   testImplementation 'org.jetbrains.kotlin:kotlin-test:1.1.0'
+
+  androidTestImplementation 'com.android.support:support-annotations:24.0.0'
+  androidTestImplementation 'com.android.support.test:runner:0.5'
 }
 repositories {
   mavenCentral()
