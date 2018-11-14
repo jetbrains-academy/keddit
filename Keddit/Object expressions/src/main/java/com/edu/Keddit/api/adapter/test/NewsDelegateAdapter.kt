@@ -28,11 +28,6 @@ class NewsDelegateAdapter : ViewTypeDelegateAdapter {
 
         fun bind(item: RedditNewsItem) = with(itemView) {
             //Picasso.with(itemView.context).load(item.thumbnail).into(img_thumbnail)
-            img_thumbnail.loadImg(item.thumbnail)
-            description.text = item.title
-            author.text = item.author
-            comments.text = "${item.numComments} comments"
-            time.text = item.created.getFriendlyTime()
         }
     }
 }
