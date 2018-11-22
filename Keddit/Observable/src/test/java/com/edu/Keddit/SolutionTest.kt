@@ -20,7 +20,6 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.util.ReflectionHelpers
 import java.util.*
 import kotlin.reflect.KClass
-import kotlin.reflect.full.isSuperclassOf
 import kotlin.test.assertNull
 
 @RunWith(RobolectricTestRunner::class)
