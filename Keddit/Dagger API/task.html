@@ -55,5 +55,10 @@ newsComponent = DaggerNewsComponent.builder()
     KedditApp.newsComponent.inject(this)
 }</code></pre>
 <p><b>Task:</b></p>
-<p>Provide the necessary annotations int the di package (all of the files), <code>NewsFragment.kt</code> and <code>NewsManager.kt</code></p>
+<p>Provide the necessary annotations in the di package (all of the files), <code>NewsFragment.kt</code> and <code>NewsManager.kt</code>. <b>This task would not be checked.</b></p>
 </html>
+<div class='hint'>All of the classes in <code>di</code> package use annotations <code>Provides</code> and <code>Singleton</code>, except the <code>NewsComponent.kt</code> - it uses <code>Provides</code> and <code>Component</code></div>
+<div class='hint'>In the <code>NewsFragment.kt</code> <code>newsManager</code> variable should be annotated with <code>Inject</code></div>
+<div class='hint'>In the <code>NewsManager.kt</code> <code>class</code> should be annotated with <code>Singleton</code> and the constructor should be annotated with <code>Inject</code></div>
+
+<br>
