@@ -64,10 +64,7 @@ class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     fun getNews(): List<ViewType> {
-        return items
-                .filter { it.getViewType() == AdapterConstants.NEWS }
-
-
+        return items.filter { it.getViewType() == AdapterConstants.NEWS }
     }
 
     private fun getLastPosition() = if (items.lastIndex == -1) 0 else items.lastIndex
