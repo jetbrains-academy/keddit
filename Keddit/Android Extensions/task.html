@@ -29,4 +29,7 @@ newsList?.layoutManager = LinearLayoutManager(context)</code></pre>
 <p><b>Task:</b></p>
 <p>Complete <code>OnActivityCreated()</code> method in <code>NewsFragment.kt</code>: it should set <code>HasFixedSize</code> parameter of the newsList to <code>true</code> and also set its <code>layoutManager</code> to a <code>LinearLayoutManager</code> based on <code>context</code></p>
 <p>Notice that news_lists and is a non-nullable object so you can use it in your code without the “?” question mark. This could be a problem if you run this code in another part of the Activity lifecycle and the view was not previously inflated, this will throw an exception at runtime.</p>
-</html>
+</html><br>
+<div class='hint'>Set the fixed size parameter of the <code>newsList</code> to true.</div>
+<div class='hint'>Set the layoutManager of the <code>newsList</code> to a new LinearLayoutManager passing context as an argument to the constructor.</div>
+<br>
