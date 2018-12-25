@@ -1,7 +1,11 @@
 <html>
 <p><b>Create our NewsFragment.kt</b></p>
-<p>It is time to create NewsFragment.kt file, it will be responsible to show the latests news from the Reddit API and a RecyclerView to show the news.</p>
-<p>In Java you would normally create a private field to store the RecyclerView locally and assign it when inflating the view. Trying to do the same in Kotlin leads to this:
+<p>It is time to create NewsFragment.kt file, it will be responsible to show the latests news from the Reddit API and a <code>RecyclerView</code> to show the news.</p>
+<p><b>Fragments</b></p>
+<p>Fragment is an entity providing a part of UI in an activity. Multiple fragments could be combined for creating a multi-pane UI.
+    Fragment could be reused in multiple activities. Each of them have separate lifecycles, input events and could be added or removed from the activity in runtime.</p>
+<p>To create a <code>Fragment</code> you should extend <code>Fragment</code> class and override its key methods. The method necessary to run a <code>Fragment</code> is <code>onCreateView()</code> </p>
+<p>In Java you would normally create a private field to store the <code>RecyclerView</code> locally and assign it when inflating the view. Trying to do the same in Kotlin leads to this:
 </p>
 <pre><code>private var newsList: RecyclerView? = null
 
