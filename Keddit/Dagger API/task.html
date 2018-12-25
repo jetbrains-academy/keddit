@@ -1,12 +1,12 @@
 <html>
 <p><b>Dagger API</b></p>
-<p>As you may know, Dagger has 4 main annotations to provide dependency injection (there are others but they are not covered here)</p>
+<p>Here we will implement 4 main annotations Dagger has to provide dependency injection (there are others but they are not covered in this topic)</p>
 <ul>
-    <li><code>@Modules</code> + <code>@Provides</code>: provides dependencies.</li>
-    <li><code>@Injects</code>: request dependencies.</li>
-    <li><code>@Component</code>: bridge between modules and injections.</li>
+    <li><code>@Modules</code> + <code>@Provides</code>: provides dependencies. A <code>@Provides</code>-annotated method is used to satisfy a dependency requiring a method. This method satisfies a dependency defined by its return type. All <code>@Provides</code>-annotated methods must be included in a module - a class annotated with <code>@Module</code>.</li>
+    <li><code>@Inject</code>: request dependencies. <code>@Inject</code> should annotate the constructor used by Dagger while creating instances of a class. Dagger obtains the required parameters values and invokes annotated constructor while creating an instance.</li>
+    <li><code>@Component</code>: bridge between modules and injections. The classes annotated with <code>@Inject</code> and <code>@Provides</code> are used to form a graph of objects, which dependencies do link. Code invoking that graph accesses it through roots. This set is defined by an interface with methods returning the needed type and having no arguments. This interface should be annotated as <code>@Component</code>the module types should be passed as module parameters, so Dagger 2 could generate an implementation of that contract.</li>
 </ul>
-<p>Thanks to default constructors in Kotlin, some dependencies from the constructor were already provided, so you don’t have to change so much your code in the Keddit App in order to provide these dependencies.</p>
+<p>Thanks to default constructors in Kotlin, some dependencies from the constructor were already provided, so you don’t have to change so much your code in the Keddit App in order to provide those.</p>
 <p><b>@Modules</b></p>
 <p>3 modules were created:</p>
 <ul>
@@ -14,12 +14,13 @@
     <li><code>NetworkModule</code>: provides an instance of Retrofit.</li>
     <li><code>NewsModule</code>: provides the <code>NewsAPI</code> and <code>RedditApi</code> instances.</li>
 </ul>
+<p>They are all located in the <code>di</code> package.</p>
 <p>Also you need to provide is the “<code>NewsManager</code>” but it is not listed in any Module class, this is because you can annotate a constructor of a class that you created with the “<code>@Inject</code>” annotation and Dagger by default will create a <code>Factory</code> and make this class available to be provided like any other “<code>@Provide</code>” in the module classes. Kotlin also allows you to add annotations inlined with the constructor in this way:</p>
 <pre><code>@Singleton
 class NewsManager @Inject constructor(private val api: NewsAPI) {
     ...
 }</code></pre>
-<p><b>@Injects</b></p>
+<p><b>@Inject</b></p>
 <p>Dependencies are requested in 2 places:</p>
 <ul>
     <li><code>NewsManager</code>: as you saw previously in the constructor.</li>
@@ -38,9 +39,9 @@ class NewsManager @Inject constructor(private val api: NewsAPI) {
 interface NewsComponent {
     fun inject(newsFragment: NewsFragment)
 }</code></pre>
-<p>At least for now you don’t need to expose any other thing than a method to inject dependencies for the <code>NewsFragment</code>. Dagger will implement this method, search for injectable annotations and provides them.</p>
+<p>At least for now you don’t need to expose any other thing than a method to inject dependencies for the <code>NewsFragment</code>. Dagger will implement this method, search for injectable annotations and provide them.</p>
 <p><b>Binding Altogether</b></p>
-<p>As you know, Dagger will create a new class called <code>DaggerNewsComponent</code> which will have a builder to create an implementation of our <code>NewsComponent</code> interface. You are going to create an instance of this and make it available from the <code>KedditApp</code> class in a static way:</p>
+<p>Dagger will create a new class called <code>DaggerNewsComponent</code> which will have a builder to create an implementation of our <code>NewsComponent</code> interface. You are going to create an instance of this and make it available from the <code>KedditApp</code> class in a static way:</p>
 <pre><code>companion object {
     lateinit var newsComponent: NewsComponent
 }
