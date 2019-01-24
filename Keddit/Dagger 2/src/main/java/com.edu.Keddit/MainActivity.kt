@@ -1,4 +1,4 @@
-package com.edu.keddit
+package com.edu.Keddit
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
