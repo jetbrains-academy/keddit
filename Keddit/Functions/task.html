@@ -1,10 +1,13 @@
-<html>
-<p><b>Kotlin Syntax</b></p>
-<p>Time to start learning the syntax.
-</p><p>Kotlin is defined in many ways and this is one of them that tries to include the most important characteristics in one sentence:</p>
-<blockquote style="border-left:2px solid">Kotlin is a Concise, Safe and Statically typed programming language focused on Interoperability with Java.</blockquote><br>
-<p>Let’s use this definition to start reviewing our generated code. Here we have both MainActivity files: Java and Kotlin files.</p>
-<pre><code>public class MainActivity extends AppCompatActivity {
+<html xmlns="http://www.w3.org/1999/html">
+<h3>Kotlin Syntax</h3>
+<p>Time to take a look at the Kotlin syntax.</p>
+<p>Kotlin is defined in many ways and this is one of them that tries to include the most important characteristics in one sentence:</p>
+<blockquote style="border-left:2px solid; margin-left:10px;">Kotlin is a Concise, Safe and Statically typed programming language focused on Interoperability with Java.</blockquote><br>
+<h4>onCreate()</h4>
+<p>All of the activities in the app must implement the <code>onCreate()</code> method - it is called by the android while creating the object of the activity, to setup basic parameters (e.g. choose the layout).</p>
+<p>Let’s use the definition to start reviewing our generated code. Here we have both MainActivity files: Java and Kotlin files.</p>
+<h4>Java</h4>
+<div style="width: 110px;  height: 110px;  overflow: scroll;"><pre><code>public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +25,9 @@
             }
         });
     }
-}</code></pre>
-Main.Activity.class
-<pre><code>class MainActivity : AppCompatActivity() {
+}</code></pre></div>
+<h4>Kotlin</h4>
+<div style="width: 100px;"><pre style="overflow-x:scroll;"><code>class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,24 +36,27 @@ Main.Activity.class
         setSupportActionBar(toolbar)
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener { view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
+        fab.setOnClickListener { view -> Snackbar.make(...).setAction("Action", null).show() }
     }
-}</code></pre>
-MainActivity.kt
-<p><b>Concise</b></p>
+}</code></pre></div>
+<h4>Concise</h4>
 Take a look - the Java file has 19 lines of code and the Kotlin file has only 12.
 
 <p>This is because most of the verbosity of Java was eliminated. Concise code takes less time to write and to read so it can improve your productivity.<p>
-<p><b>Extend and Implement:</b></p><p>The words “extends” and “implement” were replaced by a colon “:” indifferently. In this case we are extending from AppCompatActivity (which is a Java class)</p>
+<h4>Extend and Implement:</h4>
+<p>The words “extends” and “implement” were replaced by a colon “:” indifferently. In this case we are extending from AppCompatActivity (which is a Java class)</p>
 <p><code>class MainActivity : AppCompatActivity()</code></p>
-<p><b>Fun-ctions</b></p>
+<h4>Fun-ctions</h4>
 <p>There is not classic “public void methodName()” structure in Kotlin. Now the functions inside a class are defined with the “fun” keyword and the return type is added to the end. But where is the type returned from our “onCreate” method?</p>
 <p><code>override fun onCreate(savedInstanceState: Bundle?) </code></p>
 <p>In the case of not returning any value in Java “void” is used, in Kotlin the alternative is “Unit” which works in the same way. The compiler will know that the function not returning anything so it can be omitted. In the case of adding it just do it in this way:</p>
 <p><code>override fun onCreate(savedInstanceState: Bundle?) : Unit </code></p>
 <p>Also the parameters are in a different order. First you define the name of the variable and then the type.</p>
-<p><b>Bye, Semicolon;</b></p>
+<h4>Bye, Semicolon;</h4>
 <p>In Kotlin you don’t have to put the semicolon at the end of a sentences but still you can do it if you want (don’t do it).</p>
-<p><b>Task:</b></p>
-<p>Complite the onCreate declaration for it to take a parameter with name savedinstanceState and type "Bundle?"</p>
-</html>
+<h4>Task:</h4>
+<p>Complete the onCreate declaration for it to take a parameter with name savedinstanceState and type "Bundle?"</p>
+</html><br>
+<div class='hint'>You should declare that onCreate() is a function in the upper placeholder, using a keyword specified in the task description.</div>
+<div class='hint'>You should fill in the parameter of the onCreate function in the lower placeholder - a variable savedInstanceState of type Bundle, which is nullable (don't forget to add the question mark at the end of the type.)</div>
+<br>
