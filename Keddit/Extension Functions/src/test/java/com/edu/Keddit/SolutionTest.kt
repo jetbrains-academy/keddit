@@ -16,17 +16,22 @@ class SolutionTest {
     private var newsFragment: NewsFragment? = null
     private var activity: MainActivity? = null
     private var container: TestViewGroup? = null
+
     @Before
     fun setup() {
         newsFragment = NewsFragment()
         activity = Robolectric.buildActivity(MainActivity::class.java).create().get()
         container = TestViewGroup(activity?.applicationContext)
     }
+
+    /*Checking if OnCreateView inflates NewsFragment*/
     @Test
     fun testOnCreateViewReturnsNewsFragmentInflate() {
         val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity), container, null)
         Assert.assertNotNull(actualResult)
     }
+
+    /*Checking if NewsFragment inflates the correct View*/
     @Test
     fun testNewsFragmentInflatesCorrectly() {
         val expectedResult = LayoutInflater.from(activity).inflate(R.layout.news_fragment, null, false)
