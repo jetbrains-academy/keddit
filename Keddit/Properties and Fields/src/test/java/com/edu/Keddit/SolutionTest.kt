@@ -1,5 +1,10 @@
 package com.edu.Keddit
 
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
+import android.support.v4.app.FragmentTransaction
+import android.view.View
+import com.google.common.util.concurrent.Service
 import kotlinx.android.synthetic.main.activity_main.view.*
 import org.junit.Assert
 import org.junit.Before
@@ -11,17 +16,30 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class SolutionTest {
     private var activity: MainActivity? = null
+    private var manager: FragmentManager? = null
     @Before
     fun setup() {
         activity = Robolectric.buildActivity(MainActivity::class.java).create().get()
-    }
-    @Test
-    fun testManagerNotDeclaredByDefault() {
-        Assert.assertNull("Toolbar is not set, check your onCreate() method.", activity?.globalManager)
+        manager = activity?.supportFragmentManager
+
     }
     @Test
     fun testManagerIsDeclaredInClearBackStack() {
+        val ft = manager?.beginTransaction()
+        ft?.addToBackStack(null)
+        ft?.commit()
+        val listener = TestListener()
+        manager?.addOnBackStackChangedListener(listener)
         activity?.clearBackStack()
-        Assert.assertNotNull("Fragment is not set, check your clearBackStack() method.", activity?.globalManager)
+        Assert.assertTrue("Fragment is not set, check your clearBackStack() method.", listener.modificationCount>0)
     }
 }
+
+class TestListener: android.support.v4.app.FragmentManager.OnBackStackChangedListener {
+    var modificationCount = 0
+    override fun onBackStackChanged () {
+        modificationCount++
+    }
+}
+
+
