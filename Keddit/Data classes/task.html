@@ -1,6 +1,6 @@
 <html>
-<p><b>News Item with Data Classes</b></p>
-<p>Before creating our News delegate adapter and configure the <code>NewsAdapter</code> to receive a list of news, you need your UI object to represent each news. In Java it is normally to create a class like this:</p>
+<h3>News Item with Data Classes</h3>
+<p>While creating your News delegate adapter and configuring the <code>NewsAdapter</code> to receive a list of news, you need your UI object to represent each news. In Java it is normally to create a class like this:</p>
 <pre><code>public class RedditNewsItem {
 
     private String author;
@@ -30,12 +30,12 @@
 <p>Again, Kotlin has come to help you with a new class type called “data class” which brings you a lot of benefits and for the same example it looks like this:</p>
 <pre><code>data class RedditNewsItem(var author: String, var title: String)</code></pre>
 <p>With this simple line you are doing the same as the previous Java code, it means that author and title has their own getters and setters and it requires a constructor with this two elements. But you still receive more benefits: if you take this data class, you receive for free:</p>
-<ul><li>equals/hashCode pair.
-</li>
-<li>toString() with all the properties included.</li>
-<li>copy() method to make easily a copy of your object.</li>
-    <li>and other useful methods, you can see more in the <a href="https://kotlinlang.org/docs/reference/data-classes.html">official page.</a></li></ul>
-<p><b>Task:</b></p>
+    <ul><li><code>equals/hashCode</code> pair.</li>
+        <li><code>toString()</code> with all the properties included.</li>
+        <li><code>copy()</code> method to make easily a copy of your object.</li>
+        <li>and other useful methods, you can see more in the <a href="https://kotlinlang.org/docs/reference/data-classes.html">official page.</a></li>
+    </ul>
+<h4>Task:</h4>
 <p>Complete a data class declaration for RedditNewsItem in the Models.kt. It should has following properties to use in your NewsAdapter: author (String), title (String), numComments(int), created (Long), thumbnail (String)), url (String).</p>
 </html><br>
 <div class='hint'>You should add the <code>data</code> keyword to implement the data class.</div>
