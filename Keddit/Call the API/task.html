@@ -1,5 +1,5 @@
 <html>
-<p><b>NewsManager: Call the Api!</b></p>
+<h3>NewsManager: Call the Api!</h3>
 <p>You need to use default parameters to initialize your RestApi class</p>
 <pre><code>class NewsManager(private val api: RestAPI ...) {
      ...
@@ -24,7 +24,7 @@ if (response.isSuccessful) {
     <li><code>response.body().data.children.map {…}</code>: Here you use the List function “map” to transform every children into a RedditNewsItem.</li>
     <li><code>it.data</code>: “it” is a short way to access a single parameter from the lambda expression. This is only valid when you receive just one parameter, otherwise for more parameters you have to specify it, for example with two parameters it looks like this “x, y -> …”.</li>
     <li><code>subscriber.onError()</code>: a new <code>Throwable</code> object is created with the <code>response.message()</code> that we receive from the service.</li></ol>
-<p><b>Task:</b></p>
+<h4>Task:</h4>
 <p>Complete <code>NewsManager</code> declaration by passing the <code>RestApi()</code> constructor as the default value for the api parameter</p>
 <p>With this last changes you are now showing the first 10 news from Reddit in your app </p>
 </html><br>

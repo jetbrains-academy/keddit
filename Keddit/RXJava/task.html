@@ -1,8 +1,8 @@
 <html>
-<p><b>Kotlin, RxJava & RxAndroid</b></p>
+<h3>Kotlin, RxJava & RxAndroid</h3>
 <p>Time to talk about RxJava in Kotlin. You are going to take advantages of both by providing a new layer to your App and decoupling your Main UI thread with your background tasks, in this case to request Reddit news from the server. For now the mock data will be OK to emulate a server request.</p>
 <p>If this is the first time that you hear about RxJava, you should <a href="https://github.com/ReactiveX/RxJava/wiki">read about this software</a>.</p>
 <blockquote>RxJava is the implementation of Reactive Extensions, a library for composing asynchronous and event-based programs by using observable sequences.</blockquote>
-<p>You should use the <code>Observable</code> class to avoid making server requests (or any long process execution) from your famous Main UI Thread.</p>
+<p>You should use the <code>Observable</code> class to avoid making server requests (or any long process execution) from your Main UI Thread, as such actions could freeze it and disrupt the user's ability to interact with the application.</p>
 <p>You can move on to the nest task.</p>
 </html>

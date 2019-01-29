@@ -15,11 +15,6 @@ import retrofit2.Response
 import rx.observers.TestSubscriber
 import java.util.*
 
-/**
- * Unit Tests for NewsManager
- *
- * @author juancho.
- */
 class NewsManagerTest {
 
     var testSub = TestSubscriber<RedditNews>()
@@ -29,7 +24,6 @@ class NewsManagerTest {
 
     @Before
     fun setup() {
-        //TODO: placeholder
         testSub = TestSubscriber<RedditNews>()
         apiMock = mock<NewsAPI>()
         callMock = mock<Call<RedditNewsResponse>>()
@@ -38,7 +32,6 @@ class NewsManagerTest {
 
     @Test
     fun testSuccess_basic() {
-        //TODO: placeholder
         // prepare
         val redditNewsResponse = RedditNewsResponse(RedditDataResponse(listOf(), null, null))
         val response = Response.success(redditNewsResponse)
@@ -58,7 +51,6 @@ class NewsManagerTest {
     @Test
     fun testSuccess_checkOneNews() {
         // prepare
-        //TODO: placeholder
         val newsData = RedditNewsDataResponse(
                 "author",
                 "title",
@@ -88,7 +80,6 @@ class NewsManagerTest {
 
     @Test
     fun testError() {
-        //TODO: placeholder
         // prepare
         val responseError = Response.error<RedditNewsResponse>(500,
                 ResponseBody.create(MediaType.parse("application/json"), ""))

@@ -15,14 +15,8 @@ import retrofit2.Response
 import rx.observers.TestSubscriber
 import java.util.*
 
-/**
- * Unit Tests for NewsManager
- *
- * @author juancho.
- */
 class NewsManagerTest {
 
-    //TODO: placeholder
     var testSub = TestSubscriber<RedditNews>()
     var apiMock = mock<NewsAPI>()
     var callMock = mock<Call<RedditNewsResponse>>()
@@ -30,5 +24,4 @@ class NewsManagerTest {
 
 }
 
-//TODO: placeholder
 inline fun <reified T : Any> mock(): T = Mockito.mock(T::class.java)
