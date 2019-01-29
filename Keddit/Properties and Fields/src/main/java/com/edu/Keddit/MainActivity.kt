@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentManager
 import android.support.v7.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
-  var globalManager: FragmentManager? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -18,7 +17,6 @@ class MainActivity : AppCompatActivity() {
 
   fun clearBackStack() {
     val manager = supportFragmentManager
-    globalManager = manager
     if (manager.backStackEntryCount > 0) {
       val first = manager.getBackStackEntryAt(0)
       manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE)
