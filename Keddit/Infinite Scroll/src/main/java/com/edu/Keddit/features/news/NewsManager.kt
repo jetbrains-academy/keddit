@@ -5,11 +5,6 @@ import com.edu.Keddit.api.RestAPI
 import com.edu.Keddit.commons.RedditNews
 import rx.Observable
 
-/**
- *  News Manager allows you to request news from Reddit API.
- *
- * @author juancho
- */
 class NewsManager(private val api: RestAPI = RestAPI()) {
 
     /**

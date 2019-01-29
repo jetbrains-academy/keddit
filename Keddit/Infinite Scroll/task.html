@@ -1,5 +1,5 @@
 <html>
-<p><b>Infinite Scroll</b></p>
+<h3>Infinite Scroll</h3>
 <p>Let's take advantages of this new concept and create your infinite scroll behaviour.</p>
 <p>The <code>RecyclerView</code> allows you to set a Scroll Listener so this <code>InfiniteScrollListener</code> was created and the signature of this class was defined in this way:</p>
 <pre><code>class InfiniteScrollListener(
@@ -13,11 +13,11 @@
     )</code></pre>
 <p><code>requestNews()</code> is a function that you already have in your code, it was updated to use pagination and request the next available news from Reddit.</p>
 <p>As you may notice, <code>requestNews()</code> is not passed but inside a lambda expression. This is because the compiler will not take it as a function parameter but as a function that needs to be executed and use the return type of this function as the value passed to the <code>InfiniteScrollListener</code>. As the return type of <code>requestNews</code> is “<code>Unit</code>”, it doesn’t match the <code>InfiniteScrollListener</code> parameter expected which is “<code>()->Unit</code>”, so this code will not compile except if you put this into the lambda expression that match perfectly the required parameter.</p>
-<p><b>Task:</b></p>
+<h4>Task:</h4>
 <p>Complete the <code>InfiniteScrollListener</code> declaration by filling up types for the <code>func</code> and <code>layoutManager</code> (you should choose the linear one). Check out the res of the code for the scroll listener.</p>
-<p>Complete the <code>OnActivityCreated</code> method by adding the <code>InfiniteScrollListener</code> to the news_list with the <code>requestNews</code> and <code>linearLayout</code> as the parameters.</p>
+<p>Complete the <code>OnActivityCreated</code> method in <code>NewsFragment.kt</code> by adding the <code>InfiniteScrollListener</code> to the news_list with the <code>requestNews</code> and <code>linearLayout</code> as the parameters.</p>
 </html><br>
-<div class='hint'>You should declare here a lambda function taking no parameters <code>()</code> and returning <code>Unit</code>.</div>
-<div class='hint'>This variable should has type <code>LinearLayoutManager</code>.</div>
-<div class='hint'>You should pass an <code>InfiniteScrollListener</code> constructor here with <code>{ requestNews() }</code> and <code>linearLayout</code> as the parameters.</div>
+<div class='hint'>You should declare a lambda function taking no parameters <code>()</code> and returning <code>Unit</code> in the first placeholder in InfiniteScrollListener.kt.</div>
+<div class='hint'>The variable in the second placeholder in InfiniteScrollListener.kt should has type <code>LinearLayoutManager</code>.</div>
+<div class='hint'>You should pass an <code>InfiniteScrollListener</code> constructor in the placeholder in NewsFragment with <code>{ requestNews() }</code> and <code>linearLayout</code> as the parameters.</div>
 <br>
