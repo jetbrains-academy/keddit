@@ -25,7 +25,7 @@ class InfiniteScrollListener(
 
             if (loading) {
                 if (totalItemCount > previousTotal) {
-                    loading = false;
+                    loading = false
                     previousTotal = totalItemCount
                 }
             }
