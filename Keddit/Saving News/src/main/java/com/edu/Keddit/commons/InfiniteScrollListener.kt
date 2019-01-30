@@ -19,13 +19,13 @@ class InfiniteScrollListener(
         super.onScrolled(recyclerView, dx, dy)
 
         if (dy > 0) {
-            visibleItemCount = recyclerView.childCount;
-            totalItemCount = layoutManager.itemCount;
+            visibleItemCount = recyclerView.childCount
+            totalItemCount = layoutManager.itemCount
             firstVisibleItem = layoutManager.findFirstVisibleItemPosition()
 
             if (loading) {
                 if (totalItemCount > previousTotal) {
-                    loading = false;
+                    loading = false
                     previousTotal = totalItemCount
                 }
             }

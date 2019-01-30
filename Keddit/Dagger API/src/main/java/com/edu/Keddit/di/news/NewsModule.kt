@@ -9,10 +9,6 @@ import dagger.Provides
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
-/**
- *
- * @author juancho.
- */
 @Module
 class NewsModule {
 

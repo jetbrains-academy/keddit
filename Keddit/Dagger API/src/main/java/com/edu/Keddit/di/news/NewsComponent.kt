@@ -7,10 +7,6 @@ import com.edu.Keddit.features.news.NewsFragment
 import dagger.Component
 import javax.inject.Singleton
 
-/**
- *
- * @author juancho.
- */
 @Singleton
 @Component(modules = arrayOf(
         AppModule::class,

@@ -3,7 +3,7 @@ package com.edu.Keddit.features.news
 import com.edu.Keddit.commons.RedditNewsItem
 import rx.Observable
 
-class NewsManager() {
+class NewsManager {
 
     fun getNews(): Observable<List<RedditNewsItem>> {
         return Observable.create {
