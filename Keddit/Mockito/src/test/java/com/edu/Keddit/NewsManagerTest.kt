@@ -17,7 +17,6 @@ import java.util.*
 
 class NewsManagerTest {
 
-    var testSub = TestSubscriber<RedditNews>()
     var apiMock = mock<NewsAPI>()
     var callMock = mock<Call<RedditNewsResponse>>()
 

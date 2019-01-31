@@ -12,7 +12,7 @@
 <pre><code>inline fun &lt;reified T : Any> mock(): T = Mockito.mock(T::class.java)</code></pre>
 <p>And you are ready to go!</p>
 <h4>Task:</h4>
-<p>Finish the mock declaration in the NewsManagerTest.kt. This task would not be checked, you can move on to the next task.</p>
+<p>Finish the mock declaration in the NewsManagerTest.kt. Mock <code>NewsAPI</code> and <code>Call&lt;RedditNewsResponse&gt;</code> and pass it to the variable <code>apiMock</code> and <code>callMock</code> respectively.</p>
 </html>
-<div class='hint'>You should declare a mock for the NewsManager using the Extension Function above. </div>
+<div class='hint'>You should declare a mock for the <code>NewsAPI</code> and <code>Call&lt;RedditNewsResponse&gt;</code> using the Extension Function <code>mock&lt;classname&gt;.</code>. </div>
 <br>
