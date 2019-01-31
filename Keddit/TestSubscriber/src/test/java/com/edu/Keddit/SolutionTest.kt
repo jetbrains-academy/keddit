@@ -4,7 +4,7 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 import org.junit.Assert
 import org.junit.Test
 
-class ExampleUnitTest {
+class SolutionTest {
     @Test
     fun testSolution() {
         val m  = MainActivity()
