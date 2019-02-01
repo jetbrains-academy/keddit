@@ -1,7 +1,7 @@
-package com.edu.Keddit.commons
+package com.edu.keddit.commons
 
-import com.edu.Keddit.commons.adapter.AdapterConstants
-import com.edu.Keddit.commons.adapter.ViewType
+import com.edu.keddit.commons.adapter.AdapterConstants
+import com.edu.keddit.commons.adapter.ViewType
 
 data class RedditNewsItem(
         val author: String,

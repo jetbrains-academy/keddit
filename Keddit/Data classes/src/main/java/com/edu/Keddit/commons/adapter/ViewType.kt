@@ -1,4 +1,4 @@
-package com.edu.Keddit.commons.adapter
+package com.edu.keddit.commons.adapter
 
 interface ViewType {
     fun getViewType(): Int

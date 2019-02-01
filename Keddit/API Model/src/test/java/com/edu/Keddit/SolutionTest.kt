@@ -1,9 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.RedditChildrenResponse
-import com.edu.Keddit.api.RedditDataResponse
-import com.edu.Keddit.api.RedditNewsResponse
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.keddit.api.RedditChildrenResponse
+import com.edu.keddit.api.RedditDataResponse
+import com.edu.keddit.api.RedditNewsResponse
 import org.junit.Assert
 import org.junit.Test
 import java.lang.IllegalArgumentException

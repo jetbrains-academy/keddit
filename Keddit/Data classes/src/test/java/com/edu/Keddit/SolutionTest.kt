@@ -1,10 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.commons.RedditNewsItem
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.keddit.commons.RedditNewsItem
 import org.junit.Assert
 import org.junit.Test
-import java.lang.reflect.Type
 
 class SolutionTest {
     @Test

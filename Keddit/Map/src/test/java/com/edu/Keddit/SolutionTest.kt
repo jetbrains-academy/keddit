@@ -1,12 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import android.support.v7.widget.RecyclerView
-import com.edu.Keddit.api.adapter.test.NewsAdapter
-import com.edu.Keddit.commons.RedditNewsItem
-import com.edu.Keddit.commons.adapter.AdapterConstants
-import com.edu.Keddit.commons.adapter.ViewType
-import com.edu.Keddit.features.news.NewsFragment
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.keddit.api.adapter.test.NewsAdapter
+import com.edu.keddit.commons.adapter.AdapterConstants
+import com.edu.keddit.commons.adapter.ViewType
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -46,7 +42,7 @@ class SolutionTest {
         catch (e :ClassCastException){
             actualResult = e.message
         }
-        Assert.assertEquals("com.edu.Keddit.SolutionTest\$NotRedditNewsItem cannot be cast to com.edu.Keddit.commons.RedditNewsItem", actualResult)
+        Assert.assertEquals("com.edu.keddit.SolutionTest\$NotRedditNewsItem cannot be cast to com.edu.keddit.commons.RedditNewsItem", actualResult)
     }
 
     private data class NotRedditNewsItem(

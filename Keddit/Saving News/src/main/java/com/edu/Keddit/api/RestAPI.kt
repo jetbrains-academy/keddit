@@ -1,4 +1,4 @@
-package com.edu.Keddit.api
+package com.edu.keddit.api
 
 import retrofit2.Call
 import retrofit2.Retrofit

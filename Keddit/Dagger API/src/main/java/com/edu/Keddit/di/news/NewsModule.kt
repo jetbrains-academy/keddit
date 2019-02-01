@@ -1,9 +1,9 @@
-package com.edu.Keddit.di.news
+package com.edu.keddit.di.news
 
 
-import com.edu.Keddit.api.NewsAPI
-import com.edu.Keddit.api.NewsRestAPI
-import com.edu.Keddit.api.RedditApi
+import com.edu.keddit.api.NewsAPI
+import com.edu.keddit.api.NewsRestAPI
+import com.edu.keddit.api.RedditApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

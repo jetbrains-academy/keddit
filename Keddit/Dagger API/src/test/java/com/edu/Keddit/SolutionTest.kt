@@ -1,13 +1,13 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.RedditApi
-import com.edu.Keddit.di.AppModule
-import com.edu.Keddit.di.NetworkModule
-import com.edu.Keddit.di.news.DaggerNewsComponent
-import com.edu.Keddit.di.news.NewsComponent
-import com.edu.Keddit.di.news.NewsModule
-import com.edu.Keddit.features.news.NewsFragment
-import com.edu.Keddit.features.news.NewsManager
+import com.edu.keddit.api.RedditApi
+import com.edu.keddit.di.AppModule
+import com.edu.keddit.di.NetworkModule
+import com.edu.keddit.di.news.DaggerNewsComponent
+import com.edu.keddit.di.news.NewsComponent
+import com.edu.keddit.di.news.NewsModule
+import com.edu.keddit.features.news.NewsFragment
+import com.edu.keddit.features.news.NewsManager
 import dagger.Component
 import dagger.Module
 import dagger.Provides

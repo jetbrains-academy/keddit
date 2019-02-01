@@ -1,9 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.di.AppModule
-import com.edu.Keddit.di.NetworkModule
-import com.edu.Keddit.di.news.NewsModule
-import com.edu.Keddit.features.news.NewsFragment
+import com.edu.keddit.di.NetworkModule
+import com.edu.keddit.di.news.NewsModule
+import com.edu.keddit.features.news.NewsFragment
 import dagger.Component
 import javax.inject.Singleton
 

@@ -1,7 +1,7 @@
-package com.edu.Keddit.di
+package com.edu.keddit.di
 
 import android.content.Context
-import com.edu.Keddit.KedditApp
+import com.edu.keddit.KedditApp
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

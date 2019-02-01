@@ -1,14 +1,10 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.RedditApi
-import com.edu.Keddit.api.RestAPI
-import com.edu.Keddit.features.news.NewsManager
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.keddit.api.RestAPI
+import com.edu.keddit.features.news.NewsManager
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 import java.lang.IllegalArgumentException
 
 class SolutionTest {

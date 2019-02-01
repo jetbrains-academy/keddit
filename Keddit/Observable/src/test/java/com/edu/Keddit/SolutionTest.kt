@@ -1,26 +1,11 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import android.content.Context
-import android.database.Observable
-import android.support.v7.widget.RecyclerView
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.widget.RelativeLayout
-import com.edu.Keddit.commons.RedditNewsItem
-import com.edu.Keddit.commons.inflate
-import com.edu.Keddit.features.news.NewsFragment
-import com.edu.Keddit.features.news.NewsManager
+import com.edu.keddit.features.news.NewsManager
 import org.junit.Assert
-import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
-import org.robolectric.util.ReflectionHelpers
-import java.util.*
-import kotlin.reflect.KClass
-import kotlin.test.assertNull
 
 @RunWith(RobolectricTestRunner::class)
 open class SolutionTest {

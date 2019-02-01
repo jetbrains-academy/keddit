@@ -1,4 +1,4 @@
-package com.edu.Keddit
+package com.edu.keddit
 
 import android.app.Application
 

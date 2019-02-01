@@ -1,6 +1,6 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.NewsAPI
+import com.edu.keddit.api.NewsAPI
 import javax.inject.Inject
 
 class TestNewsManager {

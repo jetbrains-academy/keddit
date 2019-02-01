@@ -1,6 +1,6 @@
-package com.edu.Keddit.features.news
+package com.edu.keddit.features.news
 
-import com.edu.Keddit.commons.RedditNewsItem
+import com.edu.keddit.commons.RedditNewsItem
 import rx.Observable
 
 class NewsManager {

@@ -1,9 +1,9 @@
-package com.edu.Keddit
+package com.edu.keddit
 
 import android.app.Application
-import com.edu.Keddit.di.AppModule
-import com.edu.Keddit.di.news.DaggerNewsComponent
-import com.edu.Keddit.di.news.NewsComponent
+import com.edu.keddit.di.AppModule
+import com.edu.keddit.di.news.DaggerNewsComponent
+import com.edu.keddit.di.news.NewsComponent
 
 /**
  *

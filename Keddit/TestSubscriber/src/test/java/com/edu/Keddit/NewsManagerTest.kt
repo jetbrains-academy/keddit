@@ -1,8 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.*
-import com.edu.Keddit.commons.RedditNews
-import com.edu.Keddit.features.news.NewsManager
+import com.edu.keddit.api.*
+import com.edu.keddit.commons.RedditNews
+import com.edu.keddit.features.news.NewsManager
 import okhttp3.MediaType
 import okhttp3.ResponseBody
 import org.junit.Before

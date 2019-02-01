@@ -1,13 +1,13 @@
-package com.edu.Keddit.api.adapter.test
+package com.edu.keddit.api.adapter.test
 
 
 import android.support.v4.util.SparseArrayCompat
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
-import com.edu.Keddit.commons.RedditNewsItem
-import com.edu.Keddit.commons.adapter.AdapterConstants
-import com.edu.Keddit.commons.adapter.ViewType
-import com.edu.Keddit.commons.adapter.ViewTypeDelegateAdapter
+import com.edu.keddit.commons.RedditNewsItem
+import com.edu.keddit.commons.adapter.AdapterConstants
+import com.edu.keddit.commons.adapter.ViewType
+import com.edu.keddit.commons.adapter.ViewTypeDelegateAdapter
 import java.util.*
 
 

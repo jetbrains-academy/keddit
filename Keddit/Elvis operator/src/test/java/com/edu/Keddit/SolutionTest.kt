@@ -1,4 +1,4 @@
-package com.edu.Keddit
+package com.edu.keddit
 
 import android.support.v4.app.Fragment
 import org.junit.Assert

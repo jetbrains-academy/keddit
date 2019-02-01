@@ -1,4 +1,4 @@
-package com.edu.Keddit.features.news
+package com.edu.keddit.features.news
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -6,10 +6,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.edu.Keddit.R
-import com.edu.Keddit.commons.RedditNewsItem
-import com.edu.Keddit.commons.inflate
-import com.edu.Keddit.api.adapter.test.NewsAdapter
+import com.edu.keddit.R
+import com.edu.keddit.commons.RedditNewsItem
+import com.edu.keddit.commons.inflate
+import com.edu.keddit.api.adapter.test.NewsAdapter
 import kotlinx.android.synthetic.main.news_fragment.*
 
 

@@ -1,11 +1,11 @@
-package com.edu.Keddit.commons
+package com.edu.keddit.commons
 
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.edu.Keddit.R
+import com.edu.keddit.R
 import com.squareup.picasso.Picasso
 
 

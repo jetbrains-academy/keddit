@@ -1,12 +1,10 @@
-package com.edu.Keddit
+package com.edu.keddit
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.RelativeLayout
-import com.edu.Keddit.commons.inflate
-import com.edu.Keddit.features.news.NewsFragment
+import com.edu.keddit.features.news.NewsFragment
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test

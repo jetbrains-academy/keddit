@@ -1,12 +1,9 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.NewsAPI
-import com.edu.Keddit.api.RedditNewsResponse
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.keddit.api.NewsAPI
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-import org.mockito.MockingDetails
 import org.mockito.Mockito
 import retrofit2.Call
 import java.lang.reflect.Field

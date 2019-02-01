@@ -1,7 +1,6 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.RedditApi
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.keddit.api.RedditApi
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test

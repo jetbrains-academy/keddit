@@ -8,7 +8,7 @@ android {
   buildToolsVersion '27.0.3'
 
   defaultConfig {
-    applicationId "com.edu.Keddit"
+    applicationId "com.edu.keddit"
     minSdkVersion 21
     targetSdkVersion 27
     versionCode 1

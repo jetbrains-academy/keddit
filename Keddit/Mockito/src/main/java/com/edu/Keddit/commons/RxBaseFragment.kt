@@ -1,4 +1,4 @@
-package com.edu.Keddit.commons
+package com.edu.keddit.commons
 
 
 import android.support.v4.app.Fragment

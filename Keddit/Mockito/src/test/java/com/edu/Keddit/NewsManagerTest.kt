@@ -1,19 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.*
-import com.edu.Keddit.commons.RedditNews
-import com.edu.Keddit.features.news.NewsManager
-import okhttp3.MediaType
-import okhttp3.ResponseBody
-import org.junit.Before
-import org.junit.Test
+import com.edu.keddit.api.*
 import org.mockito.Mockito
-import org.mockito.Mockito.`when`
-import org.mockito.Mockito.anyString
 import retrofit2.Call
-import retrofit2.Response
-import rx.observers.TestSubscriber
-import java.util.*
 
 class NewsManagerTest {
 

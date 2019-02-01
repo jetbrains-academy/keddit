@@ -1,12 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import android.support.test.internal.util.ReflectionUtil
-import android.support.v7.widget.RecyclerView
 import android.test.ActivityInstrumentationTestCase2
-import com.edu.Keddit.api.adapter.test.NewsAdapter
-import com.edu.Keddit.commons.RxBaseFragment
-import com.edu.Keddit.features.news.NewsFragment
-import kotlinx.android.synthetic.main.news_fragment.*
+import com.edu.keddit.commons.RxBaseFragment
+import com.edu.keddit.features.news.NewsFragment
 import org.junit.Assert
 import rx.subscriptions.CompositeSubscription
 

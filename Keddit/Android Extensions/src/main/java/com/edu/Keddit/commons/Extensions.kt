@@ -1,4 +1,4 @@
-package com.edu.Keddit.commons
+package com.edu.keddit.commons
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,11 +1,6 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
-import android.view.View
-import com.google.common.util.concurrent.Service
-import kotlinx.android.synthetic.main.activity_main.view.*
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test

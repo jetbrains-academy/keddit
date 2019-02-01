@@ -1,6 +1,6 @@
 @file:JvmName("TimeUtils")
 
-package com.edu.Keddit.commons.extensions
+package com.edu.keddit.commons.extensions
 
 import java.util.*
 

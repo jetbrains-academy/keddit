@@ -1,8 +1,8 @@
-package com.edu.Keddit
+package com.edu.keddit
 
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import com.edu.Keddit.commons.InfiniteScrollListener
+import com.edu.keddit.commons.InfiniteScrollListener
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -11,7 +11,6 @@ import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 import kotlinx.android.synthetic.main.news_fragment.*
 import java.lang.IllegalArgumentException
-import java.lang.reflect.Array
 
 @RunWith(RobolectricTestRunner::class)
 class SolutionTest {

@@ -1,10 +1,7 @@
-import com.edu.Keddit.NewsManagerTest
-import com.edu.Keddit.api.NewsAPI
+import com.edu.keddit.NewsManagerTest
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-import org.mockito.Mockito
-import retrofit2.Call
 import rx.observers.TestSubscriber
 import java.lang.reflect.Field
 

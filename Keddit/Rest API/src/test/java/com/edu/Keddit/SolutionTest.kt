@@ -1,13 +1,10 @@
-package com.edu.Keddit
+package com.edu.keddit
 
-import com.edu.Keddit.api.RedditApi
-import com.edu.Keddit.api.RestAPI
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.edu.keddit.api.RedditApi
+import com.edu.keddit.api.RestAPI
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 
 class SolutionTest {
     private var restApi: RestAPI? = null

@@ -1,10 +1,9 @@
-package com.edu.Keddit.features.news
+package com.edu.keddit.features.news
 
-import com.edu.Keddit.commons.RedditNewsItem
-import com.edu.Keddit.api.RestAPI
-import com.edu.Keddit.api.NewsAPI
-import com.edu.Keddit.api.NewsRestAPI
-import com.edu.Keddit.commons.RedditNews
+import com.edu.keddit.commons.RedditNewsItem
+import com.edu.keddit.api.NewsAPI
+import com.edu.keddit.api.NewsRestAPI
+import com.edu.keddit.commons.RedditNews
 import rx.Observable
 
 class NewsManager(private val api: NewsAPI = NewsRestAPI()) {

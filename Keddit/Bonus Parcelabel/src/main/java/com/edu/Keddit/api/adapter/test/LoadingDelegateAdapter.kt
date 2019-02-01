@@ -1,12 +1,12 @@
-package com.edu.Keddit.api.adapter.test
+package com.edu.keddit.api.adapter.test
 
 
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
-import com.edu.Keddit.commons.adapter.ViewType
-import com.edu.Keddit.commons.adapter.ViewTypeDelegateAdapter
-import com.edu.Keddit.R
-import com.edu.Keddit.commons.inflate
+import com.edu.keddit.commons.adapter.ViewType
+import com.edu.keddit.commons.adapter.ViewTypeDelegateAdapter
+import com.edu.keddit.R
+import com.edu.keddit.commons.inflate
 
 class LoadingDelegateAdapter : ViewTypeDelegateAdapter {
 

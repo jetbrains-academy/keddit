@@ -1,4 +1,4 @@
-package com.edu.Keddit.di
+package com.edu.keddit.di
 
 import dagger.Module
 import dagger.Provides
