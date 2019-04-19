@@ -4,13 +4,13 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdkVersion 27
-  buildToolsVersion '27.0.3'
+  compileSdkVersion 28
+  buildToolsVersion '28.0.3'
 
   defaultConfig {
     applicationId "com.edu.keddit"
     minSdkVersion 21
-    targetSdkVersion 27
+    targetSdkVersion 28
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -28,9 +28,9 @@ kapt {
 }
 dependencies {
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-  implementation 'com.android.support:appcompat-v7:27.1.1'
+  implementation 'com.android.support:appcompat-v7:28+'
   implementation 'com.squareup.picasso:picasso:2.5.2'
-  implementation 'com.android.support:design:27.1.1'
+  implementation 'com.android.support:design:28+'
   androidTestImplementation 'com.android.support.test:runner:1.0.2'
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
   // RxJava & RxAndroid
@@ -45,7 +45,7 @@ dependencies {
   compileOnly 'org.glassfish:javax.annotation:10.0-b28'
   //Tests
   testImplementation 'junit:junit:4.12'
-  testImplementation 'org.robolectric:robolectric:3.8'
+  testImplementation 'org.robolectric:robolectric:4+'
   implementation 'org.mockito:mockito-core:2.7.22'
   implementation 'junit:junit:4.12'
 
