@@ -34,7 +34,7 @@ class SolutionAndroidTest {
         mTestActivity = activityRule.activity
         mNewsFragment = mTestActivity!!.news_list
         var actualResult = (mNewsFragment?.adapter as NewsAdapter).itemCount
-        Assert.assertEquals(10, actualResult)
+        Assert.assertEquals(11, actualResult)
     }
 
 
