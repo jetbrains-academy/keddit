@@ -1,15 +1,14 @@
 package com.edu.keddit
 
+import android.support.test.runner.AndroidJUnit4
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
 
-@RunWith(RobolectricTestRunner::class)
+@RunWith(AndroidJUnit4::class)
 class SolutionTest {
     @Test
-    fun testSolution(){
-        //Not implemented, instrumented tests provided
-        Assert.assertTrue(true)
+    fun testMock() {
+        Assert.assertTrue("Instrumentation tests implemented", true)
     }
 }
