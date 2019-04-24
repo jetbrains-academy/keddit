@@ -41,7 +41,7 @@ class NewsFragment : Fragment() {
                         { retrievedNews ->
                             (news_list.adapter as NewsAdapter).addNews(retrievedNews)
                         },
-                        {  e->
+                        {  e ->
                             Snackbar.make(news_list, e.message ?: "", Snackbar.LENGTH_LONG).show()
                         }
                 )
