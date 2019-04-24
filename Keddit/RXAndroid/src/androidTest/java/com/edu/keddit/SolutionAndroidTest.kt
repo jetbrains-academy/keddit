@@ -1,4 +1,6 @@
+import android.support.test.filters.LargeTest
 import android.support.test.rule.ActivityTestRule
+import android.support.test.runner.AndroidJUnit4
 import android.support.v7.widget.RecyclerView
 import com.edu.keddit.MainActivity
 
@@ -9,13 +11,15 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-//@RunWith(AndroidJUnit4::class)
+@RunWith(AndroidJUnit4::class)
+@LargeTest
 class SolutionAndroidTest {
     @get:Rule
     val activityRule = ActivityTestRule<MainActivity>(MainActivity::class.java)
 
     private var mTestActivity: MainActivity? = null
     private var mNewsFragment: RecyclerView? = null
+
 
     @Test
     fun testPreconditions() {
@@ -30,7 +34,7 @@ class SolutionAndroidTest {
         mTestActivity = activityRule.activity
         mNewsFragment = mTestActivity!!.news_list
         var actualResult = (mNewsFragment?.adapter as NewsAdapter).itemCount
-        Assert.assertEquals(11, actualResult)
+        Assert.assertEquals(10, actualResult)
     }
 
 
