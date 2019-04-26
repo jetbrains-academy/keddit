@@ -78,7 +78,7 @@ class SolutionAndroidTest {
     }
 
     @Test
-    fun testThereisSubscriptionAfterRequestNews() {
+    fun testThereIsSubscriptionAfterRequestNews() {
         //Arrange
         mTestActivity = activityRule.activity
         mNewsFragment = mTestActivity!!.supportFragmentManager!!.fragments[0] as RxBaseFragment
