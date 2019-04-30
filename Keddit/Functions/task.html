@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/html">
+<p xmlns="http://www.w3.org/1999/html">
 <h3>Kotlin Syntax</h3>
 <p>Time to take a look at the Kotlin syntax.</p>
 <p>Kotlin is defined in many ways and this is one of them that tries to include the most important characteristics in one sentence:</p>
@@ -7,7 +7,7 @@
 <p>All of the activities in the app must implement the <code>onCreate()</code> method - it is called by the android while creating the object of the activity, to setup basic parameters (e.g. choose the layout).</p>
 <p>Let’s use the definition to start reviewing our generated code. Here we have both MainActivity files: Java and Kotlin files.</p>
 <h4>Java</h4>
-<div style="width: 110px;  height: 110px;  overflow: scroll;"><pre><code>public class MainActivity extends AppCompatActivity {
+<p><pre><code>public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +25,9 @@
             }
         });
     }
-}</code></pre></div>
+    }</code></pre></p>
 <h4>Kotlin</h4>
-<div style="width: 100px;"><pre style="overflow-x:scroll;"><code>class MainActivity : AppCompatActivity() {
+<p><pre style="overflow-x:scroll;"><code>class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,7 @@
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view -> Snackbar.make(...).setAction("Action", null).show() }
     }
-}</code></pre></div>
+}</code></pre></p>
 <h4>Concise</h4>
 Take a look - the Java file has 19 lines of code and the Kotlin file has only 12.
 
