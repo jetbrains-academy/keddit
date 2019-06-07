@@ -1,5 +1,5 @@
 <html>
-<h3>Infinite Scroll</h3>
+<h2>Infinite Scroll</h2>
 <p>Let's take advantages of this new concept and create your infinite scroll behaviour.</p>
 <p>The <code>RecyclerView</code> allows you to set a Scroll Listener so this <code>InfiniteScrollListener</code> was created and the signature of this class was defined in this way:</p>
 <pre><code>class InfiniteScrollListener(
@@ -13,7 +13,7 @@
     )</code></pre>
 <p><code>requestNews()</code> is a function that you already have in your code, it was updated to use pagination and request the next available news from Reddit.</p>
 <p>As you may notice, <code>requestNews()</code> is not passed but inside a lambda expression. This is because the compiler will not take it as a function parameter but as a function that needs to be executed and use the return type of this function as the value passed to the <code>InfiniteScrollListener</code>. As the return type of <code>requestNews</code> is “<code>Unit</code>”, it doesn’t match the <code>InfiniteScrollListener</code> parameter expected which is “<code>()->Unit</code>”, so this code will not compile except if you put this into the lambda expression that match perfectly the required parameter.</p>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Complete the <code>InfiniteScrollListener</code> declaration by filling up types for the <code>func</code> and <code>layoutManager</code> (you should choose the linear one). Check out the res of the code for the scroll listener.</p>
 <p>Complete the <code>OnActivityCreated</code> method in <code>NewsFragment.kt</code> by adding the <code>InfiniteScrollListener</code> to the news_list with the <code>requestNews</code> and <code>linearLayout</code> as the parameters.</p>
 </html><br>

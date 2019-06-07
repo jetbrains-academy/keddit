@@ -1,5 +1,5 @@
 <html>
-<h3>API Model: Kotlin Classes</h3>
+<h2>API Model: Kotlin Classes</h2>
 <p>You need to create some classes in order to convert your Json response into Kotlin classes. If you do this in Java you will end up creating big Java files with getters and setters to do this but as you are using Kotlin you can take advantage of this and represent all these classes really easily. </p>
 <pre><code>class RedditNewsResponse(val data: RedditDataResponse)
 
@@ -12,7 +12,7 @@ class RedditChildrenResponse(val data: RedditNewsDataResponse)
 class RedditNewsDataResponse(
         // Should include values "author" (String), "title" (String), "num_comments" (Int), "created" (Long), "thumbnail" (String), and "url" (also a String).
 )</code></pre>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Complete the model in <code>ApiModels.kt</code> in api package according to the comments in the code examples above.</p>
 <p>Here is mapping for the previous model reviewed with Kotlin classes and with this 4 classes the model is ready!</p>
 </html><br>

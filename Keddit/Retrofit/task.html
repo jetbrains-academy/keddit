@@ -1,11 +1,11 @@
 <html>
-<h3>Retrofit</h3>
+<h2>Retrofit</h2>
 <blockquote style="margin-left:10px;">Is a type-safe HTTP client for Android and Java</blockquote>
 <p>Retrofit is an incredible easy to use library that turns your HTTP API into a Java (Kotlin) interface. You are going to use it to consume the Reddit API.</p>
-<h4>Dependency</h4>
+<h2>Dependency</h2>
 <p>To use it, you need to add the Retrofit dependency into the <code>build.gradle</code> (already done in this task):</p>
 <pre><code>implementation "com.squareup.retrofit2:retrofit:2.0.0"</code></pre>
-<h4>JSON Converter</h4>
+<h2>JSON Converter</h2>
 <p>Also you need to indicate to Retrofit which converter it should use to convert a JSON response into a Java (Kotlin) class, Moshi will be used here as it has better performance than Gson:</p>
 <pre><code>implementation "com.squareup.retrofit2:converter-moshi:2.0.0"</code></pre>
 <p><a href="https://www.youtube.com/watch?v=WvyScM_S88c">Here you have a great video from Jake Warthon</a> explaining about Moshi and why Moshi works better than others with Retrofit.</p>

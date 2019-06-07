@@ -1,17 +1,17 @@
 <html>
-<h3>Mockito</h3>
+<h2>Mockito</h2>
 <p>Let’s talk about Unit Test in Keddit App. It’s a critical part of any app development to have a set of unit tests. So today you are going to add some unit tests to this App, those will be focused on the <code>NewsManager</code> class, the one responsible to request, map the Reddit news and key place to be the principal cause of all the mayors problems regarding internet connectivity.</p>
-<h4>NewsAPI Interface</h4>
+<h2>NewsAPI Interface</h2>
 <p>Just to make unit test easier, a new interface for the News API was created so now you just can pass a mock of this interface. There is nothing crazy with this new interface so let’s jump to the next part.</p>
-<h4>NewsManager Unit Tests</h4>
+<h2>NewsManager Unit Tests</h2>
 <p>The project was configured through <code>build.gradle</code> to create your unit tests for the <code>NewsManager</code>.</p>
-<h4>Mockito Dependency</h4>
+<h2>Mockito Dependency</h2>
 <p><a href = "http://mockito.org/">Mockito</a> is an incredible lib to make unit tests really awesome and you can use it in Kotlin!</p>
 <pre><code>testImplementation “org.mockito:mockito-core:1.+”</code></pre>
 <p>If you try to mock a class that needs a generics definition, like trying to mock the Call&lt;T> class from Retrofit, it will not work. But you can still make it work with a useful Extension Function:</p>
 <pre><code>inline fun &lt;reified T : Any> mock(): T = Mockito.mock(T::class.java)</code></pre>
 <p>And you are ready to go!</p>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Finish the mock declaration in the NewsManagerTest.kt. Mock <code>NewsAPI</code> and <code>Call&lt;RedditNewsResponse&gt;</code> and pass it to the variable <code>apiMock</code> and <code>callMock</code> respectively.</p>
 </html>
 <div class='hint'>You should declare a mock for the <code>NewsAPI</code> and <code>Call&lt;RedditNewsResponse&gt;</code> using the Extension Function <code>mock&lt;classname&gt;.</code>. </div>

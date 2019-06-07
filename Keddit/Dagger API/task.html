@@ -1,5 +1,5 @@
 <html>
-<h3>Dagger API</h3>
+<h2>Dagger API</h2>
 <p>Here we will implement 4 main annotations Dagger has to provide dependency injection (there are others but they are not covered in this topic)</p>
 <ul>
     <li><code>@Modules</code> + <code>@Provides</code>: provides dependencies. A <code>@Provides</code>-annotated method is used to satisfy a dependency requiring a method. This method satisfies a dependency defined by its return type. All <code>@Provides</code>-annotated methods must be included in a module - a class annotated with <code>@Module</code>.</li>
@@ -7,7 +7,7 @@
     <li><code>@Component</code>: bridge between modules and injections. The classes annotated with <code>@Inject</code> and <code>@Provides</code> are used to form a graph of objects, which dependencies do link. Code invoking that graph accesses it through roots. This set is defined by an interface with methods returning the needed type and having no arguments. This interface should be annotated as <code>@Component</code>the module types should be passed as module parameters, so Dagger 2 could generate an implementation of that contract.</li>
 </ul>
 <p>Thanks to default constructors in Kotlin, some dependencies from the constructor were already provided, so you don’t have to change so much your code in the Keddit App in order to provide those.</p>
-<h4>@Modules</h4>
+<h2>@Modules</h2>
 <p>3 modules were created:</p>
 <ul>
     <li><code>AppModule</code>: provides the <code>Context</code> and the instance to Keddit application.</li>
@@ -20,7 +20,7 @@
 class NewsManager @Inject constructor(private val api: NewsAPI) {
     ...
 }</code></pre>
-<h4>@Inject</h4>
+<h2>@Inject</h2>
 <p>Dependencies are requested in 2 places:</p>
 <ul>
     <li><code>NewsManager</code>: as you saw previously in the constructor.</li>
@@ -28,7 +28,7 @@ class NewsManager @Inject constructor(private val api: NewsAPI) {
 </ul>
 <pre><code>@Inject lateinit var newsManager: NewsManager</code></pre>
 <blockquote>Remember that ‘<code>lateinit</code>’ allows you to define a non-nullable property and set the value later.</blockquote>
-<h4>@Component</h4>
+<h2>@Component</h2>
 <p>A component called “<code>NewsComponent</code>” was created which will be the bridge between the modules and injections:</p>
 <pre><code>@Singleton
 @Component(modules = arrayOf(
@@ -40,7 +40,7 @@ interface NewsComponent {
     fun inject(newsFragment: NewsFragment)
 }</code></pre>
 <p>At least for now you don’t need to expose any other thing than a method to inject dependencies for the <code>NewsFragment</code>. Dagger will implement this method, search for injectable annotations and provide them.</p>
-<h4>Binding Altogether</h4>
+<h2>Binding Altogether</h2>
 <p>Dagger will create a new class called <code>DaggerNewsComponent</code> which will have a builder to create an implementation of our <code>NewsComponent</code> interface. You are going to create an instance of this and make it available from the <code>KedditApp</code> class in a static way:</p>
 <pre><code>companion object {
     lateinit var newsComponent: NewsComponent
@@ -55,7 +55,7 @@ newsComponent = DaggerNewsComponent.builder()
     super.onCreate(savedInstanceState)
     KedditApp.newsComponent.inject(this)
 }</code></pre>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Provide the necessary annotations in the di package (all of the files), <code>NewsFragment.kt</code> and <code>NewsManager.kt</code>.</p>
 </html>
 <div class='hint'>All of the classes in <code>di</code> package use annotations <code>Provides</code> and <code>Singleton</code> for their methods, except the <code>NewsComponent.kt</code>. <code>NewsComponent</code> uses <code>Singleton</code> and <code>Component</code> in its declaration.</div>

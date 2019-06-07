@@ -1,8 +1,8 @@
 <html>
-<h3>Parcelable</h3>
+<h2>Parcelable</h2>
 <p>If you were working with Android for sure you already know about <code>Parcelable</code>. A <code>Parcelable</code> is an interface for classes whose instances can be written to and restored from a <code>Parcel</code>. This is a fast mechanism that Android provides as a IPC (Inter Process Communication) transport and the <code>Parcel</code> is the message container to transfer.</p>
 <p>Also, Android provides some lifecycle methods that will allow you to persist temporarily the information required for our classes in a <code>Parcel</code> class while having a runtime change (rotating the device or if the activity is killed by the OS). In your case, save your news from this situations by implementing the <code>Parcelable</code> interface.</p>
-<h4>Data Classes with Parcelable</h4>
+<h2>Data Classes with Parcelable</h2>
 <p>Let’s review one of the classes:</p>
 <pre><code>data class RedditNews(val after: String,
                       val before: String,
@@ -27,7 +27,7 @@
 
     override fun describeContents() = 0
 }</code></pre>
-<h4>1. Companion object</h4>
+<h2>1. Companion object</h2>
 <p>As you may notice, in Kotlin there is no static keyword to create a static member for a class but exists something called companion objects which allows you to provide the same behavior. When using this keyword you are declaring an object (an instance) directly in the code and all the properties and methods inside companion object can be called directly by using the class name:</p>
 <pre><code>data class RedditNews(...)
     companion object {
@@ -37,9 +37,9 @@
 <p>Use it:</p>
 <pre><code>RedditNews.ENDPOINT</code></pre>
 <p>You are going to use it to expose the CREATOR function.</p>
-<h4>2. @JvmField Annotation</h4>
+<h2>2. @JvmField Annotation</h2>
 <p>Classes implementing the Parcelable interface must also have a non-null static field called CREATOR of a type that implements the Parcelable.Creator interface. In order to make your CREATOR implementation visible as a field in Java you need this special annotation called “@JvmField”, otherwise it will not be found and in the middle of the process it will throw an exception.</p>
-<h4>3. Extension Function for the Creator</h4>
+<h2>3. Extension Function for the Creator</h2>
 <p>Check out this useful extension function that creates the CREATOR passing as parameter a function:</p>
 <pre><code>val CREATOR = createParcel { function(it) }</code></pre>
 <p>The definition of this extension function is like this:</p>
@@ -49,18 +49,18 @@
             override fun createFromParcel(source: Parcel): T? = createFromParcel(source)
             override fun newArray(size: Int): Array&lt;out T?> = arrayOfNulls(size)
         }</code></pre>
-<h4>3.1) Inline Functions</h4>
+<h2>3.1) Inline Functions</h2>
 <p>The inline modifier means that the function itself and the function passed to it, will be inlined into the call site, it means like you were implementing manually this function at every place that you were using it. Behind the scenes, the compiler will be generating specific bytecode at every place that you use it (it’s like “copy & pasting” this function in all the place that you were using it) giving you better performance and avoiding to create new classes for you like a normal extension function could do.</p>
-<h4>3.2) reified T</h4>
+<h2>3.2) reified T</h2>
 <p>If you need to access to a type passed as a parameter, <code>reified</code> keyword is here to save you! with the reified modifier now it’s accessible inside the function, almost as if it were a normal class and no reflection is needed!</p>
-<h4>3.3) crossinline</h4>
+<h2>3.3) crossinline</h2>
 <p>If you need to execute the function passed as parameter in another context then <code>crossinline</code> allows you to use it in this way and maybe run it also in another thread. In this case, inside the Creator object.</p>
-<h4>4. Secondary Constructors</h4>
+<h2>4. Secondary Constructors</h2>
 <p>In this course classes were created with primary constructors like this:</p>
 <pre><code>data class News(val title: String)</code></pre>
 <p>But maybe the primary constructor is not enough specially for scenarios where you need to provide alternatives way to create this class, like in this example that requires a Parcel parameter.</p>
 <pre><code>protected constructor(parcelIn: Parcel) : this(...)</code></pre>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Complete the <code>Parcelable</code> implementation in <code>Models.kt</code> in commons package: insert the interface to implement, insert correct annotation in the companion object declaration, and pass the <code>ReddiNews()</code> constructor as the parameter to <code>createParcel</code> method. Also, checkout the <code>createParcel</code> implementation in the <code>Extensions.kt</code> in the commons package.</p>
 </html><br>
 <div class='hint'>In the first placeholder you should insert the name of implemented interface - <code>Parcelable</code>.</div>

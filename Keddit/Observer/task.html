@@ -1,5 +1,5 @@
 <html>
-<h3>Subscribe > Subscription > Observer</h3>
+<h2>Subscribe > Subscription > Observer</h2>
 <p>In order to request the mocked Reddit news from the <code>NewsManager</code>, time to turn your <code>NewsFragment</code> into an <code>Observer</code> of the <code>Observable</code> that you receive from the <code>NewsManager.getNews()</code>. It will be done by calling the <code>getNews()</code> method and invoke the method “<code>subscribe(…)</code>” from the received <code>Observable</code>:</p>
 <pre><code>subscribe (
         { retrievedNews ->
@@ -28,10 +28,10 @@
 <pre><code>{ e ->
     Snackbar.make(...).show()
 }</code></pre>
-<h4>Still in the Main Thread</h4>
+<h2>Still in the Main Thread</h2>
 <p>If you run the App it will just work because the data provided in this <code>Observable</code> are mocked. But if you really do a long running operation instead of the mocked data that you generate, the App will stop working as you are still in the Main UI Thread.</p>
 <p>As we didn’t provide any specific details to our Observable, it will run with the default configuration which is to be executed in the same thread that it was invoked. So let’s configure our Observable to be executed in another thread but still notify any event in our current Main UI Thread.</p>
-<h4>SubscribeOn</h4>
+<h2>SubscribeOn</h2>
 <pre><code>val subscription = newsManager.getNews()
         .subscribeOn(Schedulers.io())
         .subscribe (...)</code></pre>
@@ -42,7 +42,7 @@
         <li>test: useful for debugging.</li>
     </ul>
 <p>In this case, <code>Schedulers.io()</code> will be used as you are going to be executing an API request.</p>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Complete the <code>requestNews()</code> in the <code>NewsFragment.kt</code> by invoking <code>subscribe</code> method on <code>getNews</code> method, finishing lambdas declarations for <code>retrievedNews</code> and error, and filling up the correct argument for the <code>subscribOn</code> invocation.</p>
 </html><br>
 <div class='hint'>You should invoke the constructor of <code>Schedulers.io</code> thread in the first placeholder.</div>

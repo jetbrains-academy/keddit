@@ -1,5 +1,5 @@
 <html>
-<h3>Testing Observables with TestSubscriber</h3>
+<h2>Testing Observables with TestSubscriber</h2>
 <p>A simple way to test your observables is by using the <code>TestSubscriber</code> class provided by <code>RxJava</code>. It allows you to run an <code>Observable</code> and make some assertions:</p>
 <pre><code>var testSub = TestSubscriber...
 newsManager.getNews("").subscribe(testSub)
@@ -24,7 +24,7 @@ fun testSuccess_basic() {
     testSub.assertValueCount(1)
     testSub.assertCompleted()
 }</code></pre>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Complete the testSub variable declaration by passing RedditNews observable into it. Checkout and run the unit tests. Try to modify them.</p>
 </html><div class='hint'>You should declare a <code>TestSubscriber</code> and pass <code>RedditNews</code> as a type to it.</div>
 <br>

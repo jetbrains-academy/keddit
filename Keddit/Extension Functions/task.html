@@ -1,7 +1,7 @@
 <html>
-<h3>Create your NewsFragment.kt</h3>
+<h2>Create your NewsFragment.kt</h2>
 <p>It is time to create <code>NewsFragment.kt</code> file, it will be responsible to show the latests news from the Reddit API and a <code>RecyclerView</code> to show the news.</p>
-<h4>Fragments</h4>
+<h2>Fragments</h2>
 <p>Fragment is an entity providing a part of UI in an activity. Multiple fragments could be combined for creating a multi-pane UI.
     Fragment could be reused in multiple activities. Each of them have separate lifecycles, input events and could be added or removed from the activity in runtime.</p>
 <p>To create a <code>Fragment</code> you should extend <code>Fragment</code> class and override its key methods. The method necessary to run a <code>Fragment</code> is <code>onCreateView()</code> </p>
@@ -18,7 +18,7 @@ override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saved
     return view
 }</code></pre>
 <p>This is a valid code and works but! it’s not a “Kotlin-ized” code so you are going to make it better. With this small piece of code you are going to incorporate some new concepts about the language:</p>
-<h4>Extension Functions (Utility class?)</h4>
+<h2>Extension Functions (Utility class?)</h2>
 <p>Extension functions allow you to extend the functionality of a class by adding new functions. The class doesn’t have to belongs to you (could it be a third party library) and also without requiring you to inherit the class.</p>
 <p>As you will be able to add new functions to existing classes, e.g. the ViewGroup class. Also you are going to understand how it works and how to consume it from Java.</p>
 <p>ViewGroup is a class from the Android SDK and in order to inflate it you have to do this:</p>
@@ -38,7 +38,7 @@ container?.inflate(R.layout.news_fragment)</code></pre>
 <p>The name of the Utility class will be the same as the file’s name plus “Kt” suffix or you can override it with an specific annotation:</p>
 <pre><code>@file:JvmName("ExtensionsUtils")
 
-package com.edu.Keddit.commons
+package com.edu.keddit.commons
 
 import ...
 
@@ -56,7 +56,7 @@ ExtensionsUtils.inflate(container, R.layout.news_fragment);</code></pre>
 <p>Great! This is your first Extension Function and you know a lot more about this concept. Code in the MainActivity was updated in this way:</p>
 <pre><code>// old code:
 val view = inflater.inflate(R.layout.news_fragment, container, false)</code></pre>
-<h4>Task:</h4>
+<h2>Task:</h2>
 Complete the return statement of <code>onCreateView()</code> method in <code>NewsFragment.kt</code> to use an inflate extension function in Extensions.kt for returning the value similar to the commented one (<code>val view</code>).
 </html>
 <br>

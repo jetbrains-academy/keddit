@@ -1,5 +1,5 @@
 <html>
-<h3>Properties and Fields</h3>
+<h2>Properties and Fields</h2>
 <p>In Kotlin you access properties like accessing a field in Java. Instead of calling the getResources() method from an Activity you directly do:</p>
 <pre><code>resources.getString(R.string.id)
 // vs
@@ -7,11 +7,11 @@ getResources().getString(R.string.id)
 //the second one is still allowed</code></pre>
 <p>You can still call the getResource() method but Android Studio will suggest you to change it.<p>
 <p>It doesn’t mean that you are accessing the field directly, it’s calling the “getResource()” method but in a more convenient way.</p>
-<h4>FragmentManager</h4>
+<h2>FragmentManager</h2>
 <p>A FragmentManager is an entity responsible for interactions with fragments associated with a particular activity. The fragments will be described more in detail later in the course. For now you can just assume them to be parts of activities, visible and interactive, that could be used by different activities to avoid the code duplication.</p>
-<h4>clearBackStack()</h4>
+<h2>clearBackStack()</h2>
 <p>Here we create a method <code>clearBackStack()</code> which would be used later for clearing things up in case of the activity reload.</p>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Complete the condition by checking if the <code>backStackEntryCount</code> property of the <code>manager</code> variable is greater than 0.</p>
 </html><br>
 <div class='hint'>Just type the "backStackEntryCount", you can invoke this property of the <code>supportFragmentManager</code> without calling any methods explicitly.</div>

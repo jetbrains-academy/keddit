@@ -1,5 +1,5 @@
 <html>
-<h3>API Interface</h3>
+<h2>API Interface</h2>
 <p>A Kotlin file called RedditApi was created and it looks like this:</p>
 <pre><code>import retrofit2.Call
 import retrofit2.http.GET
@@ -9,7 +9,7 @@ interface  RedditApi {
     : Call&lt;RedditNewsResponse>;
 }</code></pre>
 <p>You should define here a synchronous API that will receive the “after” and “limit” query string. The return type is “<code>Call&lt;RedditNewsResponse></code>”, this Call class will allow you to execute the request and know if the request was successful or not, also to extract the response data with the given generic type, in this case, the new defined Kotlin class RedditNewsResponse.</p>
-<h4>Task:</h4>
+<h2>Task:</h2>
 <p>Complete the interface in <code>RedditApi.kt</code> by providing String values for "after" and "limit".</p>
 </html><br>
 <div class='hint'>Insert the name of "after" query parameter in the first placeholder. Do not forget the quotes.</div>
