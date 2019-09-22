@@ -1,0 +1,49 @@
+type: edu
+files:
+- name: build.gradle
+  visible: false
+- name: src/main/AndroidManifest.xml
+  visible: false
+- name: src/main/java/com/edu/Keddit/MainActivity.kt
+  visible: true
+  placeholders:
+  - offset: 194
+    length: 3
+    placeholder_text: type here
+  - offset: 207
+    length: 27
+    placeholder_text: type here
+- name: src/main/res/layout/activity_main.xml
+  visible: true
+- name: src/main/res/layout/news_fragment.xml
+  visible: true
+- name: src/main/res/layout/news_item.xml
+  visible: true
+- name: src/main/res/layout/news_item_loading.xml
+  visible: true
+- name: src/main/res/menu/menu_main.xml
+  visible: true
+- name: src/main/res/mipmap-hdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-mdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/values-v21/styles.xml
+  visible: true
+- name: src/main/res/values-w820dp/dimens.xml
+  visible: true
+- name: src/main/res/values/colors.xml
+  visible: true
+- name: src/main/res/values/dimens.xml
+  visible: true
+- name: src/main/res/values/strings.xml
+  visible: true
+- name: src/main/res/values/styles.xml
+  visible: true
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false

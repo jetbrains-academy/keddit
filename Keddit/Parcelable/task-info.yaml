@@ -1,0 +1,250 @@
+type: edu
+files:
+- name: build.gradle
+  visible: false
+- name: src/main/AndroidManifest.xml
+  visible: false
+- name: src/main/java/com/edu/Keddit/MainActivity.kt
+  visible: true
+  placeholders:
+  - offset: 329
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Functions
+      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 342
+    length: 27
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Functions
+      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 459
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Values and Variables
+      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      placeholder: 3
+      is_visible: false
+- name: src/main/java/com/edu/Keddit/api/ApiModels.kt
+  visible: true
+  placeholders:
+  - offset: 53
+    length: 28
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/ApiModels.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 118
+    length: 99
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/ApiModels.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 323
+    length: 159
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/ApiModels.kt
+      placeholder: 3
+      is_visible: false
+- name: src/main/java/com/edu/Keddit/api/RedditApi.kt
+  visible: true
+  placeholders:
+  - offset: 172
+    length: 7
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/RedditApi.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 218
+    length: 7
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/RedditApi.kt
+      placeholder: 2
+      is_visible: false
+- name: src/main/java/com/edu/Keddit/api/RestAPI.kt
+  visible: true
+  placeholders:
+  - offset: 178
+    length: 9
+    placeholder_text: RedditApi
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/RestAPI.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 208
+    length: 238
+    placeholder_text: |-
+      val retrofit = Retrofit.Builder()
+                      .baseUrl("https://www.reddit.com")
+                      .addConverterFactory(MoshiConverterFactory.create())
+                      .build()
+
+              redditApi = retrofit.create(RedditApi::class.java)
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/RestAPI.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 536
+    length: 37
+    placeholder_text: return redditApi.getTop(after, limit)
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/api/RestAPI.kt
+      placeholder: 3
+      is_visible: false
+- name: src/main/java/com/edu/Keddit/api/adapter/test/LoadingDelegateAdapter.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/api/adapter/test/NewsAdapter.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/api/adapter/test/NewsDelegateAdapter.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/commons/Extensions.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/commons/InfiniteScrollListener.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/commons/Models.kt
+  visible: true
+  placeholders:
+  - offset: 309
+    length: 10
+    placeholder_text: type here
+  - offset: 354
+    length: 29
+    placeholder_text: type here
+  - offset: 421
+    length: 14
+    placeholder_text: type here
+- name: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+  visible: true
+  placeholders:
+  - offset: 195
+    length: 23
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Higher-Order functions
+      file: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 283
+    length: 39
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Higher-Order functions
+      file: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 486
+    length: 21
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Higher-Order functions
+      file: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+      placeholder: 3
+      is_visible: false
+- name: src/main/java/com/edu/Keddit/commons/adapter/AdapterConstants.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/commons/adapter/ViewType.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/commons/adapter/ViewTypeDelgateAdapter.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/commons/extensions/TimeExt.kt
+  visible: true
+- name: src/main/java/com/edu/Keddit/features/news/NewsFragment.kt
+  visible: true
+  placeholders:
+  - offset: 1307
+    length: 55
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/features/news/NewsFragment.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 2311
+    length: 31
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Higher-Order functions
+      file: src/main/java/com/edu/Keddit/features/news/NewsFragment.kt
+      placeholder: 1
+      is_visible: false
+- name: src/main/java/com/edu/Keddit/features/news/NewsManager.kt
+  visible: true
+  placeholders:
+  - offset: 198
+    length: 36
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Infinite Scroll
+      file: src/main/java/com/edu/Keddit/features/news/NewsManager.kt
+      placeholder: 1
+      is_visible: false
+- name: src/main/res/layout/activity_main.xml
+  visible: true
+- name: src/main/res/layout/news_fragment.xml
+  visible: true
+- name: src/main/res/layout/news_item.xml
+  visible: true
+- name: src/main/res/layout/news_item_loading.xml
+  visible: true
+- name: src/main/res/menu/menu_main.xml
+  visible: true
+- name: src/main/res/mipmap-hdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-mdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/values-v21/styles.xml
+  visible: true
+- name: src/main/res/values-w820dp/dimens.xml
+  visible: true
+- name: src/main/res/values/colors.xml
+  visible: true
+- name: src/main/res/values/dimens.xml
+  visible: true
+- name: src/main/res/values/strings.xml
+  visible: true
+- name: src/main/res/values/styles.xml
+  visible: true
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false
