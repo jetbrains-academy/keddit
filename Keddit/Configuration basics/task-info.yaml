@@ -40,3 +40,5 @@ files:
   visible: true
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false
+- name: src/main/java/com/edu/keddit/MainActivity.kt
+  visible: true
