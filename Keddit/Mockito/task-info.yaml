@@ -4,7 +4,7 @@ files:
   visible: false
 - name: src/main/AndroidManifest.xml
   visible: false
-- name: src/main/java/com/edu/Keddit/MainActivity.kt
+- name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
   placeholders:
   - offset: 329
@@ -13,7 +13,7 @@ files:
     dependency:
       lesson: Keddit
       task: Functions
-      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 1
       is_visible: false
   - offset: 342
@@ -22,7 +22,7 @@ files:
     dependency:
       lesson: Keddit
       task: Functions
-      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 2
       is_visible: false
   - offset: 459
@@ -31,10 +31,10 @@ files:
     dependency:
       lesson: Keddit
       task: Values and Variables
-      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 3
       is_visible: false
-- name: src/main/java/com/edu/Keddit/api/ApiModels.kt
+- name: src/main/java/com/edu/keddit/api/ApiModels.kt
   visible: true
   placeholders:
   - offset: 53
@@ -43,7 +43,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/ApiModels.kt
+      file: src/main/java/com/edu/keddit/api/ApiModels.kt
       placeholder: 1
       is_visible: false
   - offset: 118
@@ -52,7 +52,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/ApiModels.kt
+      file: src/main/java/com/edu/keddit/api/ApiModels.kt
       placeholder: 2
       is_visible: false
   - offset: 323
@@ -61,14 +61,14 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/ApiModels.kt
+      file: src/main/java/com/edu/keddit/api/ApiModels.kt
       placeholder: 3
       is_visible: false
-- name: src/main/java/com/edu/Keddit/api/NewsAPI.kt
+- name: src/main/java/com/edu/keddit/api/NewsAPI.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/api/NewsRestAPI.kt
+- name: src/main/java/com/edu/keddit/api/NewsRestAPI.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/api/RedditApi.kt
+- name: src/main/java/com/edu/keddit/api/RedditApi.kt
   visible: true
   placeholders:
   - offset: 172
@@ -77,7 +77,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/RedditApi.kt
+      file: src/main/java/com/edu/keddit/api/RedditApi.kt
       placeholder: 1
       is_visible: false
   - offset: 218
@@ -86,10 +86,10 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/RedditApi.kt
+      file: src/main/java/com/edu/keddit/api/RedditApi.kt
       placeholder: 2
       is_visible: false
-- name: src/main/java/com/edu/Keddit/api/RestAPI.kt
+- name: src/main/java/com/edu/keddit/api/RestAPI.kt
   visible: true
   placeholders:
   - offset: 176
@@ -98,7 +98,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/RestAPI.kt
+      file: src/main/java/com/edu/keddit/api/RestAPI.kt
       placeholder: 1
       is_visible: false
   - offset: 206
@@ -107,7 +107,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/RestAPI.kt
+      file: src/main/java/com/edu/keddit/api/RestAPI.kt
       placeholder: 2
       is_visible: false
   - offset: 534
@@ -116,22 +116,22 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/api/RestAPI.kt
+      file: src/main/java/com/edu/keddit/api/RestAPI.kt
       placeholder: 3
       is_visible: false
-- name: src/main/java/com/edu/Keddit/api/adapter/test/LoadingDelegateAdapter.kt
+- name: src/main/java/com/edu/keddit/api/adapter/test/LoadingDelegateAdapter.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/api/adapter/test/NewsAdapter.kt
+- name: src/main/java/com/edu/keddit/api/adapter/test/NewsAdapter.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/api/adapter/test/NewsDelegateAdapter.kt
+- name: src/main/java/com/edu/keddit/api/adapter/test/NewsDelegateAdapter.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/commons/Extensions.kt
+- name: src/main/java/com/edu/keddit/commons/Extensions.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/commons/InfiniteScrollListener.kt
+- name: src/main/java/com/edu/keddit/commons/InfiniteScrollListener.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/commons/Models.kt
+- name: src/main/java/com/edu/keddit/commons/Models.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+- name: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
   visible: true
   placeholders:
   - offset: 195
@@ -140,7 +140,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+      file: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
       placeholder: 1
       is_visible: false
   - offset: 258
@@ -149,7 +149,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+      file: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
       placeholder: 2
       is_visible: false
   - offset: 367
@@ -158,18 +158,18 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/commons/RxBaseFragment.kt
+      file: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
       placeholder: 3
       is_visible: false
-- name: src/main/java/com/edu/Keddit/commons/adapter/AdapterConstants.kt
+- name: src/main/java/com/edu/keddit/commons/adapter/AdapterConstants.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/commons/adapter/ViewType.kt
+- name: src/main/java/com/edu/keddit/commons/adapter/ViewType.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/commons/adapter/ViewTypeDelgateAdapter.kt
+- name: src/main/java/com/edu/keddit/commons/adapter/ViewTypeDelgateAdapter.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/commons/extensions/TimeExt.kt
+- name: src/main/java/com/edu/keddit/commons/extensions/TimeExt.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/features/news/NewsFragment.kt
+- name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
   visible: true
   placeholders:
   - offset: 2953
@@ -178,10 +178,10 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/features/news/NewsFragment.kt
+      file: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
       placeholder: 2
       is_visible: false
-- name: src/main/java/com/edu/Keddit/features/news/NewsManager.kt
+- name: src/main/java/com/edu/keddit/features/news/NewsManager.kt
   visible: true
   placeholders:
   - offset: 655
@@ -190,7 +190,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/features/news/NewsManager.kt
+      file: src/main/java/com/edu/keddit/features/news/NewsManager.kt
       placeholder: 2
       is_visible: false
   - offset: 712
@@ -199,7 +199,7 @@ files:
     dependency:
       lesson: Keddit
       task: Saving News
-      file: src/main/java/com/edu/Keddit/features/news/NewsManager.kt
+      file: src/main/java/com/edu/keddit/features/news/NewsManager.kt
       placeholder: 3
       is_visible: false
 - name: src/main/res/layout/activity_main.xml
