@@ -1,0 +1,8 @@
+title: Creating Android Application with Kotlin
+language: English
+summary: Demo course of Android Development with Kotlin, based on original Keddit
+  series by Juan Saravia.
+programming_language: Kotlin
+environment: Android
+content:
+- Keddit

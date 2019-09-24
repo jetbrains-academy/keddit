@@ -1,0 +1,43 @@
+type: framework
+content:
+- Configuration basics
+- Kotlin plugin
+- Gradle introduction
+- Functions
+- Values and Variables
+- Properties and Fields
+- Safe
+- Elvis operator
+- Statically Typed
+- Java Interoperability
+- Extension Functions
+- Default Values in Parameters
+- Android Extensions
+- Delegated Properties
+- Object expressions
+- Data classes
+- Range
+- Filter
+- Map
+- RXJava
+- Observable
+- Lambda expressions
+- Observer
+- RXAndroid
+- Subscriptions
+- RedditApi
+- Retrofit
+- API Model
+- API Interface
+- Rest API
+- Call the API
+- Higher-Order functions
+- Infinite Scroll
+- Parcelable
+- Bonus Parcelabel
+- Saving News
+- Mockito
+- TestSubscriber
+- Annotation processing
+- Dagger 2
+- Dagger API
