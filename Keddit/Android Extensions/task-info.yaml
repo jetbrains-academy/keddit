@@ -4,7 +4,7 @@ files:
   visible: false
 - name: src/main/AndroidManifest.xml
   visible: false
-- name: src/main/java/com/edu/Keddit/MainActivity.kt
+- name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
   placeholders:
   - offset: 328
@@ -13,7 +13,7 @@ files:
     dependency:
       lesson: Keddit
       task: Functions
-      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 1
       is_visible: false
   - offset: 341
@@ -22,7 +22,7 @@ files:
     dependency:
       lesson: Keddit
       task: Functions
-      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 2
       is_visible: false
   - offset: 458
@@ -31,12 +31,12 @@ files:
     dependency:
       lesson: Keddit
       task: Values and Variables
-      file: src/main/java/com/edu/Keddit/MainActivity.kt
+      file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 3
       is_visible: false
-- name: src/main/java/com/edu/Keddit/commons/Extensions.kt
+- name: src/main/java/com/edu/keddit/commons/Extensions.kt
   visible: true
-- name: src/main/java/com/edu/Keddit/features/news/NewsFragment.kt
+- name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
   visible: true
   placeholders:
   - offset: 836

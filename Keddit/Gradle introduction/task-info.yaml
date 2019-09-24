@@ -4,7 +4,7 @@ files:
   visible: false
 - name: src/main/AndroidManifest.xml
   visible: false
-- name: src/main/java/com/edu/Keddit/MainActivity.kt
+- name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
 - name: src/main/res/layout/activity_main.xml
   visible: true
