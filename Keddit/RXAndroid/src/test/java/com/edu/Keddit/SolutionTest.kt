@@ -1,5 +1,7 @@
 package com.edu.keddit
 
+import org.junit.Assert
+import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 
@@ -7,5 +9,8 @@ import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class SolutionTest {
-    //The instrumental tests are implemented
+    @Test
+    fun testMock() {
+        Assert.assertTrue("Instrumentation tests implemented", true)
+    }
 }
