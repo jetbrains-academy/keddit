@@ -1,8 +1,8 @@
 package com.edu.keddit.api.adapter.test
 
 
-import android.support.v4.util.SparseArrayCompat
-import android.support.v7.widget.RecyclerView
+import androidx.collection.SparseArrayCompat
+import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import com.edu.keddit.commons.RedditNewsItem
 import com.edu.keddit.commons.adapter.AdapterConstants
@@ -11,10 +11,10 @@ import com.edu.keddit.commons.adapter.ViewTypeDelegateAdapter
 import java.util.*
 
 
-class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class NewsAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<androidx.recyclerview.widget.RecyclerView.ViewHolder>() {
 
     private var items: ArrayList<ViewType>
-    private var delegateAdapters = SparseArrayCompat<ViewTypeDelegateAdapter>()
+    private var delegateAdapters = androidx.collection.SparseArrayCompat<ViewTypeDelegateAdapter>()
     private val loadingItem = object : ViewType {
         override fun getViewType() = AdapterConstants.LOADING
     }
@@ -30,11 +30,11 @@ class NewsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return items.size
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): androidx.recyclerview.widget.RecyclerView.ViewHolder {
         return delegateAdapters.get(viewType)!!.onCreateViewHolder(parent)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: androidx.recyclerview.widget.RecyclerView.ViewHolder, position: Int) {
         delegateAdapters.get(getItemViewType(position))!!.onBindViewHolder(holder, this.items[position])
     }
 

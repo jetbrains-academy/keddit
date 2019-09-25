@@ -1,7 +1,7 @@
 package com.edu.keddit.features.news
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +10,7 @@ import com.edu.keddit.R
 import com.edu.keddit.commons.inflate
 
 
-class NewsFragment : Fragment() {
+class NewsFragment : androidx.fragment.app.Fragment() {
 
     private val newsList by lazy {
         news_list

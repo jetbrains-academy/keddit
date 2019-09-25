@@ -1,6 +1,6 @@
 package com.edu.keddit
 
-import android.support.v4.app.FragmentManager
+import androidx.fragment.app.FragmentManager
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -11,7 +11,7 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class SolutionTest {
     private var activity: MainActivity? = null
-    private var manager: FragmentManager? = null
+    private var manager: androidx.fragment.app.FragmentManager? = null
     @Before
     fun setup() {
         activity = Robolectric.buildActivity(MainActivity::class.java).create().get()
@@ -30,7 +30,7 @@ class SolutionTest {
     }
 }
 
-class TestListener: android.support.v4.app.FragmentManager.OnBackStackChangedListener {
+class TestListener: androidx.fragment.app.FragmentManager.OnBackStackChangedListener {
     var modificationCount = 0
     override fun onBackStackChanged () {
         modificationCount++

@@ -1,7 +1,7 @@
 package com.edu.keddit
 
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.edu.keddit.commons.InfiniteScrollListener
 import org.junit.Assert
 import org.junit.Before
@@ -25,7 +25,7 @@ class SolutionTest {
     fun testInfiniteScrollListenerParameters() {
         var error: String? = null
         try {
-            infiniteScrollListener = InfiniteScrollListener({test()}, LinearLayoutManager(activity?.baseContext) )
+            infiniteScrollListener = InfiniteScrollListener({test()}, androidx.recyclerview.widget.LinearLayoutManager(activity?.baseContext))
         }
         catch (e: IllegalArgumentException){
             error = e.message
@@ -35,7 +35,7 @@ class SolutionTest {
     @Test
     fun testListenerAttached() {
         val actualResult = activity?.news_list
-        var listenerField = RecyclerView::class.java.getDeclaredField("mScrollListeners")
+        var listenerField = androidx.recyclerview.widget.RecyclerView::class.java.getDeclaredField("mScrollListeners")
         listenerField.isAccessible = true
         val actualListener = (listenerField.get(actualResult) as ArrayList<*>)[0]
         Assert.assertTrue("Check if ",InfiniteScrollListener::class.java.isInstance(actualListener))

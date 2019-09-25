@@ -1,7 +1,7 @@
 package com.edu.keddit
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.edu.keddit.features.news.NewsFragment
@@ -28,29 +28,29 @@ class SolutionTest {
     @Test
     fun testOnActivityCreatedNewsListNotNull() {
         newsFragment?.onActivityCreated(null)
-        val actualResult = ReflectionHelpers.getField<RecyclerView>(newsFragment, "newsList")
+        val actualResult = ReflectionHelpers.getField<androidx.recyclerview.widget.RecyclerView>(newsFragment, "newsList")
         Assert.assertNotNull(actualResult)
     }
     @Test
     fun testBeforeActivityCreatedHasFixedSizedFalse() {
-        val actualResult = ReflectionHelpers.getField<RecyclerView>(newsFragment, "newsList").hasFixedSize()
+        val actualResult = ReflectionHelpers.getField<androidx.recyclerview.widget.RecyclerView>(newsFragment, "newsList").hasFixedSize()
         Assert.assertEquals(false, actualResult)
     }
     @Test
     fun testOnActivityCreatedHasFixedSizedBecomesTrue() {
         newsFragment?.onActivityCreated(null)
-        val actualResult = ReflectionHelpers.getField<RecyclerView>(newsFragment, "newsList").hasFixedSize()
+        val actualResult = ReflectionHelpers.getField<androidx.recyclerview.widget.RecyclerView>(newsFragment, "newsList").hasFixedSize()
         Assert.assertEquals(true, actualResult)
     }
     @Test
     fun testBeforeActivityCreatedLayoutManagerIsNull() {
-        val actualResult = ReflectionHelpers.getField<RecyclerView>(newsFragment, "newsList").layoutManager
+        val actualResult = ReflectionHelpers.getField<androidx.recyclerview.widget.RecyclerView>(newsFragment, "newsList").layoutManager
         Assert.assertNull(actualResult)
     }
     @Test
     fun testOnActivityCreatedlayoutManagerBecomesNotNull() {
         newsFragment?.onActivityCreated(null)
-        val actualResult = ReflectionHelpers.getField<RecyclerView>(newsFragment, "newsList").layoutManager
+        val actualResult = ReflectionHelpers.getField<androidx.recyclerview.widget.RecyclerView>(newsFragment, "newsList").layoutManager
         Assert.assertNotNull(actualResult)
     }
 

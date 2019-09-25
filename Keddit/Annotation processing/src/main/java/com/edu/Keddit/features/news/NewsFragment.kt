@@ -1,8 +1,8 @@
 package com.edu.keddit.features.news
 
-import android.support.design.widget.Snackbar
+import com.google.android.material.snackbar.Snackbar
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +35,7 @@ class NewsFragment : RxBaseFragment() {
 
         news_list.apply {
             setHasFixedSize(true)
-            val linearLayout = LinearLayoutManager(context)
+            val linearLayout = androidx.recyclerview.widget.LinearLayoutManager(context)
             layoutManager = linearLayout
             clearOnScrollListeners()
             addOnScrollListener(InfiniteScrollListener({ requestNews() }, linearLayout))

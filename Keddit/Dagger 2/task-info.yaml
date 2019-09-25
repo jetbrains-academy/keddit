@@ -6,48 +6,8 @@ files:
   visible: false
 - name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
-- name: src/main/java/com/edu/keddit/api/ApiModels.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/NewsAPI.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/NewsRestAPI.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/RedditApi.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/RestAPI.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/adapter/test/ApiModels.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/adapter/test/LoadingDelegateAdapter.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/adapter/test/NewsAdapter.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/api/adapter/test/NewsDelegateAdapter.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/Extensions.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/InfiniteScrollListener.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/Models.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/adapter/AdapterConstants.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/adapter/ViewType.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/adapter/ViewTypeDelgateAdapter.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/commons/extensions/TimeExt.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/news/NewsFragment.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/news/NewsManager.kt
-  visible: true
-- name: src/main/java/com/edu/keddit/MainActivity.kt
-  visible: true
   placeholders:
-  - offset: 279
+  - offset: 277
     length: 3
     placeholder_text: type here
     dependency:
@@ -56,7 +16,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 1
       is_visible: false
-  - offset: 292
+  - offset: 290
     length: 27
     placeholder_text: type here
     dependency:
@@ -65,7 +25,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 2
       is_visible: false
-  - offset: 409
+  - offset: 407
     length: 3
     placeholder_text: type here
     dependency:
