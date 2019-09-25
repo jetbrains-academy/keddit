@@ -4,8 +4,6 @@ files:
   visible: false
 - name: src/androidTest/java/com/edu/keddit/AndroidEduTestRunner.kt
   visible: false
-- name: src/androidTest/java/com/edu/keddit/SolutionAndroidTest.kt
-  visible: true
 - name: src/main/AndroidManifest.xml
   visible: false
 - name: src/main/java/com/edu/keddit/MainActivity.kt
@@ -109,4 +107,6 @@ files:
 - name: src/main/res/values/styles.xml
   visible: true
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false
+- name: src/androidTest/java/com/edu/keddit/SolutionAndroidTest.kt
   visible: false
