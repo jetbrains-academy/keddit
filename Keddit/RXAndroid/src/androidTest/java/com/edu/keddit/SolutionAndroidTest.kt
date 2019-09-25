@@ -1,7 +1,6 @@
-import android.support.test.filters.LargeTest
-import android.support.test.rule.ActivityTestRule
-import android.support.test.runner.AndroidJUnit4
-import android.support.v7.widget.RecyclerView
+import androidx.test.filters.LargeTest
+import androidx.test.rule.ActivityTestRule
+import androidx.test.runner.AndroidJUnit4
 import com.edu.keddit.MainActivity
 
 import com.edu.keddit.api.adapter.test.NewsAdapter
@@ -18,7 +17,7 @@ class SolutionAndroidTest {
     val activityRule = ActivityTestRule<MainActivity>(MainActivity::class.java)
 
     private var mTestActivity: MainActivity? = null
-    private var mNewsFragment: RecyclerView? = null
+    private var mNewsFragment: androidx.recyclerview.widget.RecyclerView? = null
 
 
     @Test

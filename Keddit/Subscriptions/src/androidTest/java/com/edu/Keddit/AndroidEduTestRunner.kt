@@ -1,6 +1,6 @@
 package com.edu.keddit
 
-import android.support.test.runner.AndroidJUnitRunner
+import androidx.test.runner.AndroidJUnitRunner
 
 class AndroidEduTestRunner : AndroidJUnitRunner() {
     override fun sendStatus(resultCode: Int, results: android.os.Bundle) {

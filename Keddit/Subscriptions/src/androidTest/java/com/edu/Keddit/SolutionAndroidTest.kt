@@ -1,13 +1,10 @@
-import android.support.test.filters.LargeTest
-import android.support.test.rule.ActivityTestRule
-import android.support.test.runner.AndroidJUnit4
-import android.support.v7.widget.RecyclerView
+import androidx.test.filters.LargeTest
+import androidx.test.rule.ActivityTestRule
+import androidx.test.runner.AndroidJUnit4
 import com.edu.keddit.MainActivity
 
-import com.edu.keddit.api.adapter.test.NewsAdapter
 import com.edu.keddit.commons.RxBaseFragment
 import com.edu.keddit.features.news.NewsFragment
-import kotlinx.android.synthetic.main.news_fragment.*
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule

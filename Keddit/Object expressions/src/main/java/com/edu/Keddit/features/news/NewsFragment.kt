@@ -1,8 +1,8 @@
 package com.edu.keddit.features.news
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +13,7 @@ import com.edu.keddit.api.adapter.test.NewsAdapter
 import kotlinx.android.synthetic.main.news_fragment.*
 
 
-class NewsFragment : Fragment() {
+class NewsFragment : androidx.fragment.app.Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         //val view = inflater.inflate(R.layout.news_fragment, container, false)
@@ -24,7 +24,7 @@ class NewsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         news_list.setHasFixedSize(true)
-        news_list.layoutManager = LinearLayoutManager(context)
+        news_list.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
         initAdapter()
 
         if (savedInstanceState == null) {

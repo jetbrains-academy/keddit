@@ -7,7 +7,7 @@ files:
 - name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
   placeholders:
-  - offset: 329
+  - offset: 327
     length: 3
     placeholder_text: type here
     dependency:
@@ -16,7 +16,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 1
       is_visible: false
-  - offset: 342
+  - offset: 340
     length: 27
     placeholder_text: type here
     dependency:
@@ -25,7 +25,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 2
       is_visible: false
-  - offset: 459
+  - offset: 457
     length: 3
     placeholder_text: type here
     dependency:
@@ -125,7 +125,7 @@ files:
 - name: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
   visible: true
   placeholders:
-  - offset: 195
+  - offset: 216
     length: 23
     placeholder_text: type here
     dependency:
@@ -134,7 +134,7 @@ files:
       file: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
       placeholder: 1
       is_visible: false
-  - offset: 283
+  - offset: 304
     length: 39
     placeholder_text: type here
     dependency:
@@ -143,7 +143,7 @@ files:
       file: src/main/java/com/edu/keddit/commons/RxBaseFragment.kt
       placeholder: 2
       is_visible: false
-  - offset: 486
+  - offset: 507
     length: 21
     placeholder_text: type here
     dependency:
@@ -163,7 +163,7 @@ files:
 - name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
   visible: true
   placeholders:
-  - offset: 2953
+  - offset: 2992
     length: 31
     placeholder_text: type here
     dependency:

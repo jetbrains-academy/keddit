@@ -1,7 +1,7 @@
 package com.edu.keddit.api.adapter.test
 
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import com.edu.keddit.commons.adapter.ViewType
 import com.edu.keddit.commons.adapter.ViewTypeDelegateAdapter
@@ -12,10 +12,10 @@ class LoadingDelegateAdapter : ViewTypeDelegateAdapter {
 
     override fun onCreateViewHolder(parent: ViewGroup) = TurnsViewHolder(parent)
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, item: ViewType) {
+    override fun onBindViewHolder(holder: androidx.recyclerview.widget.RecyclerView.ViewHolder, item: ViewType) {
     }
 
-    class TurnsViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
+    class TurnsViewHolder(parent: ViewGroup) : androidx.recyclerview.widget.RecyclerView.ViewHolder(
             parent.inflate(R.layout.news_item_loading)) {
     }
 }
