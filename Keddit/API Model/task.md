@@ -20,37 +20,11 @@ class RedditNewsDataResponse(
 Task:
 -----
 
-Complete the model in
-```kotlin
-ApiModels.kt
-```      
-in api package according to the comments in the code examples above.
+Complete the model in `ApiModels.kt` in api package according to the comments in the code examples above.
 
 Here is mapping for the previous model reviewed with Kotlin classes and with this 4 classes the model is ready!
 
   
-You should pass the value parameter
-```kotlin
-data
-```      
-of type
-```kotlin
-RedditDataResponse
-```      
-in the first placeholder.You should pass the value parameter
-```kotlin
-children
-```      
-in the second placeholder. It is a list of
-```kotlin
-RedditChildrenResponse
-```      
-. Also pass the parameters
-```kotlin
-after
-```      
-and
-```kotlin
-before
-```      
-, having nulable and non-nullable String types respectively.Pass all the needed parameters in the third placeholder, divided by commas. Don't forget to state their types.  
+<div class='hint'>You should pass the value parameter `data` of type `RedditDataResponse` in the first placeholder.</div>
+<div class='hint'>You should pass the value parameter `children` in the second placeholder. It is a list of `RedditChildrenResponse`. Also pass the parameters `after` and `before`, having nullable and non-nullable `String` types respectively.</div>
+<div class='hint'>Pass all the needed parameters in the third placeholder, divided by commas. Don't forget to state their types.</div>
