@@ -1,11 +1,7 @@
 Mockito
 -------
 
-Let’s talk about Unit Test in Keddit App. It’s a critical part of any app development to have a set of unit tests. So today you are going to add some unit tests to this App, those will be focused on the
-```kotlin
-NewsManager
-```      
-class, the one responsible to request, map the Reddit news and key place to be the principal cause of all the mayors problems regarding internet connectivity.
+Let’s talk about Unit Test in Keddit App. It’s a critical part of any app development to have a set of unit tests. So today you are going to add some unit tests to this App, those will be focused on the `NewsManager` class, the one responsible to request, map the Reddit news and key place to be the principal cause of all the mayors problems regarding internet connectivity.
 
 NewsAPI Interface
 -----------------
@@ -15,20 +11,12 @@ Just to make unit test easier, a new interface for the News API was created so n
 NewsManager Unit Tests
 ----------------------
 
-The project was configured through
-```kotlin
-build.gradle
-```      
-to create your unit tests for the
-```kotlin
-NewsManager
-```      
-.
+The project was configured through `build.gradle` to create your unit tests for the `NewsManager`.
 
 Mockito Dependency
 ------------------
 
-[Mockito](http://mockito.org/)is an incredible lib to make unit tests really awesome and you can use it in Kotlin!
+[Mockito](http://mockito.org/) is an incredible lib to make unit tests really awesome and you can use it in Kotlin!
 
 
 ```kotlin
@@ -45,34 +33,6 @@ And you are ready to go!
 Task:
 -----
 
-Finish the mock declaration in the NewsManagerTest.kt. Mock
-```kotlin
-NewsAPI
-```      
-and
-```kotlin
-Call<RedditNewsResponse>
-```      
-and pass it to the variable
-```kotlin
-apiMock
-```      
-and
-```kotlin
-callMock
-```      
-respectively.
+Finish the mock declaration in the `NewsManagerTest.kt`. Mock `NewsAPI` and  `Call<RedditNewsResponse>` and pass it to the variable `apiMock` and `callMock` respectively.
 
-You should declare a mock for the
-```kotlin
-NewsAPI
-```      
-and
-```kotlin
-Call<RedditNewsResponse>
-```      
-using the Extension Function
-```kotlin
-mock<classname>.
-```      
-.  
+<div class='hint'>You should declare a mock for the `NewsAPI` and `Call<RedditNewsResponse>` using the Extension Function `mock<classname>`.</div>
