@@ -1,19 +1,7 @@
 Testing Observables with TestSubscriber
 ---------------------------------------
 
-A simple way to test your observables is by using the
-```kotlin
-TestSubscriber
-```      
-class provided by
-```kotlin
-RxJava
-```      
-. It allows you to run an
-```kotlin
-Observable
-```      
-and make some assertions:
+A simple way to test your observables is by using the `TestSubscriber` class provided by `RxJava`. It allows you to run an `Observable` and make some assertions:
 
 
 ```kotlin
@@ -48,14 +36,6 @@ fun testSuccess_basic() {
 Task:
 -----
 
-Complete the testSub variable declaration by passing RedditNews observable into it. Checkout and run the unit tests. Try to modify them.
+Complete the `testSub` variable declaration by passing `RedditNews` observable into it. Checkout and run the unit tests. Try to modify them.
 
-You should declare a
-```kotlin
-TestSubscriber
-```      
-and pass
-```kotlin
-RedditNews
-```      
-as a type to it.  
+<div class='hint'>You should declare a TestSubscriber and pass RedditNews as a type to it.
