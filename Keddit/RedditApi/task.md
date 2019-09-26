@@ -22,5 +22,7 @@ Here there are 3 things that we will care about it:
 * children: Is the news’ list paginated by 10 items (as we requested in the query string) and each children has details about the news (name, image, author, etc).
 * after: It allows you to perform pagination with this Reddit API. “after” will bring you the next 10 items by calling: “/top.json?after=t3\_4cdt7v”.
 * before: The same as “after” but to navigate back.
+\
+\
 You can move onto the next task.
 
