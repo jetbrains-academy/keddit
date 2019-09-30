@@ -28,4 +28,4 @@ Task:
 Insert an elvis operator in the condition check inside `changeFragment()` method. Note, that a more safe way to implement this would be to exclude Null from the possible argument value of the `changeFragment`, forcing `cleanStack` to have a value. This approach will be used in the following tasks, but for now is violated to provide an example of usage.
 
   
-Insert the Elvis operator here to make sure the value of `cleanStack` is always provided.
+<div class='hint'>Insert the Elvis operator here to make sure the value of cleanStack is always provided.</div>

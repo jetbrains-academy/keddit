@@ -51,4 +51,5 @@ Task:
 Complete a data class declaration for RedditNewsItem in the Models.kt. It should has following properties to use in your NewsAdapter: author (String), title (String), numComments(int), created (Long), thumbnail (String), url (String).
 
   
-You should add the `data` keyword to implement the data class. List the parameters like this: `val first_parameter_name: parameter type, val second_parameter_name: parameter type`
+<div class='hint'>You should add the data keyword to implement the data class.</div>
+<div class='hint'>List the parameters like this: val first_parameter_name: parameter type, val second_parameter_name: parameter type.</div>

@@ -32,4 +32,5 @@ Define a value toolbar with appropriate type.
 
   
   
-Declare a value in the first placeholder. Use the special keyword from Kotlin syntax.Declare the type of value in the second placeholder. You need it to be a Toolbar.  
+<div class='hint'>Declare a value in the first placeholder. Use the special keyword from Kotlin syntax.</div>
+<div class='hint'>Declare the type of value in the second placeholder. You need it to be a Toolbar.</div>

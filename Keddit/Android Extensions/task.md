@@ -63,4 +63,4 @@ Complete `OnActivityCreated()` method in `NewsFragment.kt`: it should set `HasFi
 Notice that `news_list` is a non-nullable object so you can use it in your code without the “?” question mark. This could be a problem if you run this code in another part of the Activity lifecycle and the view was not previously inflated, this will throw an exception at runtime.
 
   
-Set the fixed size parameter of the `newsList` to `true`. Set the `layoutManager` of the `newsList` to a new `LinearLayoutManager` passing context as an argument to the constructor.
+<div class='hint'>Set the fixed size parameter of the newsList to true. Set the layoutManager of the newsList to a new LinearLayoutManager passing context as an argument to the constructor.</div>

@@ -26,8 +26,8 @@ Task:
 Modify the `getNews` function in `NewsAdapter.kt` to filter items which `getViewType()` method returns to be the same value as `AdapterConstants.NEWS`
 
   
-You should filter the list using the condition
-```kotlin
+<div class='hint'>You should filter the list using the condition
+<pre><code>
 it.getViewType() == AdapterConstants.NEWS
-```      
+</code></pre></div>
   

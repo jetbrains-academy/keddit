@@ -31,4 +31,5 @@ Task:
 Modify `onActivityCreated` function of `NewsFragment.kt`: declare value news as a mutable list of `RedditNewsItem` and iterate from 1 to 10 to fill the list up.
 
   
-You should create value news and pass a constructor of the mutable list of `RedditNewsItems` to it. You should iterate over i from 1 to 10.
+<div class='hint'>You should create value news and pass a constructor of the mutable list of `RedditNewsItems` to it.</div>
+<div class='hint'>You should iterate over i from 1 to 10.</div>

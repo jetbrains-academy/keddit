@@ -32,4 +32,4 @@ Complete the condition by checking if the `backStackEntryCount` property of the 
 
 
   
-Just type the "backStackEntryCount", you can invoke this property of the `supportFragmentManager` without calling any methods explicitly.
+<div class='hint'>Just type the "backStackEntryCount", you can invoke this property of the `supportFragmentManager` without calling any methods explicitly.</div>

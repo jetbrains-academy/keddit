@@ -20,8 +20,8 @@ Task:
 Map the items after filtering in the `getNews()` function in `NewsAdapter.kt` to return a list of `RedditNewItem`.
 
   
-You should map the result as follows
-```kotlin
-{is as RedditNewsItem}
-```      
+<div class='hint'>You should map the result as follows
+<pre><code>
+{it as RedditNewsItem}
+</code></pre></div>
   

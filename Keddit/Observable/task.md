@@ -42,4 +42,7 @@ Task:
 -----
 
 Complete the `getNews()` functions in `NewsManager.kt` to create and return `Observable`, that will generate news for subscriber (will be added in the next task).
-You should declare an implementation of `Observable`. You should also invoke the `create` method of the `Observable` in the lower placeholder.
+
+
+<div class='hint'>You should declare an implementation of Observable.</div>
+<div class='hint'>You should also invoke the create method of the Observable in the lower placeholder.</div>

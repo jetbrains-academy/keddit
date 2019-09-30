@@ -103,5 +103,5 @@ Task:
 -----
 
 Complete the return statement of `onCreateView()` method in `NewsFragment.kt` to use an inflate extension function in `Extensions.kt` for returning the value similar to the commented one (`val view`).
-The method should return result of invocation of `inflate` method on the `container` variable, which could be nullable. You should pass `R.layout.news_fragment` as the paremeter to the `inflate`.
+<div class='hint'>The method should return result of invocation of inflate method on the container variable, which could be nullable. You should pass R.layout.news_fragment as the parameter to the inflate.</div>
   

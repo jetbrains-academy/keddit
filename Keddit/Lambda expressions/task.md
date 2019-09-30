@@ -28,4 +28,5 @@ private val newsManager by lazy { NewsManager() }
 This newsManager will be initialized with the NewsManager() only the first time that newsManagers field is used.
 
   
-You should pass the following code to the `subscriber` in the upper placeholder. You should invoke the `subscriber`'s method `onNext()` here, passing `news` as the parameter in the lower placeholder.
+<div class='hint'>You should pass the following code to the subscriber in the upper placeholder.</div>
+<div class='hint'>You should invoke the subscriber's method onNext() here, passing news as the parameter in the lower placeholder.</div>

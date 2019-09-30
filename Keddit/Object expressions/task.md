@@ -47,4 +47,4 @@ Task:
 Complete the `getViewType()` function override for it to return NEWS adapter constant in `Models.kt` in `commons` package.
 
   
-Add the `AdapterConstants` property `NEWS` as the return value.
+<div class='hint'>Add the AdapterConstants property NEWS as the return value.</div>

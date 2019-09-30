@@ -78,4 +78,8 @@ Task:
 Complete the `requestNews()` in the `NewsFragment.kt` by invoking `subscribe` method on `getNews` method, finishing lambdas declarations for `retrievedNews` and error, and filling up the correct argument for the `subscribOn` invocation.
 
   
-You should invoke the constructor of `Schedulers.io` thread. You should also invoke the `subscribe` method in the second placeholder. You should use the `->` to pass the following code to the lambda expression. You should pass the error that might possibly occur during the subscription to the following lambda expression. You should name it `e`, as it is used below inside the `e.message` expression.
+<div class='hint'>You should invoke the constructor of Schedulers.io thread.</div>
+<div class='hint'>You should also invoke the subscribe method in the second placeholder.</div>
+<div class='hint'>You should use the -> to pass the following code to the lambda expression.</div>
+<div class='hint'>You should pass the error that might possibly occur during the subscription to the following lambda expression.</div>
+<div class='hint'>You should name it e, as it is used below inside the e.message expression.</div>
