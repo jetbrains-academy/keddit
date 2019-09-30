@@ -35,17 +35,9 @@ You will be able to access the news\_list RecyclerView from our NewsFragment cla
 ```kotlin
 import kotlinx.android.synthetic.main.news_fragment.*
 ```      
-In this way you have access to all the elements in the layout that you choose in this import and use it directly from your code. In order to make sure the layout was already inflated, move your newsList assignment from
-```kotlin
-onViewCreated()
-```      
-method to the
-```kotlin
-onActivityCreated()
-```      
-to be sure that the view (news\_fragment) was already inflated at the moment of the assignment.
+In this way you have access to all the elements in the layout that you choose in this import and use it directly from your code. In order to make sure the layout was already inflated, move your newsList assignment from `onViewCreated()` method to the `onActivityCreated()` to be sure that the view `news_fragment` was already inflated at the moment of the assignment.
 
-You will be able to access news\_list directly now.
+You will be able to access news_list directly now.
 
 
 ```kotlin
@@ -58,71 +50,17 @@ RecyclerView
 ------------
 
 
-```kotlin
-RecyclerView
-```      
-is a layout component that allows user to interact with a list of information, providing the fell of its continuity. The toolbar above the
-```kotlin
-RecyclerView
-```      
-will remain on top as you scroll the data.
+`RecyclerView` is a layout component that allows user to interact with a list of information, providing the fell of its continuity. The toolbar above the `RecyclerView` will remain on top as you scroll the data.
 
-The
-```kotlin
-recyclerView
-```      
-interacts with its elements' data using an adapter, which you would create in the following tasks. The
-```kotlin
-RecyclerView
-```      
-also uses a
-```kotlin
-LayoutManager
-```      
-to describe behaviour of the elements in the UI. It will be also described more in the future.
+The `recyclerView` interacts with its elements' data using an adapter, which you would create in the following tasks. The `RecyclerView` also uses a `LayoutManager` to describe behaviour of the elements in the UI. It will be also described more in the future.
 
 Task:
 -----
 
-Complete
-```kotlin
-OnActivityCreated()
-```      
-method in
-```kotlin
-NewsFragment.kt
-```      
-: it should set
-```kotlin
-HasFixedSize
-```      
-parameter of the newsList to
-```kotlin
-true
-```      
-and also set its
-```kotlin
-layoutManager
-```      
-to a
-```kotlin
-LinearLayoutManager
-```      
-based on
-```kotlin
-context
-```      
+Complete `OnActivityCreated()` method in `NewsFragment.kt`: it should set `HasFixedSize` parameter of the newsList to `true` and also set its `layoutManager` to a `LinearLayoutManager` based on  `context`.
 
 
-Notice that news\_lists and is a non-nullable object so you can use it in your code without the “?” question mark. This could be a problem if you run this code in another part of the Activity lifecycle and the view was not previously inflated, this will throw an exception at runtime.
+Notice that `news_list` is a non-nullable object so you can use it in your code without the “?” question mark. This could be a problem if you run this code in another part of the Activity lifecycle and the view was not previously inflated, this will throw an exception at runtime.
 
   
-Set the fixed size parameter of the
-```kotlin
-newsList
-```      
-to true.Set the layoutManager of the
-```kotlin
-newsList
-```      
-to a new LinearLayoutManager passing context as an argument to the constructor.  
+<div class='hint'>Set the fixed size parameter of the newsList to true. Set the layoutManager of the newsList to a new LinearLayoutManager passing context as an argument to the constructor.</div>

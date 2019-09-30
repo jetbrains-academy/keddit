@@ -16,22 +16,15 @@ Basic app structure
 Main Activity
 -------------
 
-Our app includes an element called[MainActivity](https://developer.android.com/guide/components/activities/intro-activities)- starting point of the application. It is contained in package
-```kotlin
-main.java.com.edu.keddit
-```      
-Check it out, it will be changed further in the course.
+Our app includes an element called [MainActivity](https://developer.android.com/guide/components/activities/intro-activities) - starting point of the application. It is contained in package `main.java.com.edu.keddit`. Check it out, it will be changed further in the course.
 
 Basically, every app consists of several screens, each of the screens includes an activity and a layout. Activity is a class defining the user's interactions with the particular screen of the application.
 
 res
 ---
 
-There are several[resources](https://developer.android.com/guide/topics/resources/providing-resources)our app is going to use - they are placed in
-```kotlin
-src.main.res
-```      
-
-
+There are several [resources](https://developer.android.com/guide/topics/resources/providing-resources) our app is going to use - they are placed in `src.main.res`.
+\
+\
 You can move onto the next task.
 

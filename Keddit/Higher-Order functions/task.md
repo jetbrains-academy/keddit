@@ -2,9 +2,9 @@ Higher-Order Functions
 ----------------------
 
 
-> A higher-order function is a function that takes functions as parameters, or returns a function.Well, lets see how Kotlin allows you to pass functions as parameter or return it with some examples.
+> A higher-order function is a function that takes functions as parameters, or returns a function. Well, lets see how Kotlin allows you to pass functions as parameter or return it with some examples.
 
-This function “logExecution” allows you to pass a function as parameter and log before and after the execution of this function.
+This function `logExecution` allows you to pass a function as parameter and log before and after the execution of this function.
 
 
 ```kotlin
@@ -17,7 +17,7 @@ fun logExecution(func: () -> Unit) {
 func: ()-> Unit
 ---------------
 
-As you already know, “func” is the name of the parameter and “() -> Unit” is the “type” of the parameter, in this case, func will be a function that doesn’t receive any parameter and doesn’t return any value (remember that Unit works like void in Java).
+As you already know, `func` is the name of the parameter and `() -> Unit` is the `type` of the parameter, in this case, `func` will be a function that doesn’t receive any parameters and doesn’t return any value (remember that `Unit` works like void in Java).
 
 You can call this function by passing a lambda expression that must not receive or return any value, like in this way:
 

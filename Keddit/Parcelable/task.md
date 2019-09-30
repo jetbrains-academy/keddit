@@ -1,33 +1,9 @@
 Parcelable
 ----------
 
-If you were working with Android for sure you already know about
-```kotlin
-Parcelable
-```      
-. A
-```kotlin
-Parcelable
-```      
-is an interface for classes whose instances can be written to and restored from a
-```kotlin
-Parcel
-```      
-. This is a fast mechanism that Android provides as a IPC (Inter Process Communication) transport and the
-```kotlin
-Parcel
-```      
-is the message container to transfer.
+If you were working with Android for sure you already know about `Parcelable`. A `Parcelable` is an interface for classes whose instances can be written to and restored from a `Parcel`. This is a fast mechanism that Android provides as a IPC (Inter Process Communication) transport and the `Parcel` is the message container to transfer.
 
-Also, Android provides some lifecycle methods that will allow you to persist temporarily the information required for our classes in a
-```kotlin
-Parcel
-```      
-class while having a runtime change (rotating the device or if the activity is killed by the OS). In your case, save your news from this situations by implementing the
-```kotlin
-Parcelable
-```      
-interface.
+Also, Android provides some lifecycle methods that will allow you to persist temporarily the information required for our classes in a `Parcel` class while having a runtime change (rotating the device or if the activity is killed by the OS). In your case, save your news from this situations by implementing the `Parcelable` interface.
 
 Data Classes with Parcelable
 ----------------------------
@@ -59,8 +35,10 @@ data class RedditNews(val after: String,
 
     override fun describeContents() = 0
 }
-```      
-1. Companion object
+```
+
+
+Companion object
 -------------------
 
 As you may notice, in Kotlin there is no static keyword to create a static member for a class but exists something called companion objects which allows you to provide the same behavior. When using this keyword you are declaring an object (an instance) directly in the code and all the properties and methods inside companion object can be called directly by using the class name:
@@ -81,12 +59,13 @@ RedditNews.ENDPOINT
 ```      
 You are going to use it to expose the CREATOR function.
 
-2. @JvmField Annotation
+
+@JvmField Annotation
 -----------------------
 
 Classes implementing the Parcelable interface must also have a non-null static field called CREATOR of a type that implements the Parcelable.Creator interface. In order to make your CREATOR implementation visible as a field in Java you need this special annotation called “@JvmField”, otherwise it will not be found and in the middle of the process it will throw an exception.
 
-3. Extension Function for the Creator
+Extension Function for the Creator
 -------------------------------------
 
 Check out this useful extension function that creates the CREATOR passing as parameter a function:
@@ -106,12 +85,12 @@ inline fun <reified T : Parcelable> createParcel(
             override fun newArray(size: Int): Array<out T?> = arrayOfNulls(size)
         }
 ```      
-3.1) Inline Functions
+Inline Functions
 ---------------------
 
 The inline modifier means that the function itself and the function passed to it, will be inlined into the call site, it means like you were implementing manually this function at every place that you were using it. Behind the scenes, the compiler will be generating specific bytecode at every place that you use it (it’s like “copy & pasting” this function in all the place that you were using it) giving you better performance and avoiding to create new classes for you like a normal extension function could do.
 
-3.2) reified T
+reified T
 --------------
 
 If you need to access to a type passed as a parameter,
@@ -120,7 +99,7 @@ reified
 ```      
 keyword is here to save you! with the reified modifier now it’s accessible inside the function, almost as if it were a normal class and no reflection is needed!
 
-3.3) crossinline
+crossinline
 ----------------
 
 If you need to execute the function passed as parameter in another context then
@@ -129,7 +108,7 @@ crossinline
 ```      
 allows you to use it in this way and maybe run it also in another thread. In this case, inside the Creator object.
 
-4. Secondary Constructors
+Secondary Constructors
 -------------------------
 
 In this course classes were created with primary constructors like this:
@@ -147,55 +126,9 @@ protected constructor(parcelIn: Parcel) : this(...)
 Task:
 -----
 
-Complete the
-```kotlin
-Parcelable
-```      
-implementation in
-```kotlin
-Models.kt
-```      
-in commons package: insert the interface to implement, insert correct annotation in the companion object declaration, and pass the
-```kotlin
-ReddiNews()
-```      
-constructor as the parameter to
-```kotlin
-createParcel
-```      
-method. Also, checkout the
-```kotlin
-createParcel
-```      
-implementation in the
-```kotlin
-Extensions.kt
-```      
-in the commons package.
+Complete the `Parcelable` implementation in `Models.kt` in `commons` package: insert the interface to implement, insert correct annotation in the companion object declaration, and pass the `ReddiNews()` constructor as the parameter to `createParcel` method. Also, checkout the `createParcel` implementation in the `Extensions.kt` in the commons package.
 
   
-In the first placeholder you should insert the name of implemented interface -
-```kotlin
-Parcelable
-```      
-.In the second placeholder you should right the annotations for the
-```kotlin
-CREATOR
-```      
-variable - that it is a
-```kotlin
-JvmField
-```      
-and you want to supress
-```kotlin
-"unused"
-```      
-warning.In the third placeholder you should pass the
-```kotlin
-RedditNews
-```      
-constructor with
-```kotlin
-it
-```      
-as a parameter.  
+<div class='hint'>In the first placeholder you should insert the name of implemented interface - Parcelable.</div>
+<div class='hint'>In the second placeholder you should right the annotations for the CREATOR variable - that it is a JvmField and you might want to suppress "unused" warning.</div>
+<div class='hint'>In the third placeholder you should pass the RedditNews constructor with "it" as a parameter.</div>

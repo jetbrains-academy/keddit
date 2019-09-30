@@ -1,15 +1,7 @@
 Map
 ---
 
-Another great function is “map” to transform the items from a list. In this case, you cast a
-```kotlin
-ViewType
-```      
-object to a
-```kotlin
-RedditNewsItem
-```      
-but you could also create and return new objects.
+Another great function is “map” to transform the items from a list. In this case, you cast a `ViewType` object to a `RedditNewsItem` but you could also create and return new objects.
 
 Lambdas
 -------
@@ -25,19 +17,11 @@ It is good starting point to see this kind of examples on how to use this great 
 Task:
 -----
 
-Map the items after filtering in the
-```kotlin
-getNews()
-```      
-function in NewsAdapter.kt to return a list of
-```kotlin
-RedditNewItem
-```      
-.
+Map the items after filtering in the `getNews()` function in `NewsAdapter.kt` to return a list of `RedditNewItem`.
 
   
-You should map the result as follows
-```kotlin
-{is as RedditNewsItem}
-```      
+<div class='hint'>You should map the result as follows
+<pre><code>
+{it as RedditNewsItem}
+</code></pre></div>
   

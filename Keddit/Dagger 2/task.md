@@ -7,27 +7,25 @@ DI is a technique for one object supplying external dependency for another one, 
 
 Dependency injections in an application are managed by a dependency injection container: an entity which takes the responsibility of instantiating and injecting different components. There are various dependency injection containers, but we will use Dagger 2.
 
-Here are some other materials with further explanation by[Jakob Jenkov](http://tutorials.jenkov.com/dependency-injection/index.html)
+Here are some other materials with further explanation by [Jakob Jenkov](http://tutorials.jenkov.com/dependency-injection/index.html).
 
 Dagger 2
 --------
 
 
-> Dagger is a fully static, compile-time dependency injection framework for both Java and Android. It is an adaptation of an earlier version created by Square and now maintained by Google.You can check out this video from[Jake Wharton.](https://youtu.be/plK0zyRLIP8)as a good example of further dagger explanation.
-
+Dagger is a fully static, compile-time dependency injection framework for both Java and Android. It is an adaptation of an earlier version created by Square and now maintained by Google.You can check out this video from [Jake Wharton.](https://youtu.be/plK0zyRLIP8) as a good example of further dagger explanation.
+\
+\
  **Dependency** 
 
-Dagger 2 was added as dependency to your Keddit App in the
-```kotlin
-build.gradle
-```      
-file:
+Dagger 2 was added as dependency to your Keddit App in the `build.gradle` file:
 
 
 ```kotlin
 implementation 'com.google.dagger:dagger:2.4'
 kapt 'com.google.dagger:dagger-compiler:2.4'
 provided 'org.glassfish:javax.annotation:10.0-b28'
-```      
+```
+
 You can move onto the next task, it contains examples of using DI with Dagger 2.
 

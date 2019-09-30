@@ -1,44 +1,17 @@
 Create your NewsFragment.kt
 ---------------------------
 
-It is time to create
-```kotlin
-NewsFragment.kt
-```      
-file, it will be responsible to show the latests news from the Reddit API and a
-```kotlin
-RecyclerView
-```      
-to show the news.
+It is time to create `NewsFragment.kt` file, it will be responsible to show the latests news from the Reddit API and a `RecyclerView` to show the news.
 
 Fragments
 ---------
 
 Fragment is an entity providing a part of UI in an activity. Multiple fragments could be combined for creating a multi-pane UI. Fragment could be reused in multiple activities. Each of them have separate lifecycles, input events and could be added or removed from the activity in runtime.
 
-To create a
-```kotlin
-Fragment
-```      
-you should extend
-```kotlin
-Fragment
-```      
-class and override its key methods. The method necessary to run a
-```kotlin
-Fragment
-```      
-is
-```kotlin
-onCreateView()
-```      
+To create a `Fragment` you should extend `Fragment` class and override its key methods. The method necessary to run a `Fragment` is `onCreateView()`.
 
 
-In Java you would normally create a private field to store the
-```kotlin
-RecyclerView
-```      
-locally and assign it when inflating the view. Trying to do the same in Kotlin leads to this:
+Creating a private field to store the `RecyclerView` locally and assign it when inflating the view leads to this:
 
 
 ```kotlin
@@ -70,7 +43,7 @@ ViewGroup is a class from the Android SDK and in order to inflate it you have to
 inflater.inflate(R.layout.news_fragment, container, false)
 
 ```      
-But this is not really an intuitive way to do this. This should be something that the ViewGroup should be able to do like this:
+But this is not really an intuitive way to do this. This should be something that the `ViewGroup` should be able to do like this:
 
 
 ```kotlin
@@ -80,15 +53,7 @@ It’s like the ViewGroup is able to inflate by itself! But how to do that? Let�
 
 A file called “Extensions.kt” in the package “commons” was created. Checkout the code to see it.
 
-Here you are going to add a new method to ViewGroup (check out the ViewGroup with a dot before the “inflate” method name) but you are not modifying the ViewGroup class but adding a new function. This function will be internally a static method but you will be calling it from an instance of a class with the dot-notation, in this case:
-```kotlin
-container.inflate(…)
-```      
-and not
-```kotlin
-ViewGroup.inflate()
-```      
-. This is because the compiler will be creating a Util class for you. If you want to use this Extension Function from Java you will be using it in this way:
+Here you are going to add a new method to ViewGroup (check out the ViewGroup with a dot before the “inflate” method name) but you are not modifying the ViewGroup class but adding a new function. This function will be internally a static method but you will be calling it from an instance of a class with the dot-notation, in this case: `container.inflate(…)` and not `ViewGroup.inflate()`. This is because the compiler will be creating an `Util` class for you. If you want to use this Extension Function from Java you will be using it in this way:
 
 
 ```kotlin
@@ -115,7 +80,7 @@ fun ViewGroup.inflate(layoutId: Int): View {
 // Use it in this way in Java:
 ExtensionsUtils.inflate(container, R.layout.news_fragment);
 ```      
-More details about interoperability can be[found here](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
+More details about interoperability can be [found here](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html).
 
 Coming back to your function
 
@@ -137,29 +102,6 @@ val view = inflater.inflate(R.layout.news_fragment, container, false)
 Task:
 -----
 
-Complete the return statement of
-```kotlin
-onCreateView()
-```      
-method in
-```kotlin
-NewsFragment.kt
-```      
-to use an inflate extension function in Extensions.kt for returning the value similar to the commented one (
-```kotlin
-val view
-```      
-).  
-The method should return result of invocation of
-```kotlin
-inflate
-```      
-method on the
-```kotlin
-container
-```      
-variable, which could be nullable. You should pass R.layout.news\_fragment) as the paremeter to the
-```kotlin
-inflate
-```      
+Complete the return statement of `onCreateView()` method in `NewsFragment.kt` to use an inflate extension function in `Extensions.kt` for returning the value similar to the commented one (`val view`).
+<div class='hint'>The method should return result of invocation of inflate method on the container variable, which could be nullable. You should pass R.layout.news_fragment as the parameter to the inflate.</div>
   

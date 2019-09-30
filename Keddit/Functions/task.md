@@ -6,15 +6,12 @@ Time to take a look at the Kotlin syntax.
 Kotlin is defined in many ways and this is one of them that tries to include the most important characteristics in one sentence:
 
 
-> Kotlin is a Concise, Safe and Statically typed programming language focused on Interoperability with Java.  
-onCreate()
-----------
+> Kotlin is a Concise, Safe and Statically typed programming language.
 
-All of the activities in the app must implement the
-```kotlin
 onCreate()
-```      
-method - it is called by the android while creating the object of the activity, to setup basic parameters (e.g. choose the layout).
+---
+
+All of the activities in the app must implement the `onCreate()` method - it is called by the android while creating the object of the activity, to setup basic parameters (e.g. choose the layout).
 
 Let’s use the definition to start reviewing our generated code. Here we have both MainActivity files: Java and Kotlin files.
 
@@ -22,7 +19,7 @@ Java
 ----
 
 
-```kotlin
+```java
 public class MainActivity extends AppCompatActivity {
 
     @Override

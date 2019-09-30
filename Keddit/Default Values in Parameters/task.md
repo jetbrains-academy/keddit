@@ -1,7 +1,7 @@
 Default Values in Parameters
 ----------------------------
 
-In Kotlin you are able to define default values in the parameters of a function (also in a class constructor). So you are going to add a default value for the attachToRoot parameter.
+In Kotlin you are able to define default values in the parameters of a function (also in a class constructor). So you are going to add a default value for the `attachToRoot` parameter.
 
 
 ```kotlin
@@ -17,9 +17,5 @@ container?.inflate(R.layout.news_fragment, true)
 Task:
 -----
 
-Checkout the default value for the
-```kotlin
-attachToRoot
-```      
-parameter in Extensions.kt, move on to the next task.
+Checkout the default value for the `attachToRoot` parameter in Extensions.kt, move on to the next task.
 

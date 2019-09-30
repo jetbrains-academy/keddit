@@ -20,32 +20,16 @@ A FragmentManager is an entity responsible for interactions with fragments assoc
 clearBackStack()
 ----------------
 
-Here we create a method
-```kotlin
-clearBackStack()
-```      
-which would be used later for clearing things up in case of the activity reload.
+Here we create a method `clearBackStack()` which would be used later for clearing things up in case of the activity reload.
 
 Task:
 -----
 
-Complete the condition by checking if the
-```kotlin
-backStackEntryCount
-```      
-property of the
-```kotlin
-manager
-```      
-variable is greater than 0.
+Complete the condition by checking if the `backStackEntryCount` property of the `manager` variable is greater than 0.
 
 
 
 
 
   
-Just type the "backStackEntryCount", you can invoke this property of the
-```kotlin
-supportFragmentManager
-```      
-without calling any methods explicitly.  
+<div class='hint'>Just type the "backStackEntryCount", you can invoke this property of the `supportFragmentManager` without calling any methods explicitly.</div>

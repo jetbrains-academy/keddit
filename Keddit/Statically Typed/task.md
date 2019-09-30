@@ -14,20 +14,13 @@ Type inference brings great advantages to the language: Reliability (the compile
 Task:
 -----
 
-Check out the
-```kotlin
-Toolbar
-```      
-type cast in the toolbar declaration expression. See what happens if you remove it.
+Check out the `Toolbar` type cast in the toolbar declaration expression. See what happens if you remove it.
 
 onBackPressed()
 ---------------
 
-Here the method
-```kotlin
-onBackPressed
-```      
-is added. It is responsible for the application response to user pressing the back button on the device. It will check if the back stack contains any previous screens of the app and return the most recent of them. If the back stack does not contain any, it will finish the activity.
-
+Here the method `onBackPressed` is added. It is responsible for the application response to user pressing the back button on the device. It will check if the back stack contains any previous screens of the app and return the most recent of them. If the back stack does not contain any, it will finish the activity.
+\
+\
 You can move on to the next task.
 
