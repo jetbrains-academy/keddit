@@ -4,9 +4,7 @@ Kotlin Syntax
 Time to take a look at the Kotlin syntax.
 
 Kotlin is defined in many ways and this is one of them that tries to include the most important characteristics in one sentence:
-
-
-> Kotlin is a Concise, Safe and Statically typed programming language.
+Kotlin is a Concise, Safe and Statically typed programming language.
 
 onCreate()
 ---
@@ -66,7 +64,7 @@ Concise
 -------
 
 Take a look - the Java file has 19 lines of code and the Kotlin file has only 12.This is because most of the verbosity of Java was eliminated. Concise code takes less time to write and to read so it can improve your productivity.Extend and Implement:
----------------------
+
 
 The words “extends” and “implement” were replaced by a colon “:” indifferently. In this case we are extending from AppCompatActivity (which is a Java class)
 
