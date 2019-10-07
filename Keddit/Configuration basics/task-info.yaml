@@ -6,6 +6,10 @@ files:
   visible: false
 - name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
+  placeholders:
+  - offset: 104
+    length: 12
+    placeholder_text: /*insert your Class name here*/
 - name: src/main/res/layout/activity_main.xml
   visible: true
 - name: src/main/res/layout/news_fragment.xml
@@ -40,5 +44,3 @@ files:
   visible: true
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false
-- name: src/main/java/com/edu/keddit/MainActivity.kt
-  visible: true
