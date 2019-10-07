@@ -40,3 +40,5 @@ files:
   visible: true
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false
+- name: configure_kotlin_in_project.png
+  visible: false

@@ -5,8 +5,11 @@ In Android Studio 3.0 and above the plugin is already built-in there and while c
 
 Configure Project with Kotlin 
 ---
-To configure a project with kotlin run the “Configure Project with Kotlin” action.  
-A new message will appear allowing you to select which modules you would like to convert and also the Kotlin plugin version that you want to use (just pick the latest one in this case). You will notice that the*build.gradle*file from your module was updated.
+To configure a project with kotlin run the “Configure Kotlin in Project” action.
+
+<img src="./configure_kotlin_in_project.png" alt="The path to the action. Remember, you can just use the Find Action command." width="500"/>
+ 
+A new message will appear allowing you to select which modules you would like to convert and also the Kotlin plugin version that you want to use (just pick the latest one in this case). You will notice that the *build.gradle* file from your module was updated.
 
 You can move onto the next task.
 
