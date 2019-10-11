@@ -6,6 +6,34 @@ files:
   visible: false
 - name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
+  placeholders:
+  - offset: 239
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Safe
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 252
+    length: 27
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Safe
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 369
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Safe
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 3
+      is_visible: false
 - name: src/main/res/layout/activity_main.xml
   visible: true
 - name: src/main/res/layout/news_fragment.xml
@@ -40,3 +68,7 @@ files:
   visible: true
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false
+- name: src/main/java/com/edu/keddit/NewsItemActivity.kt
+  visible: true
+- name: src/main/res/navigation/nav_graph.xml
+  visible: true

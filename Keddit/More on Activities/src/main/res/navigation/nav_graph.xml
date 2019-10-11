@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.edu.keddit.MainActivity"
+        android:label="MainActivity" >
+        <action
+            android:id="@+id/action_mainActivity_to_newsItemActivity"
+            app:destination="@id/newsItemActivity" />
+    </activity>
+    <activity
+        android:id="@+id/newsItemActivity"
+        android:name="com.edu.keddit.NewsItemActivity"
+        android:label="NewsItemActivity" />
+</navigation>
