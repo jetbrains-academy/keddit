@@ -2,7 +2,6 @@ package com.edu.keddit.features.news
 
 import com.google.android.material.snackbar.Snackbar
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

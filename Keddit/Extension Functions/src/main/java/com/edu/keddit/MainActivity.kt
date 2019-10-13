@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
   }
 
-  fun changeFragment(f: androidx.fragment.app.Fragment, cleanStack: Boolean = false) {
+  fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
     val ft = supportFragmentManager.beginTransaction()
     if (cleanStack) {
       clearBackStack()
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     val manager = supportFragmentManager
     if (manager.backStackEntryCount > 0) {
       val first = manager.getBackStackEntryAt(0)
-      manager.popBackStack(first.id, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
+      manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
   }
 

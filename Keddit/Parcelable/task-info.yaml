@@ -184,7 +184,7 @@ files:
 - name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
   visible: true
   placeholders:
-  - offset: 1346
+  - offset: 1290
     length: 55
     placeholder_text: type here
     dependency:
@@ -193,7 +193,7 @@ files:
       file: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
       placeholder: 1
       is_visible: false
-  - offset: 2350
+  - offset: 2294
     length: 31
     placeholder_text: type here
     dependency:
