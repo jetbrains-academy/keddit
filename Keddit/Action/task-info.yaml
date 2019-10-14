@@ -1,0 +1,139 @@
+type: edu
+files:
+- name: build.gradle
+  visible: true
+  placeholders:
+  - offset: 984
+    length: 66
+    placeholder_text: //ad the navigation-fragment-ktx library implementation here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: build.gradle
+      placeholder: 1
+      is_visible: false
+  - offset: 1053
+    length: 60
+    placeholder_text: //ad the navigation -ui-ktx library implementation here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: build.gradle
+      placeholder: 2
+      is_visible: false
+- name: src/main/AndroidManifest.xml
+  visible: false
+- name: src/main/java/com/edu/keddit/MainActivity.kt
+  visible: true
+  placeholders:
+  - offset: 378
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 391
+    length: 27
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 508
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 3
+      is_visible: false
+  - offset: 598
+    length: 57
+    placeholder_text: //create the NavHostFragment here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 4
+      is_visible: false
+  - offset: 660
+    length: 127
+    placeholder_text: //set the primary navigation fragment to the NavHostFragment
+      here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 5
+      is_visible: false
+  - offset: 793
+    length: 76
+    placeholder_text: //call the changeFragment here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 6
+      is_visible: false
+- name: src/main/java/com/edu/keddit/commons/Extensions.kt
+  visible: true
+- name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
+  visible: true
+  placeholders:
+  - offset: 631
+    length: 49
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding NavHost to an Activity
+      file: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
+      placeholder: 1
+      is_visible: false
+- name: src/main/res/layout/activity_main.xml
+  visible: true
+- name: src/main/res/layout/news_fragment.xml
+  visible: true
+- name: src/main/res/layout/news_item.xml
+  visible: true
+- name: src/main/res/layout/news_item_loading.xml
+  visible: true
+- name: src/main/res/menu/menu_main.xml
+  visible: true
+- name: src/main/res/mipmap-hdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-mdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/values-v21/styles.xml
+  visible: true
+- name: src/main/res/values-w820dp/dimens.xml
+  visible: true
+- name: src/main/res/values/colors.xml
+  visible: true
+- name: src/main/res/values/dimens.xml
+  visible: true
+- name: src/main/res/values/strings.xml
+  visible: true
+- name: src/main/res/values/styles.xml
+  visible: true
+- name: src/main/java/com/edu/keddit/features/news/PostFragment.kt
+  visible: true
+- name: src/main/res/layout/post_fragment.xml
+  visible: true
+- name: src/main/res/navigation/nav_graph.xml
+  visible: true
+  placeholders:
+  - offset: 563
+    length: 123
+    placeholder_text: //add the action tag here with the PostFragment as the destination

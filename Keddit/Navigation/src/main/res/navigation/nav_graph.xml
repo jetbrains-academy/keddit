@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.edu.keddit.features.news.PostFragment"
+        android:label="PostFragment" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.edu.keddit.features.news.NewsFragment"
+        android:label="NewsFragment" >
+    </fragment>
+</navigation>

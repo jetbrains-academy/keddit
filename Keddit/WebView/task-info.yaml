@@ -1,0 +1,97 @@
+type: edu
+files:
+- name: build.gradle
+  visible: false
+- name: src/main/AndroidManifest.xml
+  visible: false
+- name: src/main/java/com/edu/keddit/MainActivity.kt
+  visible: true
+  placeholders:
+  - offset: 277
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding Another Fragment
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 290
+    length: 27
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding Another Fragment
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 407
+    length: 3
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding Another Fragment
+      file: src/main/java/com/edu/keddit/MainActivity.kt
+      placeholder: 3
+      is_visible: false
+- name: src/main/java/com/edu/keddit/commons/Extensions.kt
+  visible: true
+- name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
+  visible: true
+  placeholders:
+  - offset: 631
+    length: 49
+    placeholder_text: type here
+    dependency:
+      lesson: Keddit
+      task: Adding Another Fragment
+      file: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
+      placeholder: 1
+      is_visible: false
+- name: src/main/res/layout/activity_main.xml
+  visible: true
+- name: src/main/res/layout/news_fragment.xml
+  visible: true
+- name: src/main/res/layout/news_item.xml
+  visible: true
+- name: src/main/res/layout/news_item_loading.xml
+  visible: true
+- name: src/main/res/menu/menu_main.xml
+  visible: true
+- name: src/main/res/mipmap-hdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-mdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/mipmap-xxxhdpi/ic_launcher.png
+  visible: true
+- name: src/main/res/values-v21/styles.xml
+  visible: true
+- name: src/main/res/values-w820dp/dimens.xml
+  visible: true
+- name: src/main/res/values/colors.xml
+  visible: true
+- name: src/main/res/values/dimens.xml
+  visible: true
+- name: src/main/res/values/strings.xml
+  visible: true
+- name: src/main/res/values/styles.xml
+  visible: true
+- name: src/main/java/com/edu/keddit/features/news/PostFragment.kt
+  visible: true
+  placeholders:
+  - offset: 507
+    length: 55
+    placeholder_text: //initialize the WebView here
+  - offset: 571
+    length: 43
+    placeholder_text: //load the reddit.com url into the WebView here
+- name: src/main/res/layout/post_fragment.xml
+  visible: true
+  placeholders:
+  - offset: 206
+    length: 134
+    placeholder_text: //add the WebView layout here

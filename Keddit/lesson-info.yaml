@@ -7,11 +7,17 @@ content:
 - Values and Variables
 - Properties and Fields
 - Safe
-- More on Activities
 - Elvis operator
 - Statically Typed
 - Java Interoperability
 - Extension Functions
+- Adding Another Fragment
+- WebView
+- WebView Settings
+- Navigation
+- Adding NavHost to an Activity
+- Action
+- Linking Action
 - Default Values in Parameters
 - Android Extensions
 - Delegated Properties
