@@ -147,3 +147,5 @@ files:
       file: src/main/res/navigation/nav_graph.xml
       placeholder: 1
       is_visible: false
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false

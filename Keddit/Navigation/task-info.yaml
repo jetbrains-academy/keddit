@@ -97,3 +97,5 @@ files:
   - offset: 315
     length: 41
     placeholder_text: /*specify the path to the PostFragment here*/
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false

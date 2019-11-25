@@ -137,3 +137,5 @@ files:
   - offset: 563
     length: 123
     placeholder_text: //add the action tag here with the PostFragment as the destination
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false

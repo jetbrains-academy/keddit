@@ -91,3 +91,5 @@ files:
     placeholder_text: //enavle JS in the settings
 - name: src/main/res/layout/post_fragment.xml
   visible: true
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false

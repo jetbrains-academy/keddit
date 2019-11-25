@@ -95,3 +95,5 @@ files:
   - offset: 206
     length: 134
     placeholder_text: //add the WebView layout here
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false

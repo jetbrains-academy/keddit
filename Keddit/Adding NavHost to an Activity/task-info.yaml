@@ -115,3 +115,5 @@ files:
   visible: true
 - name: src/main/res/navigation/nav_graph.xml
   visible: true
+- name: src/test/java/com/edu/keddit/SolutionTest.kt
+  visible: false
