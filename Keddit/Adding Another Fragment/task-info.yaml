@@ -86,3 +86,7 @@ files:
   visible: true
 - name: src/main/res/layout/post_fragment.xml
   visible: true
+  placeholders:
+  - offset: 118
+    length: 76
+    placeholder_text: //insert the layout parameters here
