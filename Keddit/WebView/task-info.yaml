@@ -83,10 +83,10 @@ files:
 - name: src/main/java/com/edu/keddit/features/news/PostFragment.kt
   visible: true
   placeholders:
-  - offset: 507
+  - offset: 537
     length: 55
     placeholder_text: //initialize the WebView here
-  - offset: 571
+  - offset: 601
     length: 43
     placeholder_text: //load the reddit.com url into the WebView here
 - name: src/main/res/layout/post_fragment.xml
