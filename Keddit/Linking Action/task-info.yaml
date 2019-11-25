@@ -86,7 +86,7 @@ files:
 - name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
   visible: true
   placeholders:
-  - offset: 669
+  - offset: 699
     length: 49
     placeholder_text: type here
     dependency:
@@ -95,7 +95,7 @@ files:
       file: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
       placeholder: 1
       is_visible: false
-  - offset: 924
+  - offset: 954
     length: 132
     placeholder_text: set the onClickListener to the view invoking the transition
       action
