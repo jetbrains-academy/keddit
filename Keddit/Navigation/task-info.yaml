@@ -3,12 +3,12 @@ files:
 - name: build.gradle
   visible: true
   placeholders:
-  - offset: 1053
-    length: 60
-    placeholder_text: //ad the navigation -ui-ktx library implementation here
   - offset: 984
     length: 66
     placeholder_text: //ad the navigation-fragment-ktx library implementation here
+  - offset: 1053
+    length: 60
+    placeholder_text: //ad the navigation -ui-ktx library implementation here
 - name: src/main/AndroidManifest.xml
   visible: false
 - name: src/main/java/com/edu/keddit/MainActivity.kt
@@ -93,3 +93,7 @@ files:
   visible: true
 - name: src/main/res/navigation/nav_graph.xml
   visible: true
+  placeholders:
+  - offset: 315
+    length: 41
+    placeholder_text: /*specify the path to the PostFragment here*/
