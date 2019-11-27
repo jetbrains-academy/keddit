@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.edu.keddit.features.news.NewsFragment
+import com.edu.keddit.features.news.PostFragment
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -13,31 +14,31 @@ import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class SolutionTest {
-    private var newsFragment: NewsFragment? = null
+    private var postFragment: PostFragment? = null
     private var activity: MainActivity? = null
     private var container: TestViewGroup? = null
 
     @Before
     fun setup() {
-        newsFragment = NewsFragment()
+        postFragment = PostFragment()
         activity = Robolectric.buildActivity(MainActivity::class.java).create().get()
         container = TestViewGroup(activity?.applicationContext)
     }
 
     /*Checking if OnCreateView inflates NewsFragment*/
     @Test
-    fun testOnCreateViewReturnsNewsFragmentInflate() {
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
+    fun testOnCreateViewReturnsPostFragmentInflate() {
+        val actualResult = postFragment?.onCreateView(LayoutInflater.from(activity),
                 container, null)
         Assert.assertNotNull(actualResult)
     }
 
     /*Checking if NewsFragment inflates the correct View*/
     @Test
-    fun testNewsFragmentInflatesCorrectly() {
+    fun testPostFragmentInflatesCorrectly() {
         val expectedResult = LayoutInflater.from(activity).inflate(R.layout.news_fragment,
                 null, false)
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
+        val actualResult = postFragment?.onCreateView(LayoutInflater.from(activity),
                 container , null)
         //We are comparing Ids to avoid full scale equals() implementation.
         Assert.assertEquals(expectedResult.id, actualResult?.id)
