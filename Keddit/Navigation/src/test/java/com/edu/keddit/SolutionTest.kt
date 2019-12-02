@@ -3,6 +3,10 @@ package com.edu.keddit
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.get
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.edu.keddit.features.news.NewsFragment
 import org.junit.Assert
 import org.junit.Before
@@ -26,22 +30,14 @@ class SolutionTest {
 
     /*Checking if OnCreateView inflates NewsFragment*/
     @Test
-    fun testOnCreateViewReturnsNewsFragmentInflate() {
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
-                container, null)
-        Assert.assertNotNull(actualResult)
+    fun testNavHostContainsPostFragment() {
+        val actualNavHost = NavHostFragment.create(R.navigation.nav_graph)
+        val test = activity?.findNavController(R.navigation.nav_graph)
+//        activity?.setupActionBarWithNavController(actualNavHost.navController)
+        val actualPostFragment = actualNavHost.navController.graph.findNode(R.id.postFragment)
+        Assert.assertNotNull(actualPostFragment)
     }
 
-    /*Checking if NewsFragment inflates the correct View*/
-    @Test
-    fun testNewsFragmentInflatesCorrectly() {
-        val expectedResult = LayoutInflater.from(activity).inflate(R.layout.news_fragment,
-                null, false)
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
-                container , null)
-        //We are comparing Ids to avoid full scale equals() implementation.
-        Assert.assertEquals(expectedResult.id, actualResult?.id)
-    }
 }
 
 class TestViewGroup(context: Context?) : ViewGroup(context) {

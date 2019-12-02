@@ -3,7 +3,9 @@ package com.edu.keddit
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.webkit.WebView
 import com.edu.keddit.features.news.NewsFragment
+import com.edu.keddit.features.news.PostFragment
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -13,34 +15,45 @@ import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
 class SolutionTest {
-    private var newsFragment: NewsFragment? = null
+    private var postFragment: PostFragment? = null
     private var activity: MainActivity? = null
     private var container: TestViewGroup? = null
 
     @Before
     fun setup() {
-        newsFragment = NewsFragment()
+        postFragment = PostFragment()
         activity = Robolectric.buildActivity(MainActivity::class.java).create().get()
         container = TestViewGroup(activity?.applicationContext)
     }
 
-    /*Checking if OnCreateView inflates NewsFragment*/
+    /*Checking if OnCreateView inflates PostFragment*/
     @Test
-    fun testOnCreateViewReturnsNewsFragmentInflate() {
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
+    fun testOnCreateViewReturnsPostFragmentInflate() {
+        val actualResult = postFragment?.onCreateView(LayoutInflater.from(activity),
                 container, null)
         Assert.assertNotNull(actualResult)
     }
 
-    /*Checking if NewsFragment inflates the correct View*/
+    /*Checking if PostFragment inflates the correct View*/
     @Test
-    fun testNewsFragmentInflatesCorrectly() {
-        val expectedResult = LayoutInflater.from(activity).inflate(R.layout.news_fragment,
-                null, false)
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
+    fun testPostFragmentInflatesWebViewCorrectly() {
+        val actualResult = postFragment?.onCreateView(LayoutInflater.from(activity),
                 container , null)
-        //We are comparing Ids to avoid full scale equals() implementation.
-        Assert.assertEquals(expectedResult.id, actualResult?.id)
+        val actualWebView = actualResult?.rootView?.findViewById<WebView>(R.id.webview)
+        Assert.assertNotNull(actualWebView)
+    }
+
+    @Test
+    fun testPostFragmentInflatesWebViewWithTheProperUrl() {
+        //Arrange
+        val expectedUrl = "https://www.reddit.com/"
+        //Act
+        val actualResult = postFragment?.onCreateView(LayoutInflater.from(activity),
+                container , null)
+        val actualWebView = actualResult?.rootView?.findViewById<WebView>(R.id.webview)
+        val actulOriginalUrl = actualWebView?.originalUrl
+        //Assert
+        Assert.assertEquals(expectedUrl, actulOriginalUrl)
     }
 }
 

@@ -1,15 +1,24 @@
 package com.edu.keddit
 
+import android.R
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import com.edu.keddit.features.news.NewsFragment
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.fragment.findNavController
+import com.edu.keddit.features.news.PostFragment
+import kotlinx.android.synthetic.main.activity_main.*
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
+
 
 @RunWith(RobolectricTestRunner::class)
 class SolutionTest {
@@ -24,23 +33,22 @@ class SolutionTest {
         container = TestViewGroup(activity?.applicationContext)
     }
 
-    /*Checking if OnCreateView inflates NewsFragment*/
-    @Test
-    fun testOnCreateViewReturnsNewsFragmentInflate() {
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
-                container, null)
-        Assert.assertNotNull(actualResult)
-    }
+    /*Checking if OnCreateView inflates PostFragment*/
 
-    /*Checking if NewsFragment inflates the correct View*/
     @Test
-    fun testNewsFragmentInflatesCorrectly() {
-        val expectedResult = LayoutInflater.from(activity).inflate(R.layout.news_fragment,
-                null, false)
-        val actualResult = newsFragment?.onCreateView(LayoutInflater.from(activity),
-                container , null)
-        //We are comparing Ids to avoid full scale equals() implementation.
-        Assert.assertEquals(expectedResult.id, actualResult?.id)
+    fun testActionAddedToNavGraph() {
+        val actualStartDestination = activity!!
+                .nav_host_fragment
+                .findNavController()
+                .graph
+                .startDestination
+        val actualNavAction = activity!!
+                .nav_host_fragment
+                .findNavController()
+                .graph
+                .findNode(actualStartDestination)
+                ?.getAction(com.edu.keddit.R.id.action_newsFragment_to_postFragment)
+        Assert.assertNotNull(actualNavAction)
     }
 }
 
