@@ -91,5 +91,15 @@ files:
     placeholder_text: //enavle JS in the settings
 - name: src/main/res/layout/post_fragment.xml
   visible: true
+  placeholders:
+  - offset: 223
+    length: 114
+    placeholder_text: this placeholder should be completed in the task WebView
+    dependency:
+      lesson: Keddit
+      task: WebView
+      file: src/main/res/layout/post_fragment.xml
+      placeholder: 1
+      is_visible: false
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false

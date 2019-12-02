@@ -92,8 +92,8 @@ files:
 - name: src/main/res/layout/post_fragment.xml
   visible: true
   placeholders:
-  - offset: 206
-    length: 134
+  - offset: 219
+    length: 118
     placeholder_text: //add the WebView layout here
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false
