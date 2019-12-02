@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.get
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.edu.keddit.features.news.NewsFragment
+import kotlinx.android.synthetic.main.activity_main.*
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -28,14 +30,16 @@ class SolutionTest {
         container = TestViewGroup(activity?.applicationContext)
     }
 
-    /*Checking if OnCreateView inflates NewsFragment*/
+    /*Checking if OnCreateView inflates PostFragment*/
+
     @Test
-    fun testNavHostContainsPostFragment() {
-        val actualNavHost = NavHostFragment.create(R.navigation.nav_graph)
-        val test = activity?.findNavController(R.navigation.nav_graph)
-//        activity?.setupActionBarWithNavController(actualNavHost.navController)
-        val actualPostFragment = actualNavHost.navController.graph.findNode(R.id.postFragment)
-        Assert.assertNotNull(actualPostFragment)
+    fun testActionAddedToNavGraph() {
+        val actualNavAction = activity!!
+                .nav_host_fragment
+                .findNavController()
+                .graph
+                .findNode(com.edu.keddit.R.id.postFragment)
+        Assert.assertNotNull(actualNavAction)
     }
 
 }
