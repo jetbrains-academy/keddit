@@ -12,7 +12,3 @@ The Navigation component consists of three key parts that are described below:
 
 \
 [Navigation Overview](https://developer.android.com/guide/navigation?gclid=CjwKCAiAws7uBRAkEiwAMlbZjgmzNWcCEEkAlXO58gcoejHiLU8WHu9lktt6IJ3nZDbI56C3mZ8rSBoCoEIQAvD_BwE)
-
-<div class="hint">
-  Hints can be added anywhere in task text: type "hint" and press Tab.
-</div>

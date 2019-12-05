@@ -7,6 +7,3 @@ An action is a logical connection between destinations. Actions are represented 
 \
 You can read more about actions in the [official documentation](https://developer.android.com/guide/navigation/navigation-getting-started#connect).
 
-<div class="hint">
-  Hints can be added anywhere in task text: type "hint" and press Tab.
-</div>

@@ -15,6 +15,3 @@ Also, add a call to `changeFragment` with the `NewsFragment` as a parameter insi
 \
 You can get more information in [the official documentation](https://developer.android.com/guide/navigation/navigation-getting-started#add-navhost)
 
-<div class="hint">
-  Hints can be added anywhere in task text: type "hint" and press Tab.
-</div>

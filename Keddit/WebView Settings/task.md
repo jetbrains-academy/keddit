@@ -10,7 +10,3 @@ The `WebSettings` method `setJavaScriptEnabled()` tells the `WebView` to enable 
 
 \
 You can read more on the official documentation [page](https://developer.android.com/reference/android/webkit/WebSettings)
-
-<div class="hint">
-  Hints can be added anywhere in task text: type "hint" and press Tab.
-</div>

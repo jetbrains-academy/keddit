@@ -8,6 +8,3 @@ You should modify the `OnViewCreated` method, setting the `onClickListener` to t
 \
 **Task:** invoke the `setOnClickListener` of the `view` parameter passed in the `OnViewCreated` method  of the `NewsFragment` and implement the listener to navigate according to the action created in the previous tasks.
 
-<div class="hint">
-  Hints can be added anywhere in task text: type "hint" and press Tab.
-</div>

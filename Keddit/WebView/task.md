@@ -15,6 +15,3 @@ Also, create a new WebView, using the findByViewId method of the view variable i
 \
 You can learn more in the [official documentation](https://developer.android.com/reference/android/webkit/WebView).
 
-<div class="hint">
-  Hints can be added anywhere in task text: type "hint" and press Tab.
-</div>
