@@ -9,6 +9,7 @@ Here you will create a host variable inside the `mainActivity.kt` and replace th
 
 \
 **Task:** create a NavHost by invoking `create(R.navigation.nav_graph)` method of `NavHostFragment` inside the `onCreate` method of the `MainActivity`. Replace the `base_activity_content` of the `fragmentSupportManager` and invoke `setPrimaryNavigationTarget` to the `host`. The invocation should be surrounded by `begintransaction()` and `commit()` invocations. 
+Also, add a call to `changeFragment` with the `NewsFragment` as a parameter inside the `onCreate` method. it should be performed if the `savedInstanceState` bundle passed to the `onCreate` is null, thus there is no previous state to load.
 
 
 \

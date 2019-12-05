@@ -133,6 +133,43 @@ files:
   visible: true
 - name: src/main/java/com/edu/keddit/features/news/PostFragment.kt
   visible: true
+  placeholders:
+  - offset: 648
+    length: 55
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      lesson: Keddit
+      task: WebView
+      file: src/main/java/com/edu/keddit/features/news/PostFragment.kt
+      placeholder: 1
+      is_visible: false
+  - offset: 712
+    length: 43
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      lesson: Keddit
+      task: WebView
+      file: src/main/java/com/edu/keddit/features/news/PostFragment.kt
+      placeholder: 2
+      is_visible: false
+  - offset: 794
+    length: 40
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      lesson: Keddit
+      task: WebView Settings
+      file: src/main/java/com/edu/keddit/features/news/PostFragment.kt
+      placeholder: 3
+      is_visible: false
+  - offset: 843
+    length: 36
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      lesson: Keddit
+      task: WebView Settings
+      file: src/main/java/com/edu/keddit/features/news/PostFragment.kt
+      placeholder: 4
+      is_visible: false
 - name: src/main/res/layout/post_fragment.xml
   visible: true
   placeholders:
@@ -145,6 +182,15 @@ files:
       file: src/main/res/layout/post_fragment.xml
       placeholder: 1
       is_visible: false
+  - offset: 118
+    length: 76
+    placeholder_text: <!--this should be completed in a previous task-->
+    dependency:
+      lesson: Keddit
+      task: Adding Another Fragment
+      file: src/main/res/layout/post_fragment.xml
+      placeholder: 1
+      is_visible: false
 - name: src/main/res/navigation/nav_graph.xml
   visible: true
   placeholders:
@@ -154,6 +200,15 @@ files:
     dependency:
       lesson: Keddit
       task: Action
+      file: src/main/res/navigation/nav_graph.xml
+      placeholder: 1
+      is_visible: false
+  - offset: 315
+    length: 41
+    placeholder_text: <!--this should be completed in a previous task-->
+    dependency:
+      lesson: Keddit
+      task: Navigation
       file: src/main/res/navigation/nav_graph.xml
       placeholder: 1
       is_visible: false

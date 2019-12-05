@@ -94,6 +94,15 @@ files:
   placeholders:
   - offset: 219
     length: 118
-    placeholder_text: //add the WebView layout here
+    placeholder_text: <!--add the WebView layout here-->
+  - offset: 118
+    length: 76
+    placeholder_text: <!--this should be completed in a previous task-->
+    dependency:
+      lesson: Keddit
+      task: Adding Another Fragment
+      file: src/main/res/layout/post_fragment.xml
+      placeholder: 1
+      is_visible: false
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false
