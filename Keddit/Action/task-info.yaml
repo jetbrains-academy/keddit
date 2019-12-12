@@ -149,39 +149,7 @@ files:
       is_visible: false
 - name: src/main/res/layout/post_fragment.xml
   visible: true
-  placeholders:
-  - offset: 118
-    length: 76
-    placeholder_text: <!--this should be completed in a previous task-->
-    dependency:
-      lesson: Keddit
-      task: Adding Another Fragment
-      file: src/main/res/layout/post_fragment.xml
-      placeholder: 1
-      is_visible: false
-  - offset: 223
-    length: 114
-    placeholder_text: <!--this should be completed in the WebView task-->
-    dependency:
-      lesson: Keddit
-      task: WebView
-      file: src/main/res/layout/post_fragment.xml
-      placeholder: 1
-      is_visible: false
 - name: src/main/res/navigation/nav_graph.xml
   visible: true
-  placeholders:
-  - offset: 315
-    length: 41
-    placeholder_text: <!--this should be completed in a previous task-->
-    dependency:
-      lesson: Keddit
-      task: Navigation
-      file: src/main/res/navigation/nav_graph.xml
-      placeholder: 1
-      is_visible: false
-  - offset: 563
-    length: 123
-    placeholder_text: //add the action tag here with the PostFragment as the destination
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false

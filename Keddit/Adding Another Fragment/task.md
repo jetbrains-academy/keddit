@@ -11,8 +11,8 @@ This is especially important because a modular fragment allows you to change you
 
 Task
 ---
-Complete the ``post_fragment.xml`` by adding the layout parameters. You can look them up at the ``news_fragment.xml``.
+Complete the ``PostFragment.kt`` by adding the `return` statement.
 
 <div class="hint">
-  Look at the news_fragment.xml and add the similar android:layout_width and android:layout_height parameters.
+  Look at the NewsFragment.kt and add the similar retuen statement, but with post_fragment layout.
 </div>
