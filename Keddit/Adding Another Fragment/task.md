@@ -1,13 +1,19 @@
-Fragments could be used to represent different parts of the user experience. For example, an application can use one fragment to show a list of posts and another fragment to display a post itself. 
+As we mentioned in the previous task, an application can use one fragment to show a list of posts and another fragment to display a post itself. 
 
 \
-Each of the fragments has its own set of lifecycle callback methods and handle their own user input events. Thus, instead of using one activity to select a post and another activity to read it, the user can select a post and read it all within the same activity.
+In this task we will create another fragment for this purpose. Take a look at the `post_fragment.xml`:
+```xml
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+</RelativeLayout>
+```
 
 \
-You should design each fragment as a modular and reusable activity component. One of the good practices would be to avoid directly manipulating one fragment from another fragment. 
+It specifies the type of the layout used in the fragment. `RelativeLayaout` is a very powerful utility for designing a user interface because it can eliminate nested view groups and keep your layout hierarchy flat, which improves performance. Inside the opening tag we also must provide the parameters for width and height of the Layout.
 
-\
-This is especially important because a modular fragment allows you to change your fragment combinations for different screen sizes. When designing your application to support both tablets and handsets, you can reuse your fragments in different layout configurations to optimize the user experience based on the available screen space. 
+To learn more about the `RelativeLayout`, check out the [official documentation](https://developer.android.com/guide/topics/ui/layout/relative). 
 
 Task
 ---

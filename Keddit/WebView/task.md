@@ -10,7 +10,7 @@ We will use the `WebView` to display the content of a post. Though it could be m
 **Task:** Complete the `WebView` declaration in the `post_fragment.xml` layout. It should contain fields `id`, `layout_width` and `layout_heigth`. Last two should match parent.
 
 \
-Also, create a new WebView, using the findByViewId method of the view variable in the `PostFragment.kt` and invoke the loadUrl method of it, passing the 'https://www.reddit.com' address as the parameter.
+Also, create a new WebView, using the findByViewId method of the view variable in the `PostFragment.kt` and invoke the loadUrl method of it, passing the 'https://www.reddit.com/' address as the parameter.
 
 \
 You can learn more in the [official documentation](https://developer.android.com/reference/android/webkit/WebView).
