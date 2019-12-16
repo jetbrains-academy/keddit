@@ -26,5 +26,5 @@ res
 There are several [resources](https://developer.android.com/guide/topics/resources/providing-resources) our app is going to use - they are placed in `src.main.res`.
 \
 \
-You can move onto the next task.
-
+**Task**
+Complete the `MainActivity` class declaration by inserting its name after the `class` keyword. Note, that the name must match the file name.
