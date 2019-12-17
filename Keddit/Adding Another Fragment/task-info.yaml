@@ -84,9 +84,13 @@ files:
   visible: false
 - name: src/main/java/com/edu/keddit/features/news/PostFragment.kt
   visible: true
+  placeholders:
+  - offset: 465
+    length: 49
+    placeholder_text: //complete the method
 - name: src/main/res/layout/post_fragment.xml
   visible: true
   placeholders:
   - offset: 118
     length: 76
-    placeholder_text: //insert the layout parameters here
+    placeholder_text: complete the necesary parameters here

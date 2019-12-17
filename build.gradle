@@ -38,6 +38,8 @@ allprojects {
           }
         }
       }
+      project.properties["android.enableJetifier"]=true
+      project.properties["android.useAndroidX"]=true
     }
   }
 }

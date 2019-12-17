@@ -92,12 +92,6 @@ files:
       file: src/main/java/com/edu/keddit/features/news/PostFragment.kt
       placeholder: 1
       is_visible: false
-  - offset: 653
-    length: 40
-    placeholder_text: //get the settings of the webview here
-  - offset: 702
-    length: 38
-    placeholder_text: //enavle JS in the settings
   - offset: 571
     length: 43
     placeholder_text: //this should be completed in a previous task
@@ -107,26 +101,32 @@ files:
       file: src/main/java/com/edu/keddit/features/news/PostFragment.kt
       placeholder: 2
       is_visible: false
+  - offset: 653
+    length: 40
+    placeholder_text: //get the settings of the webview here
+  - offset: 702
+    length: 38
+    placeholder_text: //enavle JS in the settings
 - name: src/main/res/layout/post_fragment.xml
   visible: true
   placeholders:
-  - offset: 223
-    length: 114
-    placeholder_text: this placeholder should be completed in the task WebView
-    dependency:
-      lesson: Keddit
-      task: WebView
-      file: src/main/res/layout/post_fragment.xml
-      placeholder: 1
-      is_visible: false
   - offset: 118
     length: 76
-    placeholder_text: <!--this should be completed in a previous task-->
+    placeholder_text: this should be completed in a previous task
     dependency:
       lesson: Keddit
       task: Adding Another Fragment
       file: src/main/res/layout/post_fragment.xml
       placeholder: 1
+      is_visible: false
+  - offset: 223
+    length: 114
+    placeholder_text: this should be completed in a previous task
+    dependency:
+      lesson: Keddit
+      task: WebView
+      file: src/main/res/layout/post_fragment.xml
+      placeholder: 2
       is_visible: false
 - name: src/test/java/com/edu/keddit/SolutionTest.kt
   visible: false
