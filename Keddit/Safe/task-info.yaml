@@ -1,4 +1,4 @@
-type: edu
+type: theory
 files:
 - name: build.gradle
   visible: false
