@@ -18,10 +18,6 @@ class MainActivity : AppCompatActivity() {
 
     val host = NavHostFragment.create(R.navigation.nav_graph)
     supportFragmentManager.beginTransaction().replace(R.id.activity_base_content, host).setPrimaryNavigationFragment(host).commit()
-
-    if (savedInstanceState == null) {
-      changeFragment(NewsFragment())
-    }
   }
 
   fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
