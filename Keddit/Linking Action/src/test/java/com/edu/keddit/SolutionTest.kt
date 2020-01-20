@@ -11,8 +11,6 @@ import androidx.fragment.app.FragmentFactory
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.testing.FragmentScenario
-import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import com.edu.keddit.features.news.PostFragment
