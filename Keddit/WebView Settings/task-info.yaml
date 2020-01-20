@@ -7,7 +7,7 @@ files:
 - name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
   placeholders:
-  - offset: 277
+  - offset: 326
     length: 3
     placeholder_text: type here
     dependency:
@@ -16,7 +16,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 1
       is_visible: false
-  - offset: 290
+  - offset: 339
     length: 27
     placeholder_text: type here
     dependency:
@@ -25,7 +25,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 2
       is_visible: false
-  - offset: 407
+  - offset: 456
     length: 3
     placeholder_text: type here
     dependency:
@@ -39,7 +39,7 @@ files:
 - name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
   visible: true
   placeholders:
-  - offset: 631
+  - offset: 571
     length: 49
     placeholder_text: type here
     dependency:
@@ -119,8 +119,8 @@ files:
       file: src/main/res/layout/post_fragment.xml
       placeholder: 1
       is_visible: false
-  - offset: 223
-    length: 114
+  - offset: 257
+    length: 80
     placeholder_text: this should be completed in a previous task
     dependency:
       lesson: Keddit
