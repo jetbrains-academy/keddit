@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.appcompat.widget.Toolbar
+import com.edu.keddit.features.news.PostFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +14,10 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
     val toolbar = findViewById(R.id.toolbar) as Toolbar
     setSupportActionBar(toolbar)
+
+    if (savedInstanceState == null) {
+      changeFragment(PostFragment())
+    }
   }
 
   fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
