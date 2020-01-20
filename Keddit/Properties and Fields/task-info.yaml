@@ -35,7 +35,7 @@ files:
       placeholder: 3
       is_visible: false
   - offset: 541
-    length: 22
+    length: 19
     placeholder_text: type here
 - name: src/main/res/layout/activity_main.xml
   visible: true
