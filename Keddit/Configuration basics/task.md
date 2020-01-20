@@ -5,16 +5,13 @@ In this course you will overview several topics related to creating an Android a
 
 The course describes a simple app providing a list of the most recent posts on reddit in an Android device. The app itself is not complicated in any way and is used more as an illustration of some concepts listed above.
 
-Create Project
---------------
-
-If you would need to start from scratch, you would need to launch Android Studio and create a new Project, name it “Keddit” and select “Blank Activity”. In this course all of these arrangements are already done.
 
 Basic app structure
--------------------
+-----
+Let's take a quick look at the elements of the application available at the beginning.
 
 Main Activity
--------------
+---
 
 Our app includes an element called [MainActivity](https://developer.android.com/guide/components/activities/intro-activities) - starting point of the application. It is contained in package `main.java.com.edu.keddit`. Check it out, it will be changed further in the course.
 
@@ -24,7 +21,22 @@ res
 ---
 
 There are several [resources](https://developer.android.com/guide/topics/resources/providing-resources) our app is going to use - they are placed in `src.main.res`.
-\
-\
-You can move onto the next task.
 
+
+Task:
+-----
+
+Complete the declaration of MainActivity Class.
+
+
+Run:
+-----
+In every step of this course you can run your current version of the application. To do so use the **run** button from the control panel:
+
+<img src="./run-command.png" alt="The path to the action. Remember, you can just use the Find Action command." width="300"/>
+
+Or, alternatively, you can invoke the context menu in your `MainActivity` class and use the `Run` command from there.
+
+You can see the progress of the application creation by running it, though not every step will bring the visible changes to the UI.
+
+If you don't have any AVD setup yet, you can follow [this instruction](https://developer.android.com/studio/run/managing-avds#createavd), this is a straightforward process. You can use any device supporting Android 9.0 or higher. 
