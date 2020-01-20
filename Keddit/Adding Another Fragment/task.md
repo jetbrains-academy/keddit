@@ -12,6 +12,7 @@ This is especially important because a modular fragment allows you to change you
 Task
 ---
 Complete the ``post_fragment.xml`` by adding the layout parameters. You can look them up at the ``news_fragment.xml``.
+Also, ```complete the PostFragment.kt``` as well. For now it should return the same inflated container, as the ```NewsFragment```, but with the ```post_fragment``` layout. We will improve this in the following tasks.
 
 <div class="hint">
   Look at the news_fragment.xml and add the similar android:layout_width and android:layout_height parameters.
