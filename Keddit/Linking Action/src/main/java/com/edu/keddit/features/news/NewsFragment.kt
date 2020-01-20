@@ -13,10 +13,6 @@ import com.edu.keddit.commons.inflate
 
 class NewsFragment : androidx.fragment.app.Fragment() {
 
-    private val newsList by lazy {
-        news_list
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         //val view = inflater.inflate(R.layout.news_fragment, container, false)
