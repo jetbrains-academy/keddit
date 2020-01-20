@@ -1,7 +1,7 @@
 type: theory
 files:
 - name: build.gradle
-  visible: false
+  visible: true
 - name: src/main/AndroidManifest.xml
   visible: false
 - name: src/main/java/com/edu/keddit/MainActivity.kt
