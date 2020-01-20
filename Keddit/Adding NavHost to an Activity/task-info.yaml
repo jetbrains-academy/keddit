@@ -49,7 +49,7 @@ files:
 - name: src/main/java/com/edu/keddit/features/news/NewsFragment.kt
   visible: true
   placeholders:
-  - offset: 631
+  - offset: 571
     length: 49
     placeholder_text: type here
     dependency:
@@ -141,14 +141,14 @@ files:
       file: src/main/res/layout/post_fragment.xml
       placeholder: 1
       is_visible: false
-  - offset: 223
-    length: 114
+  - offset: 257
+    length: 80
     placeholder_text: <!--this should be completed in the WebView task-->
     dependency:
       lesson: Keddit
       task: WebView
       file: src/main/res/layout/post_fragment.xml
-      placeholder: 1
+      placeholder: 2
       is_visible: false
 - name: src/main/res/navigation/nav_graph.xml
   visible: true
