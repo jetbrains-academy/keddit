@@ -1,4 +1,4 @@
-type: edu
+type: theory
 files:
 - name: build.gradle
   visible: false
@@ -7,7 +7,7 @@ files:
 - name: src/main/java/com/edu/keddit/MainActivity.kt
   visible: true
   placeholders:
-  - offset: 277
+  - offset: 239
     length: 3
     placeholder_text: type here
     dependency:
@@ -16,7 +16,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 1
       is_visible: false
-  - offset: 290
+  - offset: 252
     length: 27
     placeholder_text: type here
     dependency:
@@ -25,7 +25,7 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 2
       is_visible: false
-  - offset: 407
+  - offset: 369
     length: 3
     placeholder_text: type here
     dependency:
@@ -34,9 +34,6 @@ files:
       file: src/main/java/com/edu/keddit/MainActivity.kt
       placeholder: 3
       is_visible: false
-  - offset: 651
-    length: 2
-    placeholder_text: type here
 - name: src/main/res/layout/activity_main.xml
   visible: true
 - name: src/main/res/layout/news_fragment.xml

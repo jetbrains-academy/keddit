@@ -1,15 +1,12 @@
 type: framework
 content:
 - Configuration basics
-- Kotlin plugin
 - Gradle introduction
 - Functions
 - Values and Variables
 - Properties and Fields
 - Safe
-- Elvis operator
 - Statically Typed
-- Java Interoperability
 - Extension Functions
 - Adding Another Fragment
 - WebView

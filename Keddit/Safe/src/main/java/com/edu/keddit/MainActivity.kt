@@ -2,6 +2,7 @@ package com.edu.keddit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.appcompat.widget.Toolbar
 
@@ -14,11 +15,23 @@ class MainActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
   }
 
+  fun changeFragment(f: Fragment, cleanStack: Boolean?) {
+    val ft = supportFragmentManager.beginTransaction()
+    if (cleanStack ?: false) {
+      clearBackStack()
+    }
+    ft.setCustomAnimations(
+            R.anim.abc_fade_in, R.anim.abc_fade_out, R.anim.abc_popup_enter, R.anim.abc_popup_exit)
+    ft.replace(R.id.activity_base_content, f)
+    ft.addToBackStack(null)
+    ft.commit()
+  }
+
   fun clearBackStack() {
     val manager = supportFragmentManager
     if (manager.backStackEntryCount > 0) {
       val first = manager.getBackStackEntryAt(0)
-      manager.popBackStack(first.id, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
+      manager.popBackStack(first.id, FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
   }
 }
